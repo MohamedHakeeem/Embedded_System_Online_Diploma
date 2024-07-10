@@ -1,0 +1,5 @@
+23:17:50 **** Incremental Build of configuration Debug for project C_Basics2 ****
+Info: Internal Builder is used for build
+gcc -ansi -std=c89 -o C_Basics2.exe main.o 
+Info: Nothing to build for C_Basics2
+Info: Nothing to build for C_Basics2

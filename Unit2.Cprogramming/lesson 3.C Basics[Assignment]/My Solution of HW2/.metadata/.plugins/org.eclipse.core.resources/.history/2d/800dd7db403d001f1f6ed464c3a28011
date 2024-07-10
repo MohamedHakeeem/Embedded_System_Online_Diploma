@@ -1,0 +1,123 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 7, 2024
+ *      Author: Mohamed_Hakeem
+ */
+
+
+#include<stdio.h>
+
+int main(void)
+{
+	/* ******************* Homework_one ****************************** */
+	/*******Ex1*******/
+	/*short int num1=0;
+	printf("Please enter an integer number you want to check : \r\n");
+	fflush(stdout);
+	scanf("%hd",&num1);
+	fflush(stdin);
+
+	if(num1%2==0)printf("%d is even \r\n",num1);
+	else printf("%d is odd \r\n",num1);
+	fflush(stdout);
+	 */
+	/*******Ex2*******/
+	/*char ch;
+	printf("Please enter an alphabet : \r\n");
+	fflush(stdout);
+	scanf("%c",&ch);
+	fflush(stdin);
+
+	switch(ch)
+	{
+	case('a'):
+	case('e'):
+	case('i'):
+	case('o'):
+	case('u'):
+	printf("%c is a vowel. \r\n", ch);
+	break;
+	default:
+		printf("%c is a consonant. \r\n", ch);
+	}
+
+	fflush(stdout); */
+
+	/*******Ex3*******/
+	/*short int i , num2=0 ,l_num=0;
+	printf("Please enter three numbers:  \r\n");
+	fflush(stdout);
+	for(i=0; i<3; i++)
+	{
+		scanf("%hd",&num2);
+		fflush(stdin);
+		if(num2>l_num)l_num=num2;
+		else do nothing ;
+	}
+	printf("Largest Number is : %hd", l_num);
+	fflush(stdout);*/
+
+	/*******Ex4*******/
+	/*float num3=0 ;
+	printf("Please enter a number:  \r\n");
+	fflush(stdout);
+	scanf("%f",&num3);
+	fflush(stdin);
+	if(num3>0)printf("%.3f is positive. \r\n", num3);
+	else if(num3<0)printf("%.3f is negative \r\n", num3);
+	else printf("you entered zero. \r\n");
+	fflush(stdout);*/
+
+	/*******Ex5*******/
+	/*char cha ;
+	printf("Please enter a character: \r\n");
+	fflush(stdout);
+	scanf("%c",&cha);
+	fflush(stdin);
+	ASCII Range of Alphabet between [65:90]>>>>Upper_case+[97:122]>>>>>Lower_case
+	if(((int)(cha)>=65 && (int)(cha)<=90) || ((int)(cha)>=97 && (int)(cha)<=122) )printf("%c is an alphabet. \r\n", cha);
+	else printf("%c is not an alphabet. \r\n", cha);
+	fflush(stdout);*/
+
+	/*******Ex6*******/
+	/*short int N_num=0, i,sum=0 ;
+	printf("Please enter an integer number: \r\n");
+	fflush(stdout);
+	scanf("%hd",&N_num);
+	fflush(stdin);
+	for(i=1;i<=N_num;i++)sum+=i;
+	printf("Sum = %hd  \r\n",sum);
+	fflush(stdout);*/
+
+
+	/*******Ex7*******/
+	short int f_num=0, i,Fac_Num=1 ;
+	printf("Please enter an integer number: \r\n");
+	fflush(stdout);
+	scanf("%hd",&f_num);
+	fflush(stdin);
+	if(f_num<0)
+	{
+		printf("Error!!,Factorial of negative number doesn't exist \r\n");
+	}
+	else if(f_num==0)
+	{
+		printf("Factorial number = 1 \r\n");
+	}
+	else
+	{
+		for(i=1;i<=f_num;i++)Fac_Num*=i;
+	}
+	printf("Factorial number = %hd  \r\n",Fac_Num);
+	fflush(stdout);
+
+
+
+
+
+
+
+
+	return 0;
+}

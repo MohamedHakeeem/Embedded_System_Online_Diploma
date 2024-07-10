@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;C_Basics&apos; to &apos;C_Basics2&apos;" description="Rename resource &apos;C_Basics&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/C_Basics" name="C_Basics2" stamp="1720352153031" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;C_Basics2/Debug/C_Basics.exe&apos;" deleteContents="false" description="Delete resource &apos;C_Basics2/Debug/C_Basics.exe&apos;" element1="/C_Basics2/Debug/C_Basics.exe" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1720352177770"/>
+</session>
