@@ -1,0 +1,97 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 7, 2024
+ *      Author: Mohamed_Hakeem
+ */
+
+
+#include<stdio.h>
+
+
+int main(void)
+{
+	/* ******************* Homework_one ****************************** */
+	/******Ex1********/
+	/*printf("C Programming \r\n");
+	fflush(stdout);*/
+
+
+	/*******Ex2*******/
+	/*short int num=0;
+	printf("Please enter an integer number: \r\n");
+	fflush(stdout);
+	scanf("%hd",&num);
+	fflush(stdin);
+	printf("you entered: %.2d \r\n",num);
+	fflush(stdout);
+*/
+
+	/******Ex3******/
+	/*short int num1=0,sum=0 ;
+	short int i;
+
+	for(i=0;i<2;i++)
+	{
+		printf("Please enter integer number %hd: \r\n",i+1);
+		fflush(stdout);
+		scanf("%hd",&num1);fflush(stdin);
+		sum+=num1;
+	}
+	printf("summation of two numbers= %hd \r\n",sum);
+	fflush(stdout);*/
+
+
+	/*******Ex4******/
+	/*float num2=0.0,Mul=1.0 ;
+	short int j;
+
+	for(j=0;j<2;j++)
+	{
+		printf("Please enter number %hd: \r\n",j+1);
+		fflush(stdout);
+		scanf("%f",&num2);fflush(stdin);
+		Mul*=num2;
+	}
+	printf("Multiplication of two numbers= %0.5f \r\n",Mul);
+	fflush(stdout);*/
+
+
+	/*******Ex5******/
+	/*char ch=0 ;
+	printf("Enter the first character of your name :");
+	fflush(stdout);
+	scanf("%c",&ch);fflush(stdin);
+	printf("your character in ASCII of %c = %d \r\n",ch,ch);
+	fflush(stdout);*/
+
+
+	/*******Ex6: Swap******/
+	/*int x=0 ,y=0 ,z=0;
+	printf("Enter the value of x and the value of y respectively");
+	fflush(stdout);
+	scanf("%d %d",&x,&y);fflush(stdin);
+	z=x;x=y;y=z;
+	printf("After Swapping the value of x is %d and the value of y is %d \r\n",x,y);
+	fflush(stdout);*/
+
+
+	/*******Ex6: Swap Without Temp ******/
+	/*int x1=0 ,y1=0 ;
+	printf("Enter the value of x and the value of y respectively");
+	fflush(stdout);
+	scanf("%d %d",(&x1+0x2),&y1);fflush(stdin);
+	x1|=y1;
+	y1=*(&x1+0x2);
+	*(&x1+0x2)=0;
+	printf("After Swapping without temp the value of x is %d and the value of y is %d",x1,y1);
+*/
+
+	char *str = "Hello";
+	str[0] = 'h';
+	printf("mohamed hakeem %d:",str);
+
+
+    return 0;
+
+}
