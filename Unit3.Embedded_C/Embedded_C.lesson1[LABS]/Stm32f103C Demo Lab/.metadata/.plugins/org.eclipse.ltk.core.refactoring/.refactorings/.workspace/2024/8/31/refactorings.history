@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Toggle_Led/Inc/gpio.h&apos;" deleteContents="false" description="Delete resource &apos;Toggle_Led/Inc/gpio.h&apos;" element1="/Toggle_Led/Inc/gpio.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1722719880773"/>
+</session>

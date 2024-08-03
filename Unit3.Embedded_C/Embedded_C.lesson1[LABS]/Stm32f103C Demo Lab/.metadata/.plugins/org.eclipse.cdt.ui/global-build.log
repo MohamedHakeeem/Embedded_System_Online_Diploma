@@ -1,0 +1,20 @@
+00:04:42 **** Incremental Build of configuration Debug for project Toggle_Led ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Toggle_Led.elf" @"objects.list"   -mcpu=cortex-m3 -T"F:\Embedded Systems New\Diploma\Unit3.Embedded_C\Embedded_C.lesson1[LABS]\Stm32f103C Demo Lab\Toggle_Led\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Toggle_Led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Toggle_Led.elf
+ 
+arm-none-eabi-size   Toggle_Led.elf 
+arm-none-eabi-objdump -h -S  Toggle_Led.elf  > "Toggle_Led.list"
+arm-none-eabi-objcopy  -O ihex  Toggle_Led.elf  "Toggle_Led.hex"
+arm-none-eabi-objcopy  -O binary  Toggle_Led.elf  "Toggle_Led.bin"
+   text	   data	    bss	    dec	    hex	filename
+    672	     12	   1564	   2248	    8c8	Toggle_Led.elf
+Finished building: default.size.stdout
+Finished building: Toggle_Led.bin
+ 
+ 
+Finished building: Toggle_Led.hex
+ 
+Finished building: Toggle_Led.list
+ 
