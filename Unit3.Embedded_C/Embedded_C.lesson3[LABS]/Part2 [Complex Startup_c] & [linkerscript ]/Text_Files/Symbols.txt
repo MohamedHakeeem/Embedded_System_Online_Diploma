@@ -1,0 +1,48 @@
+arm-none-eabi-nm main.o
+00000004 D Date
+00000002 C Dumy
+00000000 T main
+00000000 R name
+00000000 D ODR_Bit
+
+arm-none-eabi-nm startup.o
+000000f4 W Bus_Fault_Handler
+000000f4 T Default_Handler
+         U E_bss
+         U E_data
+         U E_text
+000000f4 W Hard_Fault_Handler
+00000004 C i
+         U main
+000000f4 W MM_Fault_Handler
+000000f4 W NMI_Handler
+00000000 T Reset_Handler
+         U S_bss
+         U S_data
+         U Stack_Top
+000000f4 W Usage_Fault_Handler
+00000000 D Vectors
+
+
+ arm-none-eabi-nm Toggle_Led.elf
+080001b8 W Bus_Fault_Handler
+20000004 D Date
+080001b8 T Default_Handler
+20001010 B Dumy
+20000010 B E_bss
+20000010 D E_data
+080001c8 T E_text
+080001b8 W Hard_Fault_Handler
+20001014 B i
+0800001c T main
+080001b8 W MM_Fault_Handler
+080001c4 T name
+080001b8 W NMI_Handler
+20000000 D ODR_Bit
+080000c4 T Reset_Handler
+20000010 B S_bss
+20000000 D S_data
+20001010 B Stack_Top
+080001b8 W Usage_Fault_Handler
+08000000 T Vectors
+
