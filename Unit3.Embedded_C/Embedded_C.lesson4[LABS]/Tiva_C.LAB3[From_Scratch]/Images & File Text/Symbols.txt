@@ -1,0 +1,39 @@
+arm-none-eabi-nm main.o
+00000000 T main
+
+
+arm-none-eabi-nm startup.o
+000000f0 W Bus_Fault_Handler
+000000f0 T Default_Handler
+         U E_bss
+         U E_data
+         U E_text
+000000f0 W Hard_Fault_Handler
+00000004 C i
+         U main
+000000f0 W MM_Fault_Handler
+000000f0 W NMI_Handler
+00000000 T Reset_Handler
+         U S_bss
+         U S_data
+00000000 b Stack_Top
+000000f0 W Usage_Fault_Handler
+00000000 R Vector_ptr
+
+ arm-none-eabi-nm Toggle_Led_TivaC.elf
+000001d4 W Bus_Fault_Handler
+000001d4 T Default_Handler
+20000400 B E_bss
+20000000 T E_data
+000001e0 T E_text
+000001d4 W Hard_Fault_Handler
+20000400 B i
+0000001c T main
+000001d4 W MM_Fault_Handler
+000001d4 W NMI_Handler
+000000e4 T Reset_Handler
+20000000 B S_bss
+20000000 T S_data
+20000000 b Stack_Top
+000001d4 W Usage_Fault_Handler
+00000000 T Vector_ptr
