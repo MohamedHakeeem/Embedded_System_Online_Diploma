@@ -1,4 +1,4 @@
-/*learn-in-depth unit3_lesson3-lab2 part1
+/*learn-in-depth 
   Mohamed Abd El Hakeem EL Said Ali.
   linker_script.ld
 */ 

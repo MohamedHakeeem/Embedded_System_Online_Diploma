@@ -7,7 +7,7 @@ SRC=$(wildcard *.c)			#wildcard searchd any files.c   in the folder.
 OBJ=$(SRC:.c=.o)
 AS=$(wildcard *.s)			#wildcard searchd any files.s   in the folder.
 ASOBJ=$(AS:.s=.o)
-Project_Name=Toggle_Led
+Project_Name=Pressure_Controller
 
 all:$(Project_Name).bin
 	@echo  "==============Build is Done================="

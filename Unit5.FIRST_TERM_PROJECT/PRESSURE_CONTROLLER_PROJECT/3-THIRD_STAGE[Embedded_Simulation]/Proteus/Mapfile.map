@@ -127,7 +127,7 @@ LOAD main.o
 LOAD Main_Algorithm.o
 LOAD Pressure_Sensor.o
 LOAD startup.o
-OUTPUT(Toggle_Led.elf elf32-littlearm)
+OUTPUT(Pressure_Controller.elf elf32-littlearm)
 
 .debug_info     0x00000000      0x7dc
  .debug_info    0x00000000      0x139 Alarm_Actuator.o

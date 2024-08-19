@@ -24,16 +24,12 @@ void setup_app()
 	State_Declare(AL_init);
 	State_Declare(PS_init);
 
-
-
 	//set states pointers for each first task'states
 	PS_State=State_Add(PS_read);
 	MA_State=State_Add(MA_pressureDetection);
 	AL_State=State_Add(AL_alarmSet);
 
 }
-
-
 
 
 int main()
