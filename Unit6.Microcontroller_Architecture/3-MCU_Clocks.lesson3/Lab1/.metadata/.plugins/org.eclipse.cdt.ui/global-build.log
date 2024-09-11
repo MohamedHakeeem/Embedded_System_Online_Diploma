@@ -1,0 +1,24 @@
+
+13:28:17 Build Finished. 0 errors, 0 warnings. (took 266ms)
+
+13:28:17 **** Incremental Build of configuration Debug for project lab1_unit6_lesson3 ****
+make -j8 all 
+arm-none-eabi-size   lab1_unit6_lesson3.elf 
+   text	   data	    bss	    dec	    hex	filename
+    656	      8	   1568	   2232	    8b8	lab1_unit6_lesson3.elf
+Finished building: default.size.stdout
+ 
+13:28:17 **** Incremental Build of configuration Debug for project lab1_unit6_lesson3 ****
+make -j8 all 
+arm-none-eabi-size   lab1_unit6_lesson3.elf 
+   text	   data	    bss	    dec	    hex	filename
+    656	      8	   1568	   2232	    8b8	lab1_unit6_lesson3.elf
+Finished building: default.size.stdout
+ 
+13:28:18 **** Incremental Build of configuration Debug for project lab1_unit6_lesson3 ****
+make -j8 all 
+arm-none-eabi-size   lab1_unit6_lesson3.elf 
+   text	   data	    bss	    dec	    hex	filename
+    656	      8	   1568	   2232	    8b8	lab1_unit6_lesson3.elf
+Finished building: default.size.stdout
+ 

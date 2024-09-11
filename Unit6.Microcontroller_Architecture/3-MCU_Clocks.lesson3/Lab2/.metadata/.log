@@ -1,0 +1,24 @@
+!SESSION 2024-09-11 14:43:43.761 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-11 14:44:07.827
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-11 14:44:07.827
+!MESSAGE Log4j2 initialized with config file F:\Embedded Systems New\Diploma\Unit6.Microcontroller_Architecture\3-MCU_Clocks.lesson3\Lab2\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-11 14:44:43.253
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-11 14:45:47.770
+!MESSAGE Indexed 'Lab2_Unit6_Lesson3' (3 sources, 53 headers) in 1.75 sec: 1,949 declarations; 2,831 references; 1 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-11 14:54:10.688
+!MESSAGE Indexed 'Lab2_Unit6_Lesson3.2' (3 sources, 53 headers) in 0.415 sec: 1,951 declarations; 2,856 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-11 15:15:37.893
+!MESSAGE Indexed 'Lab2_Unit6_Lesson3_2' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
