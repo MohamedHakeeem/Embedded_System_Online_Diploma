@@ -1,0 +1,37 @@
+!SESSION 2024-09-15 21:46:58.403 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-15 21:47:53.159
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-15 21:47:53.192
+!MESSAGE Log4j2 initialized with config file F:\Embedded Systems New\Diploma\Unit6.Microcontroller_Architecture\4-MCU_Interrupts.lesson4\LAB2.EXTI0[Toggle Led]\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-15 21:48:21.721
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-15 21:51:57.761
+!MESSAGE Indexed 'EXTI_Toggle' (3 sources, 53 headers) in 3.21 sec: 1,949 declarations; 2,831 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+!SESSION 2024-09-18 16:48:49.730 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  F:\Embedded Systems New\Diploma\Unit6.Microcontroller_Architecture\4-MCU_Interrupts.lesson4\LAB2.EXTI0[Toggle Led]\EXTI_Toggle\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 F:\Embedded Systems New\Diploma\Unit6.Microcontroller_Architecture\4-MCU_Interrupts.lesson4\LAB2.EXTI0[Toggle Led]\EXTI_Toggle\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-18 16:49:47.084
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-18 16:49:47.143
+!MESSAGE Log4j2 initialized with config file F:\Embedded Systems New\Diploma\Unit6.Microcontroller_Architecture\4-MCU_Interrupts.lesson4\LAB2.EXTI0[Toggle Led]\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-18 16:50:29.262
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-18 16:50:30.965
+!MESSAGE Indexed 'EXTI_Toggle' (3 sources, 53 headers) in 1.77 sec: 1,955 declarations; 2,862 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
