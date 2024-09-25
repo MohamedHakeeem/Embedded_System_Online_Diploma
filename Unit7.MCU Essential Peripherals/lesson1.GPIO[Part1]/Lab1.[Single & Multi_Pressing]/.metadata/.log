@@ -1,0 +1,37 @@
+!SESSION 2024-09-25 19:08:03.208 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-25 19:08:20.149
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-25 19:08:20.173
+!MESSAGE Log4j2 initialized with config file F:\Embedded Systems New\Diploma\Unit7.MCU Essential Peripherals\lesson1.GPIO[Part1]\Lab1.[Single & Multi_Pressing]\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-25 19:09:05.160
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-25 19:11:34.620
+!MESSAGE Indexed 'Lab1' (3 sources, 53 headers) in 3.19 sec: 1,949 declarations; 2,831 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+!SESSION 2024-09-25 20:41:42.086 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  F:\Embedded Systems New\Diploma\Unit7.MCU Essential Peripherals\lesson1.GPIO[Part1]\Lab1.[Single & Multi_Pressing]\Lab1\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 F:\Embedded Systems New\Diploma\Unit7.MCU Essential Peripherals\lesson1.GPIO[Part1]\Lab1.[Single & Multi_Pressing]\Lab1\.cproject
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-25 20:42:06.741
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-25 20:42:06.758
+!MESSAGE Log4j2 initialized with config file F:\Embedded Systems New\Diploma\Unit7.MCU Essential Peripherals\lesson1.GPIO[Part1]\Lab1.[Single & Multi_Pressing]\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-25 20:42:46.448
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-25 20:42:47.791
+!MESSAGE Indexed 'Lab1' (3 sources, 53 headers) in 1.32 sec: 1,955 declarations; 2,862 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
