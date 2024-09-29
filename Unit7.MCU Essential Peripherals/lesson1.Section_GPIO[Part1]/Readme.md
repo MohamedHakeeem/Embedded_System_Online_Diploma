@@ -8,7 +8,6 @@
 
 
 Buzzer:
-
 ![Buzzer](https://github.com/user-attachments/assets/731db6dd-a524-4c79-9499-773d76d51535)
 
 
