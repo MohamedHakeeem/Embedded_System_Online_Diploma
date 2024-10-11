@@ -1,0 +1,338 @@
+
+;; Function _sbrk (_sbrk, funcdef_no=0, decl_uid=4470, cgraph_uid=1, symbol_order=1)
+
+Creating trace 0 : start at note 1
+Creating trace 1 : start at note 65
+Creating trace 2 : start at code_label 20
+Creating trace 3 : start at code_label 37
+Creating trace 4 : start at code_label 49
+Creating trace 5 : start at note 66
+Creating trace 6 : start at code_label 73
+Creating trace 7 : start at code_label 75
+Processing trace 0 : start at note 1
+   saw edge from trace 0 to 1 (via fallthru 0)
+	push trace 1 to worklist
+Processing trace 1 : start at note 65
+   saw edge from trace 1 to 2 (via jump_insn 15)
+	push trace 2 to worklist
+   saw edge from trace 1 to 2 (via fallthru 0)
+Processing trace 2 : start at code_label 20
+   saw edge from trace 2 to 3 (via jump_insn 28)
+	push trace 3 to worklist
+   saw edge from trace 2 to 4 (via jump_insn 58)
+	push trace 4 to worklist
+Processing trace 4 : start at code_label 49
+   saw edge from trace 4 to 5 (via fallthru 0)
+	push trace 5 to worklist
+Processing trace 5 : start at note 66
+Processing trace 3 : start at code_label 37
+   saw edge from trace 3 to 4 (via fallthru 0)
+
+
+_sbrk
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 2 [r2] 3 [r3] 7 [r7] 12 [ip] 13 [sp] 14 [lr] 15 [pc] 100 [cc]
+;;  ref usage 	r0={3d,4u} r1={2d} r2={9d,7u} r3={19d,16u} r7={4d,20u} r12={2d} r13={5d,20u} r14={2d,2u} r15={2d} r16={1d} r17={1d} r18={1d} r19={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} r81={1d} r82={1d} r83={1d} r84={1d} r85={1d} r86={1d} r87={1d} r88={1d} r89={1d} r90={1d} r91={1d} r92={1d} r93={1d} r94={1d} r95={1d} r96={1d} r97={1d} r98={1d} r99={1d} r100={3d,2u} r101={1d} r102={1d,1u} r104={1d} r105={1d} r106={1d} 
+;;    total ref usage 212{140d,72u,0e} in 48{47 regular + 1 call} insns.
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 61 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 61 4 82 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [4  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) "../Src/sysmem.c":54:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [4  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [4  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(note 82 61 83 2
+	.cfi_def_cfa_offset 8
+	 NOTE_INSN_CFI)
+(note 83 82 84 2
+	.cfi_offset 7, -8
+	 NOTE_INSN_CFI)
+(note 84 83 62 2
+	.cfi_offset 14, -4
+	 NOTE_INSN_CFI)
+(insn/f 62 84 85 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -24 [0xffffffffffffffe8]))) "../Src/sysmem.c":54:1 7 {*arm_addsi3}
+     (nil))
+(note 85 62 63 2
+	.cfi_def_cfa_offset 32
+	 NOTE_INSN_CFI)
+(insn 63 85 64 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../Src/sysmem.c":54:1 379 {stack_tie}
+     (nil))
+(insn/f 64 63 86 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../Src/sysmem.c":54:1 7 {*arm_addsi3}
+     (nil))
+(note 86 64 65 2
+	.cfi_def_cfa_register 7
+	 NOTE_INSN_CFI)
+(note 65 86 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 65 3 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 incr+0 S4 A32])
+        (reg:SI 0 r0 [ incr ])) "../Src/sysmem.c":54:1 977 {*thumb2_movsi_insn}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 2 r2 [orig:113 _estack.0_1 ] [113])
+        (mem:SI (label_ref 75) [0  S4 A32])) "../Src/sysmem.c":58:32 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 3 r3 [orig:114 _Min_Stack_Size.1_2 ] [114])
+        (mem:SI (const:SI (plus:SI (label_ref 75)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../Src/sysmem.c":58:53 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg:SI 3 r3 [125])
+                (minus:SI (reg:SI 2 r2 [orig:113 _estack.0_1 ] [113])
+                    (reg:SI 3 r3 [orig:114 _Min_Stack_Size.1_2 ] [114])))
+            (clobber (reg:CC 100 cc))
+        ]) "../Src/sysmem.c":58:18 1018 {*thumb2_subsi_short}
+     (nil))
+(insn 9 8 10 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [2 stack_limit+0 S4 A32])
+        (reg:SI 3 r3 [125])) "../Src/sysmem.c":58:18 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 3 r3 [126])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [2 stack_limit+0 S4 A32])) "../Src/sysmem.c":59:18 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 11 10 12 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])) [1 max_heap+0 S4 A32])
+        (reg:SI 3 r3 [126])) "../Src/sysmem.c":59:18 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 3 r3 [127])
+        (mem:SI (const:SI (plus:SI (label_ref 75)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "../Src/sysmem.c":63:12 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 3 r3 [orig:115 __sbrk_heap_end.2_3 ] [115])
+        (mem/f/c:SI (reg/f:SI 3 r3 [127]) [1 __sbrk_heap_end+0 S4 A32])) "../Src/sysmem.c":63:12 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 14 13 15 2 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 3 r3 [orig:115 __sbrk_heap_end.2_3 ] [115])
+            (const_int 0 [0]))) "../Src/sysmem.c":63:6 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 20)
+            (pc))) "../Src/sysmem.c":63:6 273 {arm_cond_branch}
+     (nil)
+ -> 20)
+(note 16 15 17 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 3 (set (reg/f:SI 3 r3 [128])
+        (mem:SI (const:SI (plus:SI (label_ref 75)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "../Src/sysmem.c":65:21 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 18 17 19 3 (set (reg/f:SI 2 r2 [129])
+        (mem:SI (const:SI (plus:SI (label_ref 75)
+                    (const_int 12 [0xc]))) [0  S4 A32])) "../Src/sysmem.c":65:21 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 19 18 20 3 (set (mem/f/c:SI (reg/f:SI 3 r3 [128]) [1 __sbrk_heap_end+0 S4 A32])
+        (reg/f:SI 2 r2 [129])) "../Src/sysmem.c":65:21 977 {*thumb2_movsi_insn}
+     (nil))
+(code_label 20 19 21 4 2 (nil) [1 uses])
+(note 21 20 22 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 4 (set (reg/f:SI 3 r3 [130])
+        (mem:SI (const:SI (plus:SI (label_ref 75)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "../Src/sysmem.c":69:23 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 23 22 24 4 (set (reg/f:SI 2 r2 [orig:116 __sbrk_heap_end.3_4 ] [116])
+        (mem/f/c:SI (reg/f:SI 3 r3 [130]) [1 __sbrk_heap_end+0 S4 A32])) "../Src/sysmem.c":69:23 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 24 23 25 4 (set (reg:SI 3 r3 [orig:117 incr.4_5 ] [117])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 incr+0 S4 A32])) "../Src/sysmem.c":69:23 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 25 24 26 4 (set (reg/f:SI 3 r3 [orig:118 _6 ] [118])
+        (plus:SI (reg:SI 3 r3 [orig:117 incr.4_5 ] [117])
+            (reg/f:SI 2 r2 [orig:116 __sbrk_heap_end.3_4 ] [116]))) "../Src/sysmem.c":69:23 7 {*arm_addsi3}
+     (nil))
+(insn 26 25 27 4 (set (reg:SI 2 r2 [131])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])) [1 max_heap+0 S4 A32])) "../Src/sysmem.c":69:6 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 27 26 28 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 2 r2 [131])
+            (reg/f:SI 3 r3 [orig:118 _6 ] [118]))) "../Src/sysmem.c":69:6 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 28 27 29 4 (set (pc)
+        (if_then_else (geu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 37)
+            (pc))) "../Src/sysmem.c":69:6 273 {arm_cond_branch}
+     (nil)
+ -> 37)
+(note 29 28 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(call_insn 30 29 31 5 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__errno") [flags 0x41]  <function_decl 0000000005d67b00 __errno>) [0 __errno S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../Src/sysmem.c":71:5 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 31 30 32 5 (set (reg/f:SI 3 r3 [orig:119 _7 ] [119])
+        (reg:SI 0 r0)) "../Src/sysmem.c":71:5 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 32 31 33 5 (parallel [
+            (set (reg:SI 2 r2 [132])
+                (const_int 12 [0xc]))
+            (clobber (reg:CC 100 cc))
+        ]) "../Src/sysmem.c":71:11 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 33 32 34 5 (set (mem:SI (reg/f:SI 3 r3 [orig:119 _7 ] [119]) [3 *_7+0 S4 A32])
+        (reg:SI 2 r2 [132])) "../Src/sysmem.c":71:11 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 34 33 58 5 (set (reg/f:SI 3 r3 [orig:123 _11 ] [123])
+        (const_int -1 [0xffffffffffffffff])) "../Src/sysmem.c":72:12 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 58 34 59 5 (set (pc)
+        (label_ref 49)) "../Src/sysmem.c":72:12 284 {*arm_jump}
+     (nil)
+ -> 49)
+(barrier 59 58 37)
+(code_label 37 59 38 6 3 (nil) [1 uses])
+(note 38 37 39 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 39 38 40 6 (set (reg/f:SI 3 r3 [133])
+        (mem:SI (const:SI (plus:SI (label_ref 75)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "../Src/sysmem.c":75:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 40 39 41 6 (set (reg/f:SI 3 r3 [134])
+        (mem/f/c:SI (reg/f:SI 3 r3 [133]) [1 __sbrk_heap_end+0 S4 A32])) "../Src/sysmem.c":75:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 41 40 42 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 prev_heap_end+0 S4 A32])
+        (reg/f:SI 3 r3 [134])) "../Src/sysmem.c":75:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 42 41 43 6 (set (reg/f:SI 3 r3 [135])
+        (mem:SI (const:SI (plus:SI (label_ref 75)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "../Src/sysmem.c":76:19 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 43 42 44 6 (set (reg/f:SI 2 r2 [orig:120 __sbrk_heap_end.5_8 ] [120])
+        (mem/f/c:SI (reg/f:SI 3 r3 [135]) [1 __sbrk_heap_end+0 S4 A32])) "../Src/sysmem.c":76:19 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 44 43 45 6 (set (reg:SI 3 r3 [orig:121 incr.6_9 ] [121])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 incr+0 S4 A32])) "../Src/sysmem.c":76:19 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 45 44 46 6 (set (reg/f:SI 3 r3 [orig:122 _10 ] [122])
+        (plus:SI (reg:SI 3 r3 [orig:121 incr.6_9 ] [121])
+            (reg/f:SI 2 r2 [orig:120 __sbrk_heap_end.5_8 ] [120]))) "../Src/sysmem.c":76:19 7 {*arm_addsi3}
+     (nil))
+(insn 46 45 47 6 (set (reg/f:SI 2 r2 [136])
+        (mem:SI (const:SI (plus:SI (label_ref 75)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "../Src/sysmem.c":76:19 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 47 46 48 6 (set (mem/f/c:SI (reg/f:SI 2 r2 [136]) [1 __sbrk_heap_end+0 S4 A32])
+        (reg/f:SI 3 r3 [orig:122 _10 ] [122])) "../Src/sysmem.c":76:19 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 48 47 49 6 (set (reg/f:SI 3 r3 [orig:123 _11 ] [123])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 prev_heap_end+0 S4 A32])) "../Src/sysmem.c":78:10 977 {*thumb2_movsi_insn}
+     (nil))
+(code_label 49 48 50 7 4 (nil) [1 uses])
+(note 50 49 55 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 55 50 56 7 (set (reg/i:SI 0 r0)
+        (reg/f:SI 3 r3 [orig:124 <retval> ] [124])) "../Src/sysmem.c":79:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 56 55 66 7 (use (reg/i:SI 0 r0)) "../Src/sysmem.c":79:1 -1
+     (nil))
+(note 66 56 67 7 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 67 66 87 7 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 100 cc))
+        ]) "../Src/sysmem.c":79:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])))
+        (nil)))
+(note 87 67 68 7
+	.cfi_def_cfa_offset 8
+	 NOTE_INSN_CFI)
+(insn 68 87 69 7 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../Src/sysmem.c":79:1 301 {blockage}
+     (nil))
+(insn/f 69 68 88 7 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../Src/sysmem.c":79:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(note 88 69 70 7
+	.cfi_def_cfa_register 13
+	 NOTE_INSN_CFI)
+(insn 70 88 71 7 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../Src/sysmem.c":79:1 397 {force_register_use}
+     (nil))
+(jump_insn 71 70 72 7 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [4  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [4  S4 A32]))
+        ]) "../Src/sysmem.c":79:1 381 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 72 71 73)
+(code_label 73 72 74 6 (nil) [0 uses])
+(insn 74 73 75 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 385 {align_4}
+     (nil))
+(code_label 75 74 76 5 (nil) [0 uses])
+(insn 76 75 77 (unspec_volatile [
+            (symbol_ref:SI ("_estack") [flags 0x40]  <var_decl 00000000059b4a20 _estack>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 77 76 78 (unspec_volatile [
+            (symbol_ref:SI ("_Min_Stack_Size") [flags 0x40]  <var_decl 00000000059b4ab0 _Min_Stack_Size>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 78 77 79 (unspec_volatile [
+            (symbol_ref:SI ("__sbrk_heap_end") [flags 0x2]  <var_decl 00000000059b4900 __sbrk_heap_end>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 79 78 80 (unspec_volatile [
+            (symbol_ref:SI ("_end") [flags 0x40]  <var_decl 00000000059b4990 _end>)
+        ] VUNSPEC_POOL_4) 390 {consttable_4}
+     (nil))
+(insn 80 79 81 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 387 {consttable_end}
+     (nil))
+(barrier 81 80 60)
+(note 60 81 0 NOTE_INSN_DELETED)

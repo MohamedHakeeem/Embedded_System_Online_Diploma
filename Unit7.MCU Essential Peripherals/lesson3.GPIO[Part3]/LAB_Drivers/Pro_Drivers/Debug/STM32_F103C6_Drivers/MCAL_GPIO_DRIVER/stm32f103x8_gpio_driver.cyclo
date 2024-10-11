@@ -1,0 +1,11 @@
+stm32f103x8_gpio_driver.c:27:6:MCAL_GPIO_Enable_ClocK	5
+stm32f103x8_gpio_driver.c:61:6:MCAL_GPIO_Diable_ClocK	5
+stm32f103x8_gpio_driver.c:95:9:Get_Pos_CRLH	28
+stm32f103x8_gpio_driver.c:166:6:MCAL_GPIO_Init	8
+stm32f103x8_gpio_driver.c:217:6:MCAL_GPIO_DInit	5
+stm32f103x8_gpio_driver.c:258:10:MCAL_GPIO_ReadPin	2
+stm32f103x8_gpio_driver.c:273:10:MCAL_GPIO_ReadPort	1
+stm32f103x8_gpio_driver.c:289:6:MCAL_GPIO_WritePin	2
+stm32f103x8_gpio_driver.c:315:6:MCAL_GPIO_WritePort	1
+stm32f103x8_gpio_driver.c:333:6:MCAL_GPIO_TogglePin	1
+stm32f103x8_gpio_driver.c:348:9:MCAL_GPIO_LockPin	3

@@ -1,0 +1,3034 @@
+
+;; Function MCAL_GPIO_Enable_ClocK (MCAL_GPIO_Enable_ClocK, funcdef_no=3, decl_uid=5724, cgraph_uid=4, symbol_order=3)
+
+
+
+MCAL_GPIO_Enable_ClocK
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 100 [cc]
+;;  ref usage 	r0={1d,1u} r1={1d} r2={9d,8u} r3={17d,16u} r7={4d,19u} r13={5d,19u} r14={1d,1u} r100={4d,4u} r102={1d,1u} 
+;;    total ref usage 112{43d,69u,0e} in 51{51 regular + 0 call} insns.
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 86 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 86 4 87 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [7  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":36:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 87 86 88 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -12 [0xfffffffffffffff4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":36:1 7 {*arm_addsi3}
+     (nil))
+(insn 88 87 89 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":36:1 379 {stack_tie}
+     (nil))
+(insn/f 89 88 90 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":36:1 7 {*arm_addsi3}
+     (nil))
+(note 90 89 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 90 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])
+        (reg:SI 0 r0 [ GPIOx ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":36:1 977 {*thumb2_movsi_insn}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 3 r3 [129])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":37:4 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 2 r2 [130])
+        (mem:SI (label_ref 113) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":37:4 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 8 7 9 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [129])
+            (reg:SI 2 r2 [130]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":37:4 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":37:4 273 {arm_cond_branch}
+     (nil)
+ -> 18)
+(note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (set (reg/f:SI 3 r3 [orig:113 _1 ] [113])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":39:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:113 _1 ] [113])
+                (const_int 24 [0x18])) [1 _1->APB2ENR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":39:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 13 12 14 3 (set (reg/f:SI 2 r2 [orig:115 _3 ] [115])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":39:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 14 13 15 3 (set (reg:SI 3 r3 [orig:116 _4 ] [116])
+        (ior:SI (reg:SI 3 r3 [orig:114 _2 ] [114])
+            (const_int 4 [0x4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":39:3 106 {*iorsi3_insn}
+     (nil))
+(insn 15 14 62 3 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:115 _3 ] [115])
+                (const_int 24 [0x18])) [1 _3->APB2ENR+0 S4 A32])
+        (reg:SI 3 r3 [orig:116 _4 ] [116])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":39:3 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 62 15 63 3 (set (pc)
+        (label_ref:SI 71)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":58:1 284 {*arm_jump}
+     (nil)
+ -> 71)
+(barrier 63 62 18)
+(code_label 18 63 19 4 2 (nil) [1 uses])
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (set (reg:SI 3 r3 [131])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":42:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 21 20 22 4 (set (reg:SI 2 r2 [132])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":42:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 22 21 23 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [131])
+            (reg:SI 2 r2 [132]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":42:9 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 23 22 24 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 32)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":42:9 273 {arm_cond_branch}
+     (nil)
+ -> 32)
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (set (reg/f:SI 3 r3 [orig:117 _5 ] [117])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":44:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 26 25 27 5 (set (reg:SI 3 r3 [orig:118 _6 ] [118])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:117 _5 ] [117])
+                (const_int 24 [0x18])) [1 _5->APB2ENR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":44:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 27 26 28 5 (set (reg/f:SI 2 r2 [orig:119 _7 ] [119])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":44:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 28 27 29 5 (set (reg:SI 3 r3 [orig:120 _8 ] [120])
+        (ior:SI (reg:SI 3 r3 [orig:118 _6 ] [118])
+            (const_int 8 [0x8]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":44:3 106 {*iorsi3_insn}
+     (nil))
+(insn 29 28 64 5 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:119 _7 ] [119])
+                (const_int 24 [0x18])) [1 _7->APB2ENR+0 S4 A32])
+        (reg:SI 3 r3 [orig:120 _8 ] [120])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":44:3 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 64 29 65 5 (set (pc)
+        (label_ref:SI 71)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":58:1 284 {*arm_jump}
+     (nil)
+ -> 71)
+(barrier 65 64 32)
+(code_label 32 65 33 6 4 (nil) [1 uses])
+(note 33 32 34 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 6 (set (reg:SI 3 r3 [133])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":46:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 35 34 36 6 (set (reg:SI 2 r2 [134])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 12 [0xc]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":46:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 36 35 37 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [133])
+            (reg:SI 2 r2 [134]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":46:9 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 37 36 38 6 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 46)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":46:9 273 {arm_cond_branch}
+     (nil)
+ -> 46)
+(note 38 37 39 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 39 38 40 7 (set (reg/f:SI 3 r3 [orig:121 _9 ] [121])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":48:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 40 39 41 7 (set (reg:SI 3 r3 [orig:122 _10 ] [122])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:121 _9 ] [121])
+                (const_int 24 [0x18])) [1 _9->APB2ENR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":48:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 41 40 42 7 (set (reg/f:SI 2 r2 [orig:123 _11 ] [123])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":48:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 42 41 43 7 (set (reg:SI 3 r3 [orig:124 _12 ] [124])
+        (ior:SI (reg:SI 3 r3 [orig:122 _10 ] [122])
+            (const_int 16 [0x10]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":48:3 106 {*iorsi3_insn}
+     (nil))
+(insn 43 42 66 7 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:123 _11 ] [123])
+                (const_int 24 [0x18])) [1 _11->APB2ENR+0 S4 A32])
+        (reg:SI 3 r3 [orig:124 _12 ] [124])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":48:3 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 66 43 67 7 (set (pc)
+        (label_ref:SI 71)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":58:1 284 {*arm_jump}
+     (nil)
+ -> 71)
+(barrier 67 66 46)
+(code_label 46 67 47 8 5 (nil) [1 uses])
+(note 47 46 48 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 8 (set (reg:SI 3 r3 [135])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":50:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 49 48 50 8 (set (reg:SI 2 r2 [136])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 16 [0x10]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":50:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 50 49 51 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [135])
+            (reg:SI 2 r2 [136]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":50:9 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 51 50 52 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 71)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":50:9 273 {arm_cond_branch}
+     (nil)
+ -> 71)
+(note 52 51 53 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 9 (set (reg/f:SI 3 r3 [orig:125 _13 ] [125])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":52:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 54 53 55 9 (set (reg:SI 3 r3 [orig:126 _14 ] [126])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:125 _13 ] [125])
+                (const_int 24 [0x18])) [1 _13->APB2ENR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":52:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 55 54 56 9 (set (reg/f:SI 2 r2 [orig:127 _15 ] [127])
+        (mem:SI (const:SI (plus:SI (label_ref 113)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":52:3 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 56 55 57 9 (set (reg:SI 3 r3 [orig:128 _16 ] [128])
+        (ior:SI (reg:SI 3 r3 [orig:126 _14 ] [126])
+            (const_int 32 [0x20]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":52:3 106 {*iorsi3_insn}
+     (nil))
+(insn 57 56 71 9 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:127 _15 ] [127])
+                (const_int 24 [0x18])) [1 _15->APB2ENR+0 S4 A32])
+        (reg:SI 3 r3 [orig:128 _16 ] [128])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":52:3 977 {*thumb2_movsi_insn}
+     (nil))
+(code_label 71 57 70 10 6 (nil) [4 uses])
+(note 70 71 72 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 72 70 91 10 (const_int 0 [0]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":58:1 311 {nop}
+     (nil))
+(note 91 72 92 10 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 92 91 93 10 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":58:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])))
+        (nil)))
+(insn 93 92 94 10 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":58:1 301 {blockage}
+     (nil))
+(insn/f 94 93 95 10 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":58:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 95 94 96 10 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":58:1 397 {force_register_use}
+     (nil))
+(insn/f 96 95 97 10 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [7  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":58:1 976 {*thumb2_pop_single}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 97 96 98 10 (simple_return) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":58:1 1009 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 98 97 111)
+(code_label 111 98 112 8 (nil) [0 uses])
+(insn 112 111 113 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) -1
+     (nil))
+(code_label 113 112 114 7 (nil) [0 uses])
+(insn 114 113 115 (unspec_volatile [
+            (const_int 1073809408 [0x40010800])
+        ] VUNSPEC_POOL_4) -1
+     (nil))
+(insn 115 114 116 (unspec_volatile [
+            (const_int 1073876992 [0x40021000])
+        ] VUNSPEC_POOL_4) -1
+     (nil))
+(insn 116 115 117 (unspec_volatile [
+            (const_int 1073810432 [0x40010c00])
+        ] VUNSPEC_POOL_4) -1
+     (nil))
+(insn 117 116 118 (unspec_volatile [
+            (const_int 1073811456 [0x40011000])
+        ] VUNSPEC_POOL_4) -1
+     (nil))
+(insn 118 117 119 (unspec_volatile [
+            (const_int 1073812480 [0x40011400])
+        ] VUNSPEC_POOL_4) -1
+     (nil))
+(insn 119 118 120 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) -1
+     (nil))
+(barrier 120 119 85)
+(note 85 120 0 NOTE_INSN_DELETED)
+
+;; Function Get_Pos_CRLH (Get_Pos_CRLH, funcdef_no=4, decl_uid=5752, cgraph_uid=5, symbol_order=4)
+
+
+
+Get_Pos_CRLH
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 100 [cc]
+;;  ref usage 	r0={2d,3u} r1={1d} r2={2d} r3={21d,26u} r7={4d,48u} r13={5d,51u} r14={1d,1u} r100={22d,21u} r102={1d,1u} 
+;;    total ref usage 210{59d,151u,0e} in 93{93 regular + 0 call} insns.
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 231 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 231 6 232 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [7  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":69:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 232 231 233 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -12 [0xfffffffffffffff4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":69:1 7 {*arm_addsi3}
+     (nil))
+(insn 233 232 234 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":69:1 379 {stack_tie}
+     (nil))
+(insn/f 234 233 235 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":69:1 7 {*arm_addsi3}
+     (nil))
+(note 235 234 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 235 4 2 (set (reg:SI 3 r3 [116])
+        (reg:SI 0 r0 [ PinNumber ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":69:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 4 2 5 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                (const_int 6 [0x6])) [3 PinNumber+0 S2 A16])
+        (reg:HI 3 r3 [117])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":69:1 979 {*thumb2_movhi_insn}
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:SI 3 r3 [orig:113 _1 ] [113])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 6 [0x6])) [3 PinNumber+0 S2 A16]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 9 8 10 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 32768 [0x8000]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 178)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 178)
+(note 11 10 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 14 11 15 3 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 32768 [0x8000]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 15 14 16 3 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 183)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 16384 [0x4000]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 18 17 19 4 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 173)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 173)
+(note 19 18 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 19 23 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 16384 [0x4000]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 23 22 24 5 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 183)
+(note 24 23 25 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 8192 [0x2000]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 26 25 27 6 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 168)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 168)
+(note 27 26 30 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 30 27 31 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 8192 [0x2000]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 31 30 32 7 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 183)
+(note 32 31 33 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 34 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 4096 [0x1000]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 34 33 35 8 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 163)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 163)
+(note 35 34 38 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 38 35 39 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 4096 [0x1000]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 39 38 40 9 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 183)
+(note 40 39 41 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 2048 [0x800]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 42 41 43 10 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 158)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 158)
+(note 43 42 46 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 46 43 47 11 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 2048 [0x800]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 47 46 48 11 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 183)
+(note 48 47 49 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 49 48 50 12 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 1024 [0x400]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 50 49 51 12 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 153)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 153)
+(note 51 50 54 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 54 51 55 13 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 1024 [0x400]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 55 54 56 13 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 183)
+(note 56 55 57 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 58 14 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 512 [0x200]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 58 57 59 14 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 148)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 148)
+(note 59 58 62 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 62 59 63 15 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 512 [0x200]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 63 62 64 15 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 183)
+(note 64 63 65 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 16 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 256 [0x100]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 66 65 67 16 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 143)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 143)
+(note 67 66 70 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 70 67 71 17 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 256 [0x100]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 71 70 72 17 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 183)
+(note 72 71 73 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 73 72 74 18 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 128 [0x80]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 74 73 75 18 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 138)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 138)
+(note 75 74 78 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 78 75 79 19 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 128 [0x80]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 79 78 80 19 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 183)
+(note 80 79 83 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 83 80 84 20 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 32 [0x20]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 84 83 85 20 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 96)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 96)
+(note 85 84 88 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 88 85 89 21 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 89 88 90 21 (set (pc)
+        (if_then_else (le (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 183)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 183)
+(note 90 89 91 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 91 90 92 22 (parallel [
+            (set (reg:SI 3 r3 [118])
+                (plus:SI (reg:SI 3 r3 [orig:113 _1 ] [113])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 1017 {*thumb2_addsi_short}
+     (nil))
+(jump_insn 92 91 93 22 (parallel [
+            (set (pc)
+                (if_then_else (leu (reg:SI 3 r3 [118])
+                        (const_int 31 [0x1f]))
+                    (mem/u/c:SI (plus:SI (mult:SI (reg:SI 3 r3 [118])
+                                (const_int 4 [0x4]))
+                            (label_ref:SI 93)) [0  S4 A32])
+                    (label_ref:SI 183)))
+            (clobber (reg:CC 100 cc))
+            (clobber (reg:SI 2 r2 [121]))
+            (use (label_ref:SI 93))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 1007 {*thumb2_casesi_internal}
+     (insn_list:REG_LABEL_TARGET 183 (nil))
+ -> 93)
+(code_label 93 92 94 22 (nil) [2 uses])
+(jump_table_data 94 93 95 (addr_diff_vec:SI (label_ref:SI 93)
+         [
+            (label_ref:SI 103)
+            (label_ref:SI 108)
+            (label_ref:SI 183)
+            (label_ref:SI 113)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 118)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 123)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 183)
+            (label_ref:SI 128)
+        ]
+        (const_int 0 [0])
+        (const_int 0 [0])))
+(barrier 95 94 96)
+(code_label 96 95 97 23 20 (nil) [1 uses])
+(note 97 96 98 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 98 97 99 23 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 64 [0x40]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 99 98 195 23 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 133)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 273 {arm_cond_branch}
+     (nil)
+ -> 133)
+(note 195 99 196 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 196 195 197 24 (set (pc)
+        (label_ref 183)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":70:2 284 {*arm_jump}
+     (nil)
+ -> 183)
+(barrier 197 196 103)
+(code_label 103 197 104 25 27 (nil) [1 uses])
+(note 104 103 105 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 105 104 198 25 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":73:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 198 105 199 25 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":73:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 199 198 108)
+(code_label 108 199 109 26 26 (nil) [1 uses])
+(note 109 108 110 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 110 109 200 26 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 4 [0x4]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":76:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 200 110 201 26 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":76:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 201 200 113)
+(code_label 113 201 114 27 25 (nil) [1 uses])
+(note 114 113 115 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 115 114 202 27 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 8 [0x8]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":79:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 202 115 203 27 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":79:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 203 202 118)
+(code_label 118 203 119 28 24 (nil) [1 uses])
+(note 119 118 120 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 120 119 204 28 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 12 [0xc]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":82:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 204 120 205 28 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":82:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 205 204 123)
+(code_label 123 205 124 29 23 (nil) [1 uses])
+(note 124 123 125 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(insn 125 124 206 29 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 16 [0x10]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":85:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 206 125 207 29 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":85:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 207 206 128)
+(code_label 128 207 129 30 21 (nil) [1 uses])
+(note 129 128 130 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 130 129 208 30 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 20 [0x14]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":88:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 208 130 209 30 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":88:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 209 208 133)
+(code_label 133 209 134 31 28 (nil) [1 uses])
+(note 134 133 135 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(insn 135 134 210 31 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 24 [0x18]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":91:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 210 135 211 31 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":91:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 211 210 138)
+(code_label 138 211 139 32 19 (nil) [1 uses])
+(note 139 138 140 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 140 139 212 32 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 28 [0x1c]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":94:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 212 140 213 32 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":94:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 213 212 143)
+(code_label 143 213 144 33 18 (nil) [1 uses])
+(note 144 143 145 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(insn 145 144 214 33 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":97:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 214 145 215 33 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":97:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 215 214 148)
+(code_label 148 215 149 34 17 (nil) [1 uses])
+(note 149 148 150 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(insn 150 149 216 34 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 4 [0x4]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":100:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 216 150 217 34 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":100:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 217 216 153)
+(code_label 153 217 154 35 16 (nil) [1 uses])
+(note 154 153 155 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(insn 155 154 218 35 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 8 [0x8]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":103:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 218 155 219 35 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":103:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 219 218 158)
+(code_label 158 219 159 36 15 (nil) [1 uses])
+(note 159 158 160 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(insn 160 159 220 36 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 12 [0xc]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":106:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 220 160 221 36 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":106:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 221 220 163)
+(code_label 163 221 164 37 14 (nil) [1 uses])
+(note 164 163 165 37 [bb 37] NOTE_INSN_BASIC_BLOCK)
+(insn 165 164 222 37 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 16 [0x10]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":109:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 222 165 223 37 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":109:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 223 222 168)
+(code_label 168 223 169 38 13 (nil) [1 uses])
+(note 169 168 170 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
+(insn 170 169 224 38 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 20 [0x14]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":112:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 224 170 225 38 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":112:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 225 224 173)
+(code_label 173 225 174 39 12 (nil) [1 uses])
+(note 174 173 175 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
+(insn 175 174 226 39 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 24 [0x18]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":115:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 226 175 227 39 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":115:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 227 226 178)
+(code_label 178 227 179 40 10 (nil) [1 uses])
+(note 179 178 180 40 [bb 40] NOTE_INSN_BASIC_BLOCK)
+(insn 180 179 228 40 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 28 [0x1c]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":118:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 228 180 229 40 (set (pc)
+        (label_ref 186)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":118:10 284 {*arm_jump}
+     (nil)
+ -> 186)
+(barrier 229 228 183)
+(code_label 183 229 184 41 11 (nil) [38 uses])
+(note 184 183 185 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
+(insn 185 184 186 41 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":122:10 1016 {*thumb2_movsi_shortim}
+     (nil))
+(code_label 186 185 187 42 29 (nil) [16 uses])
+(note 187 186 192 42 [bb 42] NOTE_INSN_BASIC_BLOCK)
+(insn 192 187 193 42 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:115 <retval> ] [115])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":127:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 193 192 236 42 (use (reg/i:SI 0 r0)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":127:1 -1
+     (nil))
+(note 236 193 237 42 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 237 236 238 42 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":127:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])))
+        (nil)))
+(insn 238 237 239 42 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":127:1 301 {blockage}
+     (nil))
+(insn/f 239 238 240 42 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":127:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 240 239 241 42 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":127:1 397 {force_register_use}
+     (nil))
+(insn/f 241 240 242 42 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [7  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":127:1 976 {*thumb2_pop_single}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 242 241 243 42 (simple_return) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":127:1 1009 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 243 242 230)
+(note 230 243 0 NOTE_INSN_DELETED)
+
+;; Function MCAL_GPIO_Init (MCAL_GPIO_Init, funcdef_no=5, decl_uid=5727, cgraph_uid=6, symbol_order=5)
+
+
+
+MCAL_GPIO_Init
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 4 [r4] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 4 [r4] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 4 [r4] 7 [r7] 12 [ip] 13 [sp] 14 [lr] 15 [pc] 100 [cc]
+;;  ref usage 	r0={11d,11u} r1={6d,1u} r2={28d,22u} r3={84d,77u} r4={6d,6u} r7={4d,61u} r12={10d} r13={5d,33u} r14={6d,2u} r15={6d} r16={5d} r17={5d} r18={5d} r19={5d} r20={5d} r21={5d} r22={5d} r23={5d} r24={5d} r25={5d} r26={5d} r27={5d} r28={5d} r29={5d} r30={5d} r31={5d} r32={5d} r33={5d} r34={5d} r35={5d} r36={5d} r37={5d} r38={5d} r39={5d} r40={5d} r41={5d} r42={5d} r43={5d} r44={5d} r45={5d} r46={5d} r47={5d} r48={5d} r49={5d} r50={5d} r51={5d} r52={5d} r53={5d} r54={5d} r55={5d} r56={5d} r57={5d} r58={5d} r59={5d} r60={5d} r61={5d} r62={5d} r63={5d} r64={5d} r65={5d} r66={5d} r67={5d} r68={5d} r69={5d} r70={5d} r71={5d} r72={5d} r73={5d} r74={5d} r75={5d} r76={5d} r77={5d} r78={5d} r79={5d} r80={5d} r81={5d} r82={5d} r83={5d} r84={5d} r85={5d} r86={5d} r87={5d} r88={5d} r89={5d} r90={5d} r91={5d} r92={5d} r93={5d} r94={5d} r95={5d} r96={5d} r97={5d} r98={5d} r99={5d} r100={12d,7u} r101={5d} r102={1d,1u} r104={5d} r105={5d} r106={5d} 
+;;    total ref usage 840{619d,221u,0e} in 154{149 regular + 5 call} insns.
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 204 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 204 5 205 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -12 [0xfffffffffffffff4]))) [7  A8])
+                (unspec:BLK [
+                        (reg:SI 4 r4)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg/f:SI 7 r7))
+            (use (reg:SI 14 lr))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":140:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -12 [0xfffffffffffffff4])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32])
+                    (reg:SI 4 r4))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [7  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 8 [0x8])) [7  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 205 204 206 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -20 [0xffffffffffffffec]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":140:1 7 {*arm_addsi3}
+     (nil))
+(insn 206 205 207 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":140:1 379 {stack_tie}
+     (nil))
+(insn/f 207 206 208 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":140:1 7 {*arm_addsi3}
+     (nil))
+(note 208 207 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 208 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])
+        (reg:SI 0 r0 [ GPIOx ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":140:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])
+        (reg:SI 1 r1 [ PinConfig ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":140:1 977 {*thumb2_movsi_insn}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (parallel [
+            (set (reg:SI 3 r3 [185])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":142:21 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])
+        (reg:SI 3 r3 [185])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":142:21 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 3 r3 [186])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":144:25 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 10 9 15 2 (set (reg:SI 3 r3 [orig:113 _1 ] [113])
+        (zero_extend:SI (mem:HI (reg/f:SI 3 r3 [186]) [3 PinConfig_71(D)->GPIO_PinNumber+0 S2 A32]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":144:25 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 15 10 16 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 _1 ] [113])
+            (const_int 255 [0xff]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":144:72 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 16 15 17 2 (set (pc)
+        (if_then_else (gtu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":144:72 273 {arm_cond_branch}
+     (nil)
+ -> 21)
+(note 17 16 18 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 192 3 (set (reg/f:SI 3 r3 [orig:179 iftmp.0_67 ] [179])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":144:72 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 192 18 193 3 (set (pc)
+        (label_ref 25)) 284 {*arm_jump}
+     (nil)
+ -> 25)
+(barrier 193 192 21)
+(code_label 21 193 22 4 31 (nil) [1 uses])
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 4 (set (reg:SI 3 r3 [189])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":144:72 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 24 23 25 4 (parallel [
+            (set (reg/f:SI 3 r3 [orig:179 iftmp.0_67 ] [179])
+                (plus:SI (reg:SI 3 r3 [189])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":144:72 1017 {*thumb2_addsi_short}
+     (nil))
+(code_label 25 24 26 5 32 (nil) [1 uses])
+(note 26 25 27 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 5 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])
+        (reg/f:SI 3 r3 [orig:179 iftmp.0_67 ] [179])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":144:13 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 28 27 29 5 (set (reg/f:SI 3 r3 [190])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:26 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 29 28 30 5 (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+        (zero_extend:SI (mem:HI (reg/f:SI 3 r3 [190]) [3 PinConfig_71(D)->GPIO_PinNumber+0 S2 A32]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:26 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 30 29 31 5 (set (reg:SI 0 r0)
+        (reg:SI 3 r3 [orig:114 _2 ] [114])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:26 977 {*thumb2_movsi_insn}
+     (nil))
+(call_insn 31 30 32 5 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("Get_Pos_CRLH") [flags 0x3]  <function_decl 0000000005da3700 Get_Pos_CRLH>) [0 Get_Pos_CRLH S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:26 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:HI (use (reg:SI 0 r0))
+            (nil))))
+(insn 32 31 34 5 (set (reg:SI 3 r3 [191])
+        (reg:SI 0 r0)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:26 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 34 32 35 5 (set (reg:SI 2 r2 [orig:116 _4 ] [116])
+        (reg:SI 3 r3 [orig:115 _3 ] [115])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:26 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 35 34 36 5 (parallel [
+            (set (reg:SI 3 r3 [192])
+                (const_int 15 [0xf]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:23 1016 {*thumb2_movsi_shortim}
+     (nil))
+(insn 36 35 37 5 (parallel [
+            (set (reg:SI 3 r3 [orig:117 _5 ] [117])
+                (ashift:SI (reg:SI 3 r3 [192])
+                    (reg:SI 2 r2 [orig:116 _4 ] [116])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:23 1013 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 37 36 38 5 (parallel [
+            (set (reg:SI 2 r2 [orig:180 _77 ] [180])
+                (not:SI (reg:SI 3 r3 [orig:117 _5 ] [117])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:17 1026 {*thumb2_one_cmplsi2_short}
+     (nil))
+(insn 38 37 39 5 (set (reg/f:SI 3 r3 [193])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 39 38 41 5 (set (reg:SI 3 r3 [orig:118 _6 ] [118])
+        (mem/v:SI (reg/f:SI 3 r3 [193]) [1 *Reg_Config_75+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 41 39 42 5 (parallel [
+            (set (reg:SI 2 r2 [orig:120 _8 ] [120])
+                (and:SI (reg:SI 2 r2 [orig:119 _7 ] [119])
+                    (reg:SI 3 r3 [orig:118 _6 ] [118])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:14 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 42 41 43 5 (set (reg/f:SI 3 r3 [194])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 43 42 44 5 (set (mem/v:SI (reg/f:SI 3 r3 [194]) [1 *Reg_Config_75+0 S4 A32])
+        (reg:SI 2 r2 [orig:120 _8 ] [120])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":145:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 44 43 45 5 (set (reg/f:SI 3 r3 [195])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":148:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 45 44 46 5 (set (reg:SI 3 r3 [orig:121 _9 ] [121])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [195])
+                (const_int 4 [0x4])) [1 PinConfig_71(D)->GPIO_Mode+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":148:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 46 45 47 5 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:121 _9 ] [121])
+            (const_int 4 [0x4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":148:4 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 47 46 48 5 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":148:4 273 {arm_cond_branch}
+     (nil)
+ -> 63)
+(note 48 47 49 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 49 48 50 6 (set (reg/f:SI 3 r3 [196])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":148:66 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 50 49 51 6 (set (reg:SI 3 r3 [orig:122 _10 ] [122])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [196])
+                (const_int 4 [0x4])) [1 PinConfig_71(D)->GPIO_Mode+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":148:66 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 51 50 52 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:122 _10 ] [122])
+            (const_int 5 [0x5]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":148:53 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 52 51 53 6 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":148:53 273 {arm_cond_branch}
+     (nil)
+ -> 63)
+(note 53 52 54 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 54 53 55 7 (set (reg/f:SI 3 r3 [197])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":149:13 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 55 54 56 7 (set (reg:SI 3 r3 [orig:123 _11 ] [123])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [197])
+                (const_int 4 [0x4])) [1 PinConfig_71(D)->GPIO_Mode+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":149:13 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 56 55 57 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:123 _11 ] [123])
+            (const_int 6 [0x6]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":148:106 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 57 56 58 7 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":148:106 273 {arm_cond_branch}
+     (nil)
+ -> 63)
+(note 58 57 59 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 8 (set (reg/f:SI 3 r3 [198])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":149:68 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 60 59 61 8 (set (reg:SI 3 r3 [orig:124 _12 ] [124])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [198])
+                (const_int 4 [0x4])) [1 PinConfig_71(D)->GPIO_Mode+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":149:68 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 61 60 62 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:124 _12 ] [124])
+            (const_int 7 [0x7]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":149:55 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 62 61 63 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 88)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":149:55 273 {arm_cond_branch}
+     (nil)
+ -> 88)
+(code_label 63 62 64 9 33 (nil) [3 uses])
+(note 64 63 65 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 9 (set (reg/f:SI 3 r3 [199])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:32 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 66 65 67 9 (set (reg:SI 3 r3 [orig:125 _13 ] [125])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [199])
+                (const_int 4 [0x4])) [1 PinConfig_71(D)->GPIO_Mode+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:32 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 67 66 68 9 (parallel [
+            (set (reg:SI 3 r3 [orig:126 _14 ] [126])
+                (plus:SI (reg:SI 3 r3 [orig:125 _13 ] [125])
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:44 1017 {*thumb2_addsi_short}
+     (nil))
+(insn 68 67 69 9 (parallel [
+            (set (reg:SI 2 r2 [orig:127 _15 ] [127])
+                (ashift:SI (reg:SI 3 r3 [orig:126 _14 ] [126])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:49 1013 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 69 68 70 9 (set (reg/f:SI 3 r3 [200])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:66 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 70 69 71 9 (set (reg:SI 3 r3 [orig:128 _16 ] [128])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [200])
+                (const_int 8 [0x8])) [1 PinConfig_71(D)->GPIO_Speed+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:66 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 71 70 72 9 (parallel [
+            (set (reg:SI 3 r3 [orig:129 _17 ] [129])
+                (ior:SI (reg:SI 3 r3 [orig:128 _16 ] [128])
+                    (reg:SI 2 r2 [orig:127 _15 ] [127])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:55 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 72 71 73 9 (set (reg:SI 4 r4 [orig:130 _18 ] [130])
+        (and:SI (reg:SI 3 r3 [orig:129 _17 ] [129])
+            (const_int 15 [0xf]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:81 90 {*arm_andsi3_insn}
+     (nil))
+(insn 73 72 74 9 (set (reg/f:SI 3 r3 [201])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:94 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 74 73 75 9 (set (reg:SI 3 r3 [orig:131 _19 ] [131])
+        (zero_extend:SI (mem:HI (reg/f:SI 3 r3 [201]) [3 PinConfig_71(D)->GPIO_PinNumber+0 S2 A32]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:94 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 75 74 76 9 (set (reg:SI 0 r0)
+        (reg:SI 3 r3 [orig:131 _19 ] [131])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:94 977 {*thumb2_movsi_insn}
+     (nil))
+(call_insn 76 75 77 9 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("Get_Pos_CRLH") [flags 0x3]  <function_decl 0000000005da3700 Get_Pos_CRLH>) [0 Get_Pos_CRLH S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:94 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:HI (use (reg:SI 0 r0))
+            (nil))))
+(insn 77 76 80 9 (set (reg:SI 3 r3 [202])
+        (reg:SI 0 r0)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:94 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 80 77 81 9 (set (reg:SI 2 r2 [orig:184 _91 ] [184])
+        (ashift:SI (reg:SI 4 r4 [orig:130 _18 ] [130])
+            (reg:SI 3 r3 [orig:133 _21 ] [133]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:91 147 {*arm_shiftsi3}
+     (nil))
+(insn 81 80 82 9 (set (reg/f:SI 3 r3 [203])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 82 81 83 9 (set (reg:SI 3 r3 [orig:134 _22 ] [134])
+        (mem/v:SI (reg/f:SI 3 r3 [203]) [1 *Reg_Config_75+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 83 82 84 9 (parallel [
+            (set (reg:SI 2 r2 [orig:135 _23 ] [135])
+                (ior:SI (reg:SI 2 r2 [orig:184 _91 ] [184])
+                    (reg:SI 3 r3 [orig:134 _22 ] [134])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:15 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 84 83 85 9 (set (reg/f:SI 3 r3 [204])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 85 84 191 9 (set (mem/v:SI (reg/f:SI 3 r3 [204]) [1 *Reg_Config_75+0 S4 A32])
+        (reg:SI 2 r2 [orig:135 _23 ] [135])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 191 85 194 9 (const_int 0 [0]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":151:3 311 {nop}
+     (nil))
+(jump_insn 194 191 195 9 (set (pc)
+        (label_ref:SI 202)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":180:1 284 {*arm_jump}
+     (nil)
+ -> 202)
+(barrier 195 194 88)
+(code_label 88 195 89 10 34 (nil) [1 uses])
+(note 89 88 90 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 10 (set (reg/f:SI 3 r3 [205])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":159:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 91 90 92 10 (set (reg:SI 3 r3 [orig:136 _24 ] [136])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [205])
+                (const_int 4 [0x4])) [1 PinConfig_71(D)->GPIO_Mode+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":159:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 92 91 93 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:136 _24 ] [136])
+            (const_int 2 [0x2]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":159:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 93 92 94 10 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 125)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":159:5 273 {arm_cond_branch}
+     (nil)
+ -> 125)
+(note 94 93 95 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 95 94 96 11 (set (reg/f:SI 3 r3 [206])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":161:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 96 95 97 11 (set (reg:SI 3 r3 [orig:137 _25 ] [137])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [206])
+                (const_int 12 [0xc])) [1 GPIOx_72(D)->ODR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":161:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 97 96 98 11 (set (reg/f:SI 2 r2 [207])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":161:27 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 98 97 100 11 (set (reg:SI 2 r2 [orig:138 _26 ] [138])
+        (zero_extend:SI (mem:HI (reg/f:SI 2 r2 [207]) [3 PinConfig_71(D)->GPIO_PinNumber+0 S2 A32]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":161:27 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 100 98 101 11 (parallel [
+            (set (reg:SI 2 r2 [orig:140 _28 ] [140])
+                (ior:SI (reg:SI 2 r2 [orig:139 _27 ] [139])
+                    (reg:SI 3 r3 [orig:137 _25 ] [137])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":161:15 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 101 100 102 11 (set (reg/f:SI 3 r3 [208])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":161:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 102 101 103 11 (set (mem/v:SI (plus:SI (reg/f:SI 3 r3 [208])
+                (const_int 12 [0xc])) [1 GPIOx_72(D)->ODR+0 S4 A32])
+        (reg:SI 2 r2 [orig:140 _28 ] [140])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":161:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 103 102 104 11 (set (reg/f:SI 3 r3 [209])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:33 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 104 103 105 11 (set (reg:SI 3 r3 [orig:141 _29 ] [141])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [209])
+                (const_int 4 [0x4])) [1 PinConfig_71(D)->GPIO_Mode+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:33 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 105 104 106 11 (parallel [
+            (set (reg:SI 2 r2 [orig:142 _30 ] [142])
+                (ashift:SI (reg:SI 3 r3 [orig:141 _29 ] [141])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:46 1013 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 106 105 107 11 (set (reg/f:SI 3 r3 [210])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:63 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 107 106 108 11 (set (reg:SI 3 r3 [orig:143 _31 ] [143])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [210])
+                (const_int 8 [0x8])) [1 PinConfig_71(D)->GPIO_Speed+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:63 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 108 107 109 11 (parallel [
+            (set (reg:SI 3 r3 [orig:144 _32 ] [144])
+                (ior:SI (reg:SI 3 r3 [orig:143 _31 ] [143])
+                    (reg:SI 2 r2 [orig:142 _30 ] [142])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:52 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 109 108 110 11 (set (reg:SI 4 r4 [orig:145 _33 ] [145])
+        (and:SI (reg:SI 3 r3 [orig:144 _32 ] [144])
+            (const_int 15 [0xf]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:78 90 {*arm_andsi3_insn}
+     (nil))
+(insn 110 109 111 11 (set (reg/f:SI 3 r3 [211])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:91 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 111 110 112 11 (set (reg:SI 3 r3 [orig:146 _34 ] [146])
+        (zero_extend:SI (mem:HI (reg/f:SI 3 r3 [211]) [3 PinConfig_71(D)->GPIO_PinNumber+0 S2 A32]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:91 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 112 111 113 11 (set (reg:SI 0 r0)
+        (reg:SI 3 r3 [orig:146 _34 ] [146])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:91 977 {*thumb2_movsi_insn}
+     (nil))
+(call_insn 113 112 114 11 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("Get_Pos_CRLH") [flags 0x3]  <function_decl 0000000005da3700 Get_Pos_CRLH>) [0 Get_Pos_CRLH S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:91 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:HI (use (reg:SI 0 r0))
+            (nil))))
+(insn 114 113 117 11 (set (reg:SI 3 r3 [212])
+        (reg:SI 0 r0)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:91 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 117 114 118 11 (set (reg:SI 2 r2 [orig:183 _88 ] [183])
+        (ashift:SI (reg:SI 4 r4 [orig:145 _33 ] [145])
+            (reg:SI 3 r3 [orig:148 _36 ] [148]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:88 147 {*arm_shiftsi3}
+     (nil))
+(insn 118 117 119 11 (set (reg/f:SI 3 r3 [213])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:16 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 119 118 120 11 (set (reg:SI 3 r3 [orig:149 _37 ] [149])
+        (mem/v:SI (reg/f:SI 3 r3 [213]) [1 *Reg_Config_75+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:16 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 120 119 121 11 (parallel [
+            (set (reg:SI 2 r2 [orig:150 _38 ] [150])
+                (ior:SI (reg:SI 2 r2 [orig:183 _88 ] [183])
+                    (reg:SI 3 r3 [orig:149 _37 ] [149])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:16 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 121 120 122 11 (set (reg/f:SI 3 r3 [214])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:16 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 122 121 196 11 (set (mem/v:SI (reg/f:SI 3 r3 [214]) [1 *Reg_Config_75+0 S4 A32])
+        (reg:SI 2 r2 [orig:150 _38 ] [150])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":162:16 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 196 122 197 11 (set (pc)
+        (label_ref:SI 202)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":180:1 284 {*arm_jump}
+     (nil)
+ -> 202)
+(barrier 197 196 125)
+(code_label 125 197 126 12 36 (nil) [1 uses])
+(note 126 125 127 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 127 126 128 12 (set (reg/f:SI 3 r3 [215])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":165:21 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 128 127 129 12 (set (reg:SI 3 r3 [orig:151 _39 ] [151])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [215])
+                (const_int 4 [0x4])) [1 PinConfig_71(D)->GPIO_Mode+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":165:21 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 129 128 130 12 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:151 _39 ] [151])
+            (const_int 3 [0x3]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":165:11 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 130 129 131 12 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 165)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":165:11 273 {arm_cond_branch}
+     (nil)
+ -> 165)
+(note 131 130 132 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 132 131 133 13 (set (reg/f:SI 3 r3 [216])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":167:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 133 132 134 13 (set (reg:SI 3 r3 [orig:152 _40 ] [152])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [216])
+                (const_int 12 [0xc])) [1 GPIOx_72(D)->ODR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":167:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 134 133 135 13 (set (reg/f:SI 2 r2 [217])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":167:29 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 135 134 137 13 (set (reg:SI 2 r2 [orig:153 _41 ] [153])
+        (zero_extend:SI (mem:HI (reg/f:SI 2 r2 [217]) [3 PinConfig_71(D)->GPIO_PinNumber+0 S2 A32]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":167:29 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 137 135 139 13 (parallel [
+            (set (reg:SI 2 r2 [orig:155 _43 ] [155])
+                (not:SI (reg:SI 2 r2 [orig:154 _42 ] [154])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":167:18 1026 {*thumb2_one_cmplsi2_short}
+     (nil))
+(insn 139 137 140 13 (parallel [
+            (set (reg:SI 2 r2 [orig:157 _45 ] [157])
+                (and:SI (reg:SI 2 r2 [orig:156 _44 ] [156])
+                    (reg:SI 3 r3 [orig:152 _40 ] [152])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":167:15 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 140 139 141 13 (set (reg/f:SI 3 r3 [218])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":167:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 141 140 142 13 (set (mem/v:SI (plus:SI (reg/f:SI 3 r3 [218])
+                (const_int 12 [0xc])) [1 GPIOx_72(D)->ODR+0 S4 A32])
+        (reg:SI 2 r2 [orig:157 _45 ] [157])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":167:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 142 141 143 13 (set (reg/f:SI 3 r3 [219])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:33 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 143 142 144 13 (set (reg:SI 3 r3 [orig:158 _46 ] [158])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [219])
+                (const_int 4 [0x4])) [1 PinConfig_71(D)->GPIO_Mode+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:33 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 144 143 145 13 (parallel [
+            (set (reg:SI 3 r3 [orig:159 _47 ] [159])
+                (plus:SI (reg:SI 3 r3 [orig:158 _46 ] [158])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:45 1017 {*thumb2_addsi_short}
+     (nil))
+(insn 145 144 146 13 (parallel [
+            (set (reg:SI 2 r2 [orig:160 _48 ] [160])
+                (ashift:SI (reg:SI 3 r3 [orig:159 _47 ] [159])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:50 1013 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 146 145 147 13 (set (reg/f:SI 3 r3 [220])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:67 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 147 146 148 13 (set (reg:SI 3 r3 [orig:161 _49 ] [161])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [220])
+                (const_int 8 [0x8])) [1 PinConfig_71(D)->GPIO_Speed+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:67 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 148 147 149 13 (parallel [
+            (set (reg:SI 3 r3 [orig:162 _50 ] [162])
+                (ior:SI (reg:SI 3 r3 [orig:161 _49 ] [161])
+                    (reg:SI 2 r2 [orig:160 _48 ] [160])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:56 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 149 148 150 13 (set (reg:SI 4 r4 [orig:163 _51 ] [163])
+        (and:SI (reg:SI 3 r3 [orig:162 _50 ] [162])
+            (const_int 15 [0xf]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:82 90 {*arm_andsi3_insn}
+     (nil))
+(insn 150 149 151 13 (set (reg/f:SI 3 r3 [221])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:95 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 151 150 152 13 (set (reg:SI 3 r3 [orig:164 _52 ] [164])
+        (zero_extend:SI (mem:HI (reg/f:SI 3 r3 [221]) [3 PinConfig_71(D)->GPIO_PinNumber+0 S2 A32]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:95 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 152 151 153 13 (set (reg:SI 0 r0)
+        (reg:SI 3 r3 [orig:164 _52 ] [164])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:95 977 {*thumb2_movsi_insn}
+     (nil))
+(call_insn 153 152 154 13 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("Get_Pos_CRLH") [flags 0x3]  <function_decl 0000000005da3700 Get_Pos_CRLH>) [0 Get_Pos_CRLH S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:95 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:HI (use (reg:SI 0 r0))
+            (nil))))
+(insn 154 153 157 13 (set (reg:SI 3 r3 [222])
+        (reg:SI 0 r0)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:95 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 157 154 158 13 (set (reg:SI 2 r2 [orig:182 _84 ] [182])
+        (ashift:SI (reg:SI 4 r4 [orig:163 _51 ] [163])
+            (reg:SI 3 r3 [orig:166 _54 ] [166]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:92 147 {*arm_shiftsi3}
+     (nil))
+(insn 158 157 159 13 (set (reg/f:SI 3 r3 [223])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:16 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 159 158 160 13 (set (reg:SI 3 r3 [orig:167 _55 ] [167])
+        (mem/v:SI (reg/f:SI 3 r3 [223]) [1 *Reg_Config_75+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:16 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 160 159 161 13 (parallel [
+            (set (reg:SI 2 r2 [orig:168 _56 ] [168])
+                (ior:SI (reg:SI 2 r2 [orig:182 _84 ] [182])
+                    (reg:SI 3 r3 [orig:167 _55 ] [167])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:16 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 161 160 162 13 (set (reg/f:SI 3 r3 [224])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:16 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 162 161 198 13 (set (mem/v:SI (reg/f:SI 3 r3 [224]) [1 *Reg_Config_75+0 S4 A32])
+        (reg:SI 2 r2 [orig:168 _56 ] [168])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":168:16 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 198 162 199 13 (set (pc)
+        (label_ref:SI 202)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":180:1 284 {*arm_jump}
+     (nil)
+ -> 202)
+(barrier 199 198 165)
+(code_label 165 199 166 14 37 (nil) [1 uses])
+(note 166 165 167 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 167 166 168 14 (set (reg/f:SI 3 r3 [225])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:33 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 168 167 169 14 (set (reg:SI 3 r3 [orig:169 _57 ] [169])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [225])
+                (const_int 4 [0x4])) [1 PinConfig_71(D)->GPIO_Mode+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:33 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 169 168 170 14 (parallel [
+            (set (reg:SI 2 r2 [orig:170 _58 ] [170])
+                (ashift:SI (reg:SI 3 r3 [orig:169 _57 ] [169])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:46 1013 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 170 169 171 14 (set (reg/f:SI 3 r3 [226])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:63 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 171 170 172 14 (set (reg:SI 3 r3 [orig:171 _59 ] [171])
+        (mem:SI (plus:SI (reg/f:SI 3 r3 [226])
+                (const_int 8 [0x8])) [1 PinConfig_71(D)->GPIO_Speed+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:63 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 172 171 173 14 (parallel [
+            (set (reg:SI 3 r3 [orig:172 _60 ] [172])
+                (ior:SI (reg:SI 3 r3 [orig:171 _59 ] [171])
+                    (reg:SI 2 r2 [orig:170 _58 ] [170])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:52 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 173 172 174 14 (set (reg:SI 4 r4 [orig:173 _61 ] [173])
+        (and:SI (reg:SI 3 r3 [orig:172 _60 ] [172])
+            (const_int 15 [0xf]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:78 90 {*arm_andsi3_insn}
+     (nil))
+(insn 174 173 175 14 (set (reg/f:SI 3 r3 [227])
+        (mem/f/c:SI (reg/f:SI 7 r7) [9 PinConfig+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:91 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 175 174 176 14 (set (reg:SI 3 r3 [orig:174 _62 ] [174])
+        (zero_extend:SI (mem:HI (reg/f:SI 3 r3 [227]) [3 PinConfig_71(D)->GPIO_PinNumber+0 S2 A32]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:91 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 176 175 177 14 (set (reg:SI 0 r0)
+        (reg:SI 3 r3 [orig:174 _62 ] [174])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:91 977 {*thumb2_movsi_insn}
+     (nil))
+(call_insn 177 176 178 14 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("Get_Pos_CRLH") [flags 0x3]  <function_decl 0000000005da3700 Get_Pos_CRLH>) [0 Get_Pos_CRLH S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:91 291 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:HI (use (reg:SI 0 r0))
+            (nil))))
+(insn 178 177 181 14 (set (reg:SI 3 r3 [228])
+        (reg:SI 0 r0)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:91 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 181 178 182 14 (set (reg:SI 2 r2 [orig:181 _80 ] [181])
+        (ashift:SI (reg:SI 4 r4 [orig:173 _61 ] [173])
+            (reg:SI 3 r3 [orig:176 _64 ] [176]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:88 147 {*arm_shiftsi3}
+     (nil))
+(insn 182 181 183 14 (set (reg/f:SI 3 r3 [229])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:16 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 183 182 184 14 (set (reg:SI 3 r3 [orig:177 _65 ] [177])
+        (mem/v:SI (reg/f:SI 3 r3 [229]) [1 *Reg_Config_75+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:16 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 184 183 185 14 (parallel [
+            (set (reg:SI 2 r2 [orig:178 _66 ] [178])
+                (ior:SI (reg:SI 2 r2 [orig:181 _80 ] [181])
+                    (reg:SI 3 r3 [orig:177 _65 ] [177])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:16 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 185 184 186 14 (set (reg/f:SI 3 r3 [230])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [8 Reg_Config+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:16 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 186 185 202 14 (set (mem/v:SI (reg/f:SI 3 r3 [230]) [1 *Reg_Config_75+0 S4 A32])
+        (reg:SI 2 r2 [orig:178 _66 ] [178])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":174:16 977 {*thumb2_movsi_insn}
+     (nil))
+(code_label 202 186 200 15 38 (nil) [3 uses])
+(note 200 202 201 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 201 200 209 15 (const_int 0 [0]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":180:1 311 {nop}
+     (nil))
+(note 209 201 210 15 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 210 209 211 15 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 20 [0x14])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":180:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])))
+        (nil)))
+(insn 211 210 212 15 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":180:1 301 {blockage}
+     (nil))
+(insn/f 212 211 213 15 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":180:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 213 212 214 15 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":180:1 397 {force_register_use}
+     (nil))
+(jump_insn 214 213 215 15 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 12 [0xc])))
+            (set/f (reg:SI 4 r4)
+                (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32]))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [7  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 8 [0x8])) [7  S4 A32]))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":180:1 381 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (expr_list:REG_CFA_RESTORE (reg:SI 4 r4)
+            (nil)))
+ -> return)
+(barrier 215 214 203)
+(note 203 215 0 NOTE_INSN_DELETED)
+
+;; Function MCAL_GPIO_DInit (MCAL_GPIO_DInit, funcdef_no=6, decl_uid=5729, cgraph_uid=7, symbol_order=6)
+
+
+
+MCAL_GPIO_DInit
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 100 [cc]
+;;  ref usage 	r0={1d,1u} r1={1d} r2={13d,12u} r3={29d,28u} r7={4d,19u} r13={5d,19u} r14={1d,1u} r100={4d,4u} r102={1d,1u} 
+;;    total ref usage 144{59d,85u,0e} in 71{71 regular + 0 call} insns.
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 114 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 114 4 115 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [7  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":191:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 115 114 116 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -12 [0xfffffffffffffff4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":191:1 7 {*arm_addsi3}
+     (nil))
+(insn 116 115 117 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":191:1 379 {stack_tie}
+     (nil))
+(insn/f 117 116 118 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":191:1 7 {*arm_addsi3}
+     (nil))
+(note 118 117 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 118 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])
+        (reg:SI 0 r0 [ GPIOx ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":191:1 977 {*thumb2_movsi_insn}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 3 r3 [145])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":193:4 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 2 r2 [146])
+        (mem:SI (label_ref 149) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":193:4 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 8 7 9 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [145])
+            (reg:SI 2 r2 [146]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":193:4 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":193:4 273 {arm_cond_branch}
+     (nil)
+ -> 23)
+(note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (set (reg/f:SI 3 r3 [orig:113 _1 ] [113])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":195:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:113 _1 ] [113])
+                (const_int 12 [0xc])) [1 _1->APB2RSTR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":195:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 13 12 14 3 (set (reg/f:SI 2 r2 [orig:115 _3 ] [115])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":195:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 14 13 15 3 (set (reg:SI 3 r3 [orig:116 _4 ] [116])
+        (ior:SI (reg:SI 3 r3 [orig:114 _2 ] [114])
+            (const_int 4 [0x4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":195:17 106 {*iorsi3_insn}
+     (nil))
+(insn 15 14 16 3 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:115 _3 ] [115])
+                (const_int 12 [0xc])) [1 _3->APB2RSTR+0 S4 A32])
+        (reg:SI 3 r3 [orig:116 _4 ] [116])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":195:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 16 15 17 3 (set (reg/f:SI 3 r3 [orig:117 _5 ] [117])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":196:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 17 16 18 3 (set (reg:SI 3 r3 [orig:118 _6 ] [118])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:117 _5 ] [117])
+                (const_int 12 [0xc])) [1 _5->APB2RSTR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":196:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 18 17 19 3 (set (reg/f:SI 2 r2 [orig:119 _7 ] [119])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":196:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 19 18 20 3 (set (reg:SI 3 r3 [orig:120 _8 ] [120])
+        (and:SI (reg:SI 3 r3 [orig:118 _6 ] [118])
+            (const_int -5 [0xfffffffffffffffb]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":196:17 90 {*arm_andsi3_insn}
+     (nil))
+(insn 20 19 82 3 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:119 _7 ] [119])
+                (const_int 12 [0xc])) [1 _7->APB2RSTR+0 S4 A32])
+        (reg:SI 3 r3 [orig:120 _8 ] [120])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":196:17 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 82 20 83 3 (set (pc)
+        (label_ref:SI 91)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":218:1 284 {*arm_jump}
+     (nil)
+ -> 91)
+(barrier 83 82 23)
+(code_label 23 83 24 4 40 (nil) [1 uses])
+(note 24 23 25 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 4 (set (reg:SI 3 r3 [147])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":199:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 26 25 27 4 (set (reg:SI 2 r2 [148])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 8 [0x8]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":199:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 27 26 28 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [147])
+            (reg:SI 2 r2 [148]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":199:9 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 28 27 29 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 42)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":199:9 273 {arm_cond_branch}
+     (nil)
+ -> 42)
+(note 29 28 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 5 (set (reg/f:SI 3 r3 [orig:121 _9 ] [121])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":201:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 31 30 32 5 (set (reg:SI 3 r3 [orig:122 _10 ] [122])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:121 _9 ] [121])
+                (const_int 12 [0xc])) [1 _9->APB2RSTR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":201:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 32 31 33 5 (set (reg/f:SI 2 r2 [orig:123 _11 ] [123])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":201:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 33 32 34 5 (set (reg:SI 3 r3 [orig:124 _12 ] [124])
+        (ior:SI (reg:SI 3 r3 [orig:122 _10 ] [122])
+            (const_int 8 [0x8]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":201:17 106 {*iorsi3_insn}
+     (nil))
+(insn 34 33 35 5 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:123 _11 ] [123])
+                (const_int 12 [0xc])) [1 _11->APB2RSTR+0 S4 A32])
+        (reg:SI 3 r3 [orig:124 _12 ] [124])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":201:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 35 34 36 5 (set (reg/f:SI 3 r3 [orig:125 _13 ] [125])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":202:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 36 35 37 5 (set (reg:SI 3 r3 [orig:126 _14 ] [126])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:125 _13 ] [125])
+                (const_int 12 [0xc])) [1 _13->APB2RSTR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":202:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 37 36 38 5 (set (reg/f:SI 2 r2 [orig:127 _15 ] [127])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":202:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 38 37 39 5 (set (reg:SI 3 r3 [orig:128 _16 ] [128])
+        (and:SI (reg:SI 3 r3 [orig:126 _14 ] [126])
+            (const_int -9 [0xfffffffffffffff7]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":202:17 90 {*arm_andsi3_insn}
+     (nil))
+(insn 39 38 84 5 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:127 _15 ] [127])
+                (const_int 12 [0xc])) [1 _15->APB2RSTR+0 S4 A32])
+        (reg:SI 3 r3 [orig:128 _16 ] [128])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":202:17 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 84 39 85 5 (set (pc)
+        (label_ref:SI 91)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":218:1 284 {*arm_jump}
+     (nil)
+ -> 91)
+(barrier 85 84 42)
+(code_label 42 85 43 6 42 (nil) [1 uses])
+(note 43 42 44 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 44 43 45 6 (set (reg:SI 3 r3 [149])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":204:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 45 44 46 6 (set (reg:SI 2 r2 [150])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 12 [0xc]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":204:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 46 45 47 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [149])
+            (reg:SI 2 r2 [150]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":204:9 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 47 46 48 6 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 61)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":204:9 273 {arm_cond_branch}
+     (nil)
+ -> 61)
+(note 48 47 49 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 49 48 50 7 (set (reg/f:SI 3 r3 [orig:129 _17 ] [129])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":206:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 50 49 51 7 (set (reg:SI 3 r3 [orig:130 _18 ] [130])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:129 _17 ] [129])
+                (const_int 12 [0xc])) [1 _17->APB2RSTR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":206:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 51 50 52 7 (set (reg/f:SI 2 r2 [orig:131 _19 ] [131])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":206:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 52 51 53 7 (set (reg:SI 3 r3 [orig:132 _20 ] [132])
+        (ior:SI (reg:SI 3 r3 [orig:130 _18 ] [130])
+            (const_int 16 [0x10]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":206:17 106 {*iorsi3_insn}
+     (nil))
+(insn 53 52 54 7 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:131 _19 ] [131])
+                (const_int 12 [0xc])) [1 _19->APB2RSTR+0 S4 A32])
+        (reg:SI 3 r3 [orig:132 _20 ] [132])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":206:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 54 53 55 7 (set (reg/f:SI 3 r3 [orig:133 _21 ] [133])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":207:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 55 54 56 7 (set (reg:SI 3 r3 [orig:134 _22 ] [134])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:133 _21 ] [133])
+                (const_int 12 [0xc])) [1 _21->APB2RSTR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":207:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 56 55 57 7 (set (reg/f:SI 2 r2 [orig:135 _23 ] [135])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":207:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 57 56 58 7 (set (reg:SI 3 r3 [orig:136 _24 ] [136])
+        (and:SI (reg:SI 3 r3 [orig:134 _22 ] [134])
+            (const_int -17 [0xffffffffffffffef]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":207:17 90 {*arm_andsi3_insn}
+     (nil))
+(insn 58 57 86 7 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:135 _23 ] [135])
+                (const_int 12 [0xc])) [1 _23->APB2RSTR+0 S4 A32])
+        (reg:SI 3 r3 [orig:136 _24 ] [136])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":207:17 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 86 58 87 7 (set (pc)
+        (label_ref:SI 91)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":218:1 284 {*arm_jump}
+     (nil)
+ -> 91)
+(barrier 87 86 61)
+(code_label 61 87 62 8 43 (nil) [1 uses])
+(note 62 61 63 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 8 (set (reg:SI 3 r3 [151])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":209:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 64 63 65 8 (set (reg:SI 2 r2 [152])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 16 [0x10]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":209:9 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 65 64 66 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [151])
+            (reg:SI 2 r2 [152]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":209:9 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 66 65 67 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 91)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":209:9 273 {arm_cond_branch}
+     (nil)
+ -> 91)
+(note 67 66 68 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 68 67 69 9 (set (reg/f:SI 3 r3 [orig:137 _25 ] [137])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":211:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 69 68 70 9 (set (reg:SI 3 r3 [orig:138 _26 ] [138])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:137 _25 ] [137])
+                (const_int 12 [0xc])) [1 _25->APB2RSTR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":211:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 70 69 71 9 (set (reg/f:SI 2 r2 [orig:139 _27 ] [139])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":211:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 71 70 72 9 (set (reg:SI 3 r3 [orig:140 _28 ] [140])
+        (ior:SI (reg:SI 3 r3 [orig:138 _26 ] [138])
+            (const_int 32 [0x20]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":211:17 106 {*iorsi3_insn}
+     (nil))
+(insn 72 71 73 9 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:139 _27 ] [139])
+                (const_int 12 [0xc])) [1 _27->APB2RSTR+0 S4 A32])
+        (reg:SI 3 r3 [orig:140 _28 ] [140])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":211:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 73 72 74 9 (set (reg/f:SI 3 r3 [orig:141 _29 ] [141])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":212:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 74 73 75 9 (set (reg:SI 3 r3 [orig:142 _30 ] [142])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [orig:141 _29 ] [141])
+                (const_int 12 [0xc])) [1 _29->APB2RSTR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":212:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 75 74 76 9 (set (reg/f:SI 2 r2 [orig:143 _31 ] [143])
+        (mem:SI (const:SI (plus:SI (label_ref 149)
+                    (const_int 4 [0x4]))) [0  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":212:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 76 75 77 9 (set (reg:SI 3 r3 [orig:144 _32 ] [144])
+        (and:SI (reg:SI 3 r3 [orig:142 _30 ] [142])
+            (const_int -33 [0xffffffffffffffdf]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":212:17 90 {*arm_andsi3_insn}
+     (nil))
+(insn 77 76 91 9 (set (mem/v:SI (plus:SI (reg/f:SI 2 r2 [orig:143 _31 ] [143])
+                (const_int 12 [0xc])) [1 _31->APB2RSTR+0 S4 A32])
+        (reg:SI 3 r3 [orig:144 _32 ] [144])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":212:17 977 {*thumb2_movsi_insn}
+     (nil))
+(code_label 91 77 90 10 44 (nil) [4 uses])
+(note 90 91 92 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 92 90 119 10 (const_int 0 [0]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":218:1 311 {nop}
+     (nil))
+(note 119 92 120 10 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 120 119 121 10 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":218:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])))
+        (nil)))
+(insn 121 120 122 10 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":218:1 301 {blockage}
+     (nil))
+(insn/f 122 121 123 10 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":218:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 123 122 124 10 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":218:1 397 {force_register_use}
+     (nil))
+(insn/f 124 123 125 10 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [7  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":218:1 976 {*thumb2_pop_single}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 125 124 126 10 (simple_return) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":218:1 1009 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 126 125 147)
+(code_label 147 126 148 46 (nil) [0 uses])
+(insn 148 147 149 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) -1
+     (nil))
+(code_label 149 148 150 45 (nil) [0 uses])
+(insn 150 149 151 (unspec_volatile [
+            (const_int 1073809408 [0x40010800])
+        ] VUNSPEC_POOL_4) -1
+     (nil))
+(insn 151 150 152 (unspec_volatile [
+            (const_int 1073876992 [0x40021000])
+        ] VUNSPEC_POOL_4) -1
+     (nil))
+(insn 152 151 153 (unspec_volatile [
+            (const_int 1073810432 [0x40010c00])
+        ] VUNSPEC_POOL_4) -1
+     (nil))
+(insn 153 152 154 (unspec_volatile [
+            (const_int 1073811456 [0x40011000])
+        ] VUNSPEC_POOL_4) -1
+     (nil))
+(insn 154 153 155 (unspec_volatile [
+            (const_int 1073812480 [0x40011400])
+        ] VUNSPEC_POOL_4) -1
+     (nil))
+(insn 155 154 156 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) -1
+     (nil))
+(barrier 156 155 113)
+(note 113 156 0 NOTE_INSN_DELETED)
+
+;; Function MCAL_GPIO_ReadPin (MCAL_GPIO_ReadPin, funcdef_no=7, decl_uid=5732, cgraph_uid=8, symbol_order=7)
+
+
+
+MCAL_GPIO_ReadPin
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 100 [cc]
+;;  ref usage 	r0={2d,3u} r1={1d,1u} r2={2d,1u} r3={7d,5u} r7={4d,13u} r13={5d,14u} r14={1d,1u} r100={1d,1u} r102={1d,1u} 
+;;    total ref usage 64{24d,40u,0e} in 24{24 regular + 0 call} insns.
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 34 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 34 7 35 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [7  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":232:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 35 34 36 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -12 [0xfffffffffffffff4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":232:1 7 {*arm_addsi3}
+     (nil))
+(insn 36 35 37 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":232:1 379 {stack_tie}
+     (nil))
+(insn/f 37 36 38 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":232:1 7 {*arm_addsi3}
+     (nil))
+(note 38 37 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 38 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])
+        (reg:SI 0 r0 [ GPIOx ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":232:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 3 2 5 2 (set (reg:SI 3 r3 [118])
+        (reg:SI 1 r1 [ PinNumber ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":232:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 5 3 6 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                (const_int 2 [0x2])) [3 PinNumber+0 S2 A16])
+        (reg:HI 3 r3 [119])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":232:1 979 {*thumb2_movhi_insn}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 3 r3 [120])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":233:11 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 2 r2 [orig:113 _1 ] [113])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [120])
+                (const_int 8 [0x8])) [1 GPIOx_6(D)->IDR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":233:11 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 2 [0x2])) [3 PinNumber+0 S2 A16]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":233:17 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg:SI 3 r3 [orig:115 _3 ] [115])
+                (and:SI (reg:SI 3 r3 [orig:114 _2 ] [114])
+                    (reg:SI 2 r2 [orig:113 _1 ] [113])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":233:17 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 13 12 14 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:115 _3 ] [115])
+            (const_int 1 [0x1]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":233:4 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 19)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":233:4 273 {arm_cond_branch}
+     (nil)
+ -> 19)
+(note 15 14 16 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 31 3 (parallel [
+            (set (reg:SI 3 r3 [orig:116 _4 ] [116])
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":233:53 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 31 16 32 3 (set (pc)
+        (label_ref 22)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":233:53 284 {*arm_jump}
+     (nil)
+ -> 22)
+(barrier 32 31 19)
+(code_label 19 32 20 4 48 (nil) [1 uses])
+(note 20 19 21 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 4 (parallel [
+            (set (reg:SI 3 r3 [orig:116 _4 ] [116])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":234:14 1016 {*thumb2_movsi_shortim}
+     (nil))
+(code_label 22 21 23 5 49 (nil) [1 uses])
+(note 23 22 28 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 28 23 29 5 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:117 <retval> ] [117])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":236:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 29 28 39 5 (use (reg/i:SI 0 r0)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":236:1 -1
+     (nil))
+(note 39 29 40 5 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 40 39 41 5 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":236:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])))
+        (nil)))
+(insn 41 40 42 5 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":236:1 301 {blockage}
+     (nil))
+(insn/f 42 41 43 5 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":236:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 43 42 44 5 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":236:1 397 {force_register_use}
+     (nil))
+(insn/f 44 43 45 5 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [7  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":236:1 976 {*thumb2_pop_single}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 45 44 46 5 (simple_return) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":236:1 1009 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 46 45 33)
+(note 33 46 0 NOTE_INSN_DELETED)
+
+;; Function MCAL_GPIO_ReadPort (MCAL_GPIO_ReadPort, funcdef_no=8, decl_uid=5734, cgraph_uid=9, symbol_order=8)
+
+
+
+MCAL_GPIO_ReadPort
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 3 [r3] 7 [r7] 13 [sp]
+;;  ref usage 	r0={2d,3u} r1={1d} r2={1d} r3={4d,3u} r7={4d,8u} r13={5d,11u} r14={1d,1u} r102={1d,1u} 
+;;    total ref usage 46{19d,27u,0e} in 16{16 regular + 0 call} insns.
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 19 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 19 4 20 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [7  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":247:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 20 19 21 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -12 [0xfffffffffffffff4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":247:1 7 {*arm_addsi3}
+     (nil))
+(insn 21 20 22 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":247:1 379 {stack_tie}
+     (nil))
+(insn/f 22 21 23 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":247:1 7 {*arm_addsi3}
+     (nil))
+(note 23 22 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 23 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])
+        (reg:SI 0 r0 [ GPIOx ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":247:1 977 {*thumb2_movsi_insn}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:SI 3 r3 [116])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":248:25 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 3 r3 [orig:113 _1 ] [113])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [116])
+                (const_int 8 [0x8])) [1 GPIOx_3(D)->IDR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":248:25 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 8 7 15 2 (set (reg:SI 3 r3 [orig:114 _4 ] [114])
+        (zero_extend:SI (reg:HI 3 r3 [orig:113 _1 ] [113]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":248:9 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 15 8 16 2 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:115 <retval> ] [115])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":249:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 16 15 24 2 (use (reg/i:SI 0 r0)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":249:1 -1
+     (nil))
+(note 24 16 25 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 25 24 26 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":249:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])))
+        (nil)))
+(insn 26 25 27 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":249:1 301 {blockage}
+     (nil))
+(insn/f 27 26 28 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":249:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 28 27 29 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":249:1 397 {force_register_use}
+     (nil))
+(insn/f 29 28 30 2 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [7  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":249:1 976 {*thumb2_pop_single}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 30 29 31 2 (simple_return) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":249:1 1009 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 31 30 18)
+(note 18 31 0 NOTE_INSN_DELETED)
+
+;; Function MCAL_GPIO_WritePin (MCAL_GPIO_WritePin, funcdef_no=9, decl_uid=5738, cgraph_uid=10, symbol_order=9)
+
+
+
+MCAL_GPIO_WritePin
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 100 [cc]
+;;  ref usage 	r0={1d,1u} r1={1d,1u} r2={3d,3u} r3={8d,7u} r7={4d,17u} r13={5d,14u} r14={1d,1u} r100={1d,1u} r102={1d,1u} 
+;;    total ref usage 71{25d,46u,0e} in 28{28 regular + 0 call} insns.
+(note 1 0 10 NOTE_INSN_DELETED)
+(note 10 1 38 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 38 10 39 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [7  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":263:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 39 38 40 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -12 [0xfffffffffffffff4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":263:1 7 {*arm_addsi3}
+     (nil))
+(insn 40 39 41 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":263:1 379 {stack_tie}
+     (nil))
+(insn/f 41 40 42 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":263:1 7 {*arm_addsi3}
+     (nil))
+(note 42 41 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 42 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])
+        (reg:SI 0 r0 [ GPIOx ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":263:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 3 2 5 2 (set (reg:SI 3 r3 [117])
+        (reg:SI 1 r1 [ PinNumber ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":263:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 5 3 7 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                (const_int 2 [0x2])) [3 PinNumber+0 S2 A16])
+        (reg:HI 3 r3 [118])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":263:1 979 {*thumb2_movhi_insn}
+     (nil))
+(insn 7 5 8 2 (set (reg:QI 3 r3 [120])
+        (reg:QI 2 r2 [119])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":263:1 263 {*arm_movqi_insn}
+     (nil))
+(insn 8 7 9 2 (set (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 1 [0x1])) [0 Value+0 S1 A8])
+        (reg:QI 3 r3 [120])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":263:1 263 {*arm_movqi_insn}
+     (nil))
+(note 9 8 12 2 NOTE_INSN_FUNCTION_BEG)
+(insn 12 9 13 2 (set (reg:SI 3 r3 [121])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 1 [0x1])) [0 Value+0 S1 A8]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":265:4 1006 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 13 12 14 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [121])
+            (const_int 1 [0x1]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":265:4 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":265:4 273 {arm_cond_branch}
+     (nil)
+ -> 21)
+(note 15 14 16 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 3 (set (reg:SI 2 r2 [orig:113 _1 ] [113])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 2 [0x2])) [3 PinNumber+0 S2 A16]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":268:17 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 17 16 18 3 (set (reg/f:SI 3 r3 [122])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":268:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 18 17 32 3 (set (mem/v:SI (plus:SI (reg/f:SI 3 r3 [122])
+                (const_int 16 [0x10])) [1 GPIOx_9(D)->BSRR+0 S4 A32])
+        (reg:SI 2 r2 [orig:113 _1 ] [113])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":268:15 977 {*thumb2_movsi_insn}
+     (nil))
+(jump_insn 32 18 33 3 (set (pc)
+        (label_ref:SI 36)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":276:1 284 {*arm_jump}
+     (nil)
+ -> 36)
+(barrier 33 32 21)
+(code_label 21 33 22 4 53 (nil) [1 uses])
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 4 (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 2 [0x2])) [3 PinNumber+0 S2 A16]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":274:38 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 24 23 25 4 (parallel [
+            (set (reg:SI 3 r3 [orig:115 _3 ] [115])
+                (ashift:SI (reg:SI 3 r3 [orig:114 _2 ] [114])
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":274:38 1013 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 25 24 26 4 (set (reg:SI 2 r2 [orig:116 _4 ] [116])
+        (reg:SI 3 r3 [orig:115 _3 ] [115])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":274:17 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 26 25 27 4 (set (reg/f:SI 3 r3 [123])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":274:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 27 26 36 4 (set (mem/v:SI (plus:SI (reg/f:SI 3 r3 [123])
+                (const_int 16 [0x10])) [1 GPIOx_9(D)->BSRR+0 S4 A32])
+        (reg:SI 2 r2 [orig:116 _4 ] [116])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":274:15 977 {*thumb2_movsi_insn}
+     (nil))
+(code_label 36 27 34 5 55 (nil) [1 uses])
+(note 34 36 35 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 43 5 (const_int 0 [0]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":276:1 311 {nop}
+     (nil))
+(note 43 35 44 5 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 44 43 45 5 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":276:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])))
+        (nil)))
+(insn 45 44 46 5 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":276:1 301 {blockage}
+     (nil))
+(insn/f 46 45 47 5 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":276:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 47 46 48 5 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":276:1 397 {force_register_use}
+     (nil))
+(insn/f 48 47 49 5 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [7  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":276:1 976 {*thumb2_pop_single}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 49 48 50 5 (simple_return) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":276:1 1009 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 50 49 37)
+(note 37 50 0 NOTE_INSN_DELETED)
+
+;; Function MCAL_GPIO_WritePort (MCAL_GPIO_WritePort, funcdef_no=10, decl_uid=5741, cgraph_uid=11, symbol_order=10)
+
+
+
+MCAL_GPIO_WritePort
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp]
+;;  ref usage 	r0={1d,1u} r1={1d,1u} r2={2d,1u} r3={3d,2u} r7={4d,10u} r13={5d,11u} r14={1d,1u} r102={1d,1u} 
+;;    total ref usage 46{18d,28u,0e} in 17{17 regular + 0 call} insns.
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 17 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 17 7 18 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [7  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":289:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 18 17 19 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -12 [0xfffffffffffffff4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":289:1 7 {*arm_addsi3}
+     (nil))
+(insn 19 18 20 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":289:1 379 {stack_tie}
+     (nil))
+(insn/f 20 19 21 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":289:1 7 {*arm_addsi3}
+     (nil))
+(note 21 20 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 21 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])
+        (reg:SI 0 r0 [ GPIOx ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":289:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 3 2 5 2 (set (reg:SI 3 r3 [114])
+        (reg:SI 1 r1 [ Value ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":289:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 5 3 6 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                (const_int 2 [0x2])) [3 Value+0 S2 A16])
+        (reg:HI 3 r3 [115])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":289:1 979 {*thumb2_movhi_insn}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:SI 2 r2 [orig:113 _1 ] [113])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 2 [0x2])) [3 Value+0 S2 A16]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":291:15 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 3 r3 [116])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":291:13 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 11 10 15 2 (set (mem/v:SI (plus:SI (reg/f:SI 3 r3 [116])
+                (const_int 12 [0xc])) [1 GPIOx_4(D)->ODR+0 S4 A32])
+        (reg:SI 2 r2 [orig:113 _1 ] [113])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":291:13 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 15 11 22 2 (const_int 0 [0]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":294:1 311 {nop}
+     (nil))
+(note 22 15 23 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 23 22 24 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":294:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])))
+        (nil)))
+(insn 24 23 25 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":294:1 301 {blockage}
+     (nil))
+(insn/f 25 24 26 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":294:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 26 25 27 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":294:1 397 {force_register_use}
+     (nil))
+(insn/f 27 26 28 2 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [7  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":294:1 976 {*thumb2_pop_single}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 28 27 29 2 (simple_return) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":294:1 1009 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 29 28 16)
+(note 16 29 0 NOTE_INSN_DELETED)
+
+;; Function MCAL_GPIO_TogglePin (MCAL_GPIO_TogglePin, funcdef_no=11, decl_uid=5744, cgraph_uid=12, symbol_order=11)
+
+
+
+MCAL_GPIO_TogglePin
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp]
+;;  ref usage 	r0={1d,1u} r1={1d,1u} r2={3d,2u} r3={5d,4u} r7={4d,11u} r13={5d,11u} r14={1d,1u} r102={1d,1u} 
+;;    total ref usage 53{21d,32u,0e} in 20{20 regular + 0 call} insns.
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 20 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 20 7 21 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [7  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":307:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 21 20 22 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -12 [0xfffffffffffffff4]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":307:1 7 {*arm_addsi3}
+     (nil))
+(insn 22 21 23 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":307:1 379 {stack_tie}
+     (nil))
+(insn/f 23 22 24 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":307:1 7 {*arm_addsi3}
+     (nil))
+(note 24 23 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 24 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])
+        (reg:SI 0 r0 [ GPIOx ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":307:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 3 2 5 2 (set (reg:SI 3 r3 [116])
+        (reg:SI 1 r1 [ PinNumber ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":307:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 5 3 6 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                (const_int 2 [0x2])) [3 PinNumber+0 S2 A16])
+        (reg:HI 3 r3 [117])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":307:1 979 {*thumb2_movhi_insn}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:SI 3 r3 [118])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":308:13 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 2 r2 [orig:113 _1 ] [113])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [118])
+                (const_int 12 [0xc])) [1 GPIOx_5(D)->ODR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":308:13 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 3 r3 [orig:114 _2 ] [114])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 2 [0x2])) [3 PinNumber+0 S2 A16]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":308:16 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 12 11 13 2 (parallel [
+            (set (reg:SI 2 r2 [orig:115 _3 ] [115])
+                (xor:SI (reg:SI 2 r2 [orig:113 _1 ] [113])
+                    (reg:SI 3 r3 [orig:114 _2 ] [114])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":308:13 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 3 r3 [119])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":308:13 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 14 13 18 2 (set (mem/v:SI (plus:SI (reg/f:SI 3 r3 [119])
+                (const_int 12 [0xc])) [1 GPIOx_5(D)->ODR+0 S4 A32])
+        (reg:SI 2 r2 [orig:115 _3 ] [115])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":308:13 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 18 14 25 2 (const_int 0 [0]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":309:1 311 {nop}
+     (nil))
+(note 25 18 26 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 26 25 27 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":309:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])))
+        (nil)))
+(insn 27 26 28 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":309:1 301 {blockage}
+     (nil))
+(insn/f 28 27 29 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":309:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 29 28 30 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":309:1 397 {force_register_use}
+     (nil))
+(insn/f 30 29 31 2 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [7  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":309:1 976 {*thumb2_pop_single}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 31 30 32 2 (simple_return) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":309:1 1009 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 32 31 19)
+(note 19 32 0 NOTE_INSN_DELETED)
+
+;; Function MCAL_GPIO_LockPin (MCAL_GPIO_LockPin, funcdef_no=12, decl_uid=5747, cgraph_uid=13, symbol_order=12)
+
+
+
+MCAL_GPIO_LockPin
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 12 [ip] 14 [lr] 15 [pc] 16 [s0] 17 [s1] 18 [s2] 19 [s3] 20 [s4] 21 [s5] 22 [s6] 23 [s7] 24 [s8] 25 [s9] 26 [s10] 27 [s11] 28 [s12] 29 [s13] 30 [s14] 31 [s15] 32 [s16] 33 [s17] 34 [s18] 35 [s19] 36 [s20] 37 [s21] 38 [s22] 39 [s23] 40 [s24] 41 [s25] 42 [s26] 43 [s27] 44 [s28] 45 [s29] 46 [s30] 47 [s31] 48 [d16] 49 [?16] 50 [d17] 51 [?17] 52 [d18] 53 [?18] 54 [d19] 55 [?19] 56 [d20] 57 [?20] 58 [d21] 59 [?21] 60 [d22] 61 [?22] 62 [d23] 63 [?23] 64 [d24] 65 [?24] 66 [d25] 67 [?25] 68 [d26] 69 [?26] 70 [d27] 71 [?27] 72 [d28] 73 [?28] 74 [d29] 75 [?29] 76 [d30] 77 [?30] 78 [d31] 79 [?31] 80 [wr0] 81 [wr1] 82 [wr2] 83 [wr3] 84 [wr4] 85 [wr5] 86 [wr6] 87 [wr7] 88 [wr8] 89 [wr9] 90 [wr10] 91 [wr11] 92 [wr12] 93 [wr13] 94 [wr14] 95 [wr15] 96 [wcgr0] 97 [wcgr1] 98 [wcgr2] 99 [wcgr3] 100 [cc] 101 [vfpcc] 104 [apsrq] 105 [apsrge] 106 [p0]
+;;  hardware regs used 	 13 [sp]
+;;  regular block artificial uses 	 7 [r7] 13 [sp]
+;;  eh block artificial uses 	 7 [r7] 13 [sp] 102 [sfp] 103 [afp]
+;;  entry block defs 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  exit block uses 	 0 [r0] 7 [r7] 13 [sp] 14 [lr] 102 [sfp]
+;;  regs ever live 	 0 [r0] 1 [r1] 2 [r2] 3 [r3] 7 [r7] 13 [sp] 100 [cc]
+;;  ref usage 	r0={2d,3u} r1={1d,1u} r2={5d,4u} r3={19d,16u} r7={4d,29u} r13={5d,16u} r14={1d,1u} r100={2d,2u} r102={1d,1u} 
+;;    total ref usage 113{40d,73u,0e} in 49{49 regular + 0 call} insns.
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 65 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 65 7 66 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [7  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":322:1 378 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [7  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 66 65 67 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -20 [0xffffffffffffffec]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":322:1 7 {*arm_addsi3}
+     (nil))
+(insn 67 66 68 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":322:1 379 {stack_tie}
+     (nil))
+(insn/f 68 67 69 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":322:1 7 {*arm_addsi3}
+     (nil))
+(note 69 68 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 69 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])
+        (reg:SI 0 r0 [ GPIOx ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":322:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 3 2 5 2 (set (reg:SI 3 r3 [127])
+        (reg:SI 1 r1 [ PinNumber ])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":322:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 5 3 6 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                (const_int 2 [0x2])) [3 PinNumber+0 S2 A16])
+        (reg:HI 3 r3 [128])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":322:1 979 {*thumb2_movhi_insn}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:SI 3 r3 [129])
+        (const_int 65536 [0x10000])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":341:20 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 10 9 11 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 temp+0 S4 A32])
+        (reg:SI 3 r3 [129])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":341:20 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 2 r2 [orig:113 _1 ] [113])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 2 [0x2])) [3 PinNumber+0 S2 A16]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":342:7 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 3 r3 [orig:114 temp.1_2 ] [114])
+        (mem/v/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 temp+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":342:7 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 13 12 14 2 (parallel [
+            (set (reg:SI 3 r3 [orig:115 _3 ] [115])
+                (ior:SI (reg:SI 3 r3 [orig:114 temp.1_2 ] [114])
+                    (reg:SI 2 r2 [orig:113 _1 ] [113])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":342:7 1012 {*thumb2_alusi3_short}
+     (nil))
+(insn 14 13 15 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 temp+0 S4 A32])
+        (reg:SI 3 r3 [orig:115 _3 ] [115])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":342:7 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 2 r2 [orig:116 temp.2_4 ] [116])
+        (mem/v/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 temp+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":345:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 16 15 17 2 (set (reg/f:SI 3 r3 [130])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":345:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 17 16 18 2 (set (mem/v:SI (plus:SI (reg/f:SI 3 r3 [130])
+                (const_int 24 [0x18])) [1 GPIOx_19(D)->LCKR+0 S4 A32])
+        (reg:SI 2 r2 [orig:116 temp.2_4 ] [116])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":345:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 2 r2 [orig:117 _5 ] [117])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 2 [0x2])) [3 PinNumber+0 S2 A16]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":347:14 1005 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 19 18 20 2 (set (reg/f:SI 3 r3 [131])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":347:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 20 19 21 2 (set (mem/v:SI (plus:SI (reg/f:SI 3 r3 [131])
+                (const_int 24 [0x18])) [1 GPIOx_19(D)->LCKR+0 S4 A32])
+        (reg:SI 2 r2 [orig:117 _5 ] [117])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":347:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 2 r2 [orig:118 temp.3_6 ] [118])
+        (mem/v/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 temp+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":349:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 22 21 23 2 (set (reg/f:SI 3 r3 [132])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":349:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 23 22 24 2 (set (mem/v:SI (plus:SI (reg/f:SI 3 r3 [132])
+                (const_int 24 [0x18])) [1 GPIOx_19(D)->LCKR+0 S4 A32])
+        (reg:SI 2 r2 [orig:118 temp.3_6 ] [118])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":349:14 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 24 23 25 2 (set (reg/f:SI 3 r3 [133])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":352:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 25 24 26 2 (set (reg:SI 3 r3 [orig:119 _7 ] [119])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [133])
+                (const_int 24 [0x18])) [1 GPIOx_19(D)->LCKR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":352:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 3 r3 [orig:120 _8 ] [120])
+        (and:SI (reg:SI 3 r3 [orig:119 _7 ] [119])
+            (const_int 65536 [0x10000]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":352:22 90 {*arm_andsi3_insn}
+     (nil))
+(insn 27 26 28 2 (set (mem/v/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 temp+0 S4 A32])
+        (reg:SI 3 r3 [orig:120 _8 ] [120])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":352:7 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 28 27 29 2 (set (reg:SI 3 r3 [orig:121 temp.4_9 ] [121])
+        (mem/v/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 temp+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":354:10 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 29 28 30 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:121 temp.4_9 ] [121])
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":354:4 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 30 29 31 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 48)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":354:4 273 {arm_cond_branch}
+     (nil)
+ -> 48)
+(note 31 30 32 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 33 3 (set (reg/f:SI 3 r3 [134])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [5 GPIOx+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":357:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 33 32 34 3 (set (reg:SI 3 r3 [orig:122 _10 ] [122])
+        (mem/v:SI (plus:SI (reg/f:SI 3 r3 [134])
+                (const_int 24 [0x18])) [1 GPIOx_19(D)->LCKR+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":357:15 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 34 33 35 3 (set (reg:SI 3 r3 [orig:123 _11 ] [123])
+        (and:SI (reg:SI 3 r3 [orig:122 _10 ] [122])
+            (const_int 65536 [0x10000]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":357:22 90 {*arm_andsi3_insn}
+     (nil))
+(insn 35 34 36 3 (set (mem/v/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 temp+0 S4 A32])
+        (reg:SI 3 r3 [orig:123 _11 ] [123])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":357:8 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 36 35 37 3 (set (reg:SI 3 r3 [orig:124 temp.5_12 ] [124])
+        (mem/v/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [1 temp+0 S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":358:11 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 37 36 38 3 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:124 temp.5_12 ] [124])
+            (const_int 0 [0]))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":358:5 268 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 38 37 39 3 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 43)
+            (pc))) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":358:5 273 {arm_cond_branch}
+     (nil)
+ -> 43)
+(note 39 38 40 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 40 39 60 4 (parallel [
+            (set (reg:SI 3 r3 [orig:125 _13 ] [125])
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":358:23 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 60 40 61 4 (set (pc)
+        (label_ref 51)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":358:23 284 {*arm_jump}
+     (nil)
+ -> 51)
+(barrier 61 60 43)
+(code_label 43 61 44 5 60 (nil) [1 uses])
+(note 44 43 45 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 62 5 (parallel [
+            (set (reg:SI 3 r3 [orig:125 _13 ] [125])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":359:15 1016 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 62 45 63 5 (set (pc)
+        (label_ref 51)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":359:15 284 {*arm_jump}
+     (nil)
+ -> 51)
+(barrier 63 62 48)
+(code_label 48 63 49 6 59 (nil) [1 uses])
+(note 49 48 50 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 6 (parallel [
+            (set (reg:SI 3 r3 [orig:125 _13 ] [125])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":361:14 1016 {*thumb2_movsi_shortim}
+     (nil))
+(code_label 51 50 52 7 61 (nil) [2 uses])
+(note 52 51 57 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 57 52 58 7 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:126 <retval> ] [126])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":362:1 977 {*thumb2_movsi_insn}
+     (nil))
+(insn 58 57 70 7 (use (reg/i:SI 0 r0)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":362:1 -1
+     (nil))
+(note 70 58 71 7 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 71 70 72 7 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 20 [0x14])))
+            (clobber (reg:CC 100 cc))
+        ]) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":362:1 1017 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])))
+        (nil)))
+(insn 72 71 73 7 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":362:1 301 {blockage}
+     (nil))
+(insn/f 73 72 74 7 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":362:1 977 {*thumb2_movsi_insn}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 74 73 75 7 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":362:1 397 {force_register_use}
+     (nil))
+(insn/f 75 74 76 7 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [7  S4 A32])) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":362:1 976 {*thumb2_pop_single}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 76 75 77 7 (simple_return) "../STM32_F103C6_Drivers/MCAL_GPIO_DRIVER/stm32f103x8_gpio_driver.c":362:1 1009 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 77 76 64)
+(note 64 77 0 NOTE_INSN_DELETED)
