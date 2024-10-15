@@ -1,0 +1,2 @@
+../STM32_F103C6_Drivers/HAL_KEYPAD_DRIVER/Keypad.c:17:6:Keypad_init	8	static
+../STM32_F103C6_Drivers/HAL_KEYPAD_DRIVER/Keypad.c:62:6:Keypad_getkey	16	static

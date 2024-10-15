@@ -1,0 +1,13 @@
+/*
+ * STM32F103X8.h
+ *
+ *  Created on: Oct 13, 2024
+ *      Author: PC-SHOP
+ */
+
+#ifndef INC_STM32F103X8_H_
+#define INC_STM32F103X8_H_
+
+
+
+#endif /* INC_STM32F103X8_H_ */
