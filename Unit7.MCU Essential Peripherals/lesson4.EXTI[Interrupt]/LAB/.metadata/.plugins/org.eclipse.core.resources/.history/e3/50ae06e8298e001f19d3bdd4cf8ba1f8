@@ -1,0 +1,82 @@
+/*
+ * stm32f103x6_exti_driver.h
+ *
+ *  Created on: Oct 19, 2024
+ *      Author: Mohamed Hakeem
+ */
+
+#ifndef INC_STM32F103X6_EXTI_DRIVER_H_
+#define INC_STM32F103X6_EXTI_DRIVER_H_
+
+
+
+
+
+//-----------------------------
+//Includes
+#include <STM32F103X6.h>
+#include <stm32f103x6_gpio_driver.h>
+//-----------------------------
+
+
+
+
+
+
+
+//-----------------------------
+//User type definitions (structures)
+typedef struct
+{
+
+	uint16_t EXTI_Line_Number ;     	//Specifies the EXTI_Line_Number
+										//This Parameter can be a value of @ref EXTI_Line_Define
+
+	uint16_t EXTI_Pin_Number;           //Specifies the EXTI_Pin_Number that recevies external interrupt
+										//This Parameter can be a value of @ref EXTI_Pin_Define
+
+	GPIO_TypedDef* GPIOX;   			//Specifies the Port of the required pin
+										//This Parameter can be a value of @ref //Peripheral Instants
+										//in STM32F103X6.h
+
+}EXTI_AFIO_MAPPING;
+//-----------------------------
+//Note: You should  use the definition of the  EXTIALTPxx for giving the parameter to the EXTI_AFIO_MAPPING
+//@EXTI_ALTERNATIVE_PIN , for example :
+//EXTI_AFIO_MAPPING EXTI_Object;
+//EXTI_Object = EXTIPA0;
+
+
+
+//@ref EXTI_Line_Define
+#define EXTI0            0
+#define EXTI1            1
+#define EXTI2            2
+#define EXTI3            3
+#define EXTI4            4
+#define EXTI5            5
+#define EXTI6            5
+#define EXTI7            7
+#define EXTI8            8
+#define EXTI9            9
+#define EXTI10           10
+#define EXTI1            11
+#define EXTI2            12
+#define EXTI3            13
+#define EXTI4            14
+#define EXTI15           15
+
+
+
+//@EXTI_ALTERNATIVE_PIN
+#define EXTIPA0        (EXTI_AFIO_MAPPING){EXTI0, }
+
+
+
+
+
+
+
+
+
+#endif /* INC_STM32F103X6_EXTI_DRIVER_H_ */

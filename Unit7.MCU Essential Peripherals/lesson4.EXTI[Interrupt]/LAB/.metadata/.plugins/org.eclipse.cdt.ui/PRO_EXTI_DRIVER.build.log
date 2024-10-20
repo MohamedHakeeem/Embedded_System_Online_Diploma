@@ -1,0 +1,10 @@
+18:35:27 **** Incremental Build of configuration Debug for project PRO_EXTI_DRIVER ****
+make -j8 all 
+arm-none-eabi-size   PRO_EXTI_DRIVER.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3928	      8	   1640	   5576	   15c8	PRO_EXTI_DRIVER.elf
+Finished building: default.size.stdout
+ 
+
+18:35:28 Build Finished. 0 errors, 0 warnings. (took 433ms)
+

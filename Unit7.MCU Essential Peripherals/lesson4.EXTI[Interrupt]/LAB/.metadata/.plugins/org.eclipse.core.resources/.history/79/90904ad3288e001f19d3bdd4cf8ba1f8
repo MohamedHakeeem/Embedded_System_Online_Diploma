@@ -1,0 +1,77 @@
+/*
+ * stm32f103x6_exti_driver.h
+ *
+ *  Created on: Oct 19, 2024
+ *      Author: Mohamed Hakeem
+ */
+
+#ifndef INC_STM32F103X6_EXTI_DRIVER_H_
+#define INC_STM32F103X6_EXTI_DRIVER_H_
+
+
+
+
+
+//-----------------------------
+//Includes
+#include <STM32F103X6.h>
+#include <stm32f103x6_gpio_driver.h>
+//-----------------------------
+
+
+
+
+
+
+
+//-----------------------------
+//User type definitions (structures)
+typedef struct
+{
+
+	uint16_t EXTI_Line_Number ;     	//Specifies the EXTI_Line_Number
+										//This Parameter can be a value of @ref EXTI_Line_Define
+
+	uint16_t EXTI_Pin_Number;           //Specifies the EXTI_Pin_Number that recevies external interrupt
+										//This Parameter can be a value of @ref EXTI_Pin_Define
+
+	GPIO_TypedDef* GPIOX;   			//Specifies the Port of the required pin
+										//This Parameter can be a value of @ref //Peripheral Instants
+										//in STM32F103X6.h
+
+}EXTI_AFIO_MAPPING;
+//-----------------------------
+
+
+
+//@ref EXTI_Line_Define
+#define EXTI0           0
+#define EXTI1           0
+#define EXTI2           0
+#define EXTI3           0
+#define EXTI4           0
+#define EXTI5           0
+#define EXTI6           0
+#define EXTI7           0
+#define EXTI8           0
+#define EXTI9           0
+#define EXTI10           0
+#define EXTI1           0
+#define EXTI2           0
+#define EXTI3           0
+#define EXTI4           0
+#define EXTI15           0
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_STM32F103X6_EXTI_DRIVER_H_ */

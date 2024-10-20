@@ -1,0 +1,58 @@
+/*
+ * stm32f103x6_exti_driver.h
+ *
+ *  Created on: Oct 19, 2024
+ *      Author: Mohamed Hakeem
+ */
+
+#ifndef INC_STM32F103X6_EXTI_DRIVER_H_
+#define INC_STM32F103X6_EXTI_DRIVER_H_
+
+
+
+
+
+//-----------------------------
+//Includes
+#include <STM32F103X6.h>
+#include <stm32f103x6_gpio_driver.h>
+//-----------------------------
+
+
+
+
+
+
+
+//-----------------------------
+//User type definitions (structures)
+typedef struct
+{
+
+	uint16_t EXTI_Line_Number ;     //Specifies the EXTI_Line_Number
+							     //This Parameter can be a value of @ref EXTI_Line_Define
+
+	uint16_t EXTI_Pin_Number;           //Specifies the operating mode for the selected pin
+							     //This Parameter can be a value of @ref GPIO_Mode_Define
+
+	GPIO_TypedDef* GPIOX;   //Specifies the speed for the selected pin
+								 //This Parameter can be a value of @ref GPIO_Speed_Define
+}EXTI_AFIO_MAPPING;
+//-----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_STM32F103X6_EXTI_DRIVER_H_ */

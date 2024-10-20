@@ -1,0 +1,69 @@
+/*
+ * stm32f103x6_exti_driver.h
+ *
+ *  Created on: Oct 19, 2024
+ *      Author: Mohamed Hakeem
+ */
+
+#ifndef INC_STM32F103X6_EXTI_DRIVER_H_
+#define INC_STM32F103X6_EXTI_DRIVER_H_
+
+
+
+
+
+//-----------------------------
+//Includes
+#include <STM32F103X6.h>
+#include <stm32f103x6_gpio_driver.h>
+//-----------------------------
+
+
+
+
+//GPIO  PIN States
+#define GPIO_PIN_SET        1
+#define GPIO_PIN_RESET      0
+
+
+//GPIO PIN_LOCK State
+#define GPIO_PIN_LOCK_ENABLED    1
+#define GPIO_PIN_LOCK_FAILED     0
+
+
+
+
+
+
+//-----------------------------
+//User type definitions (structures)
+typedef struct
+{
+
+	uint16_t GPIO_PinNumber ;     //Specifies the GPIO Pin_Number
+							     //This Parameter can be a value of @ref GPIO_PINS_Define
+
+	uint32_t GPIO_Mode;           //Specifies the operating mode for the selected pin
+							     //This Parameter can be a value of @ref GPIO_Mode_Define
+
+	uint32_t GPIO_Speed;   //Specifies the speed for the selected pin
+								 //This Parameter can be a value of @ref GPIO_Speed_Define
+}GPIO_PinConfig_t;
+//-----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_STM32F103X6_EXTI_DRIVER_H_ */
