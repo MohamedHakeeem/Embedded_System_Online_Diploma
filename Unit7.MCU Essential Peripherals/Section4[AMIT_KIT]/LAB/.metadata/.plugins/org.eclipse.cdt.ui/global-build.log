@@ -1,0 +1,17 @@
+22:02:54 **** Incremental Build of configuration Debug for project AMIT_KIT_Programming ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 AMIT_KIT_Programming.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    6654 bytes (40.6% Full)
+(.text + .data + .bootloader)
+
+Data:         66 bytes (6.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
