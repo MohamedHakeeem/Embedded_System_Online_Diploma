@@ -1,0 +1,109 @@
+/*
+ * ATMEGA32.h
+ *
+ *  Created on: Nov 1, 2024
+ *      Author: Mohamed Abd El Hakeem El Said Ali
+ */
+
+#ifndef INC_ATMEGA32_H_
+#define INC_ATMEGA32_H_
+
+
+//-----------------------------
+//Includes
+#include <stdio.h>
+#include <stdlib.h>
+//-----------------------------
+
+
+//-----------------------------
+//Base addresses for Memories
+#define FLASH_Memory_BASE     						0x0000
+#define SRAM_BASE              						0x0060
+//-----------------------------
+
+//...............................
+//Interrupt_Adresseses
+#define SREG						        	   *(volatile unsigned char *)(0x5F)
+#define GICR						        	   *(volatile unsigned char *)(0x5B)
+#define GIFR       				           		   *(volatile unsigned long *)(0x5A)
+#define MCUCR       				        	   *(volatile unsigned long *)(0x55)
+#define MCUCSR       				        	   *(volatile unsigned long *)(0x54)
+
+
+
+//---------------------------
+
+
+//GPIO
+//A, B fully included in LQFP48 Package
+#define GPIOA_BASE      (0x39)
+#define GPIOB_BASE      (0x36)
+//C, D partial included in LQFP48 Package
+#define GPIOC_BASE      (0x33)
+#define GPIOD_BASE      (0x30)
+
+//For Disable Pull Up  in All Ports
+#define SFIOR      (*(volatile unsigned char *)(0x50)))
+
+
+//..........
+//-----------------------------
+
+
+
+//-*-*-*-*-*-*-*-*-*-*-*-
+//Peripheral register:GPIO
+//-*-*-*-*-*-*-*-*-*-*-*
+typedef struct
+{
+
+	volatile uint8_t PIN;
+	volatile uint8_t DDR;
+	volatile uint8_t PORT;
+}GPIO_TypedDef;
+
+
+
+
+
+
+
+
+
+
+//-*-*-*-*-*-*-*-*-*-*-*-
+//Peripheral Instants:
+
+
+#define GPIOA                ((GPIO_TypedDef*) GPIOA_BASE )
+#define GPIOB                ((GPIO_TypedDef*) GPIOB_BASE )
+#define GPIOC                ((GPIO_TypedDef*) GPIOC_BASE )
+#define GPIOD                ((GPIO_TypedDef*) GPIOD_BASE )
+
+
+//-*-*-*-*-*-*-*-*-*-*-*
+
+
+
+
+
+
+//-*-*-*-*-*-*-*-*-*-*-*-
+//Generic Macros:
+//-*-*-*-*-*-*-*-*-*-*-*
+//IVT----------EXTIx:
+#define INT0_ISR        0
+#define INT1_ISR        1
+#define INT2_ISR        2
+
+
+
+
+#define ENABLE_GLOBAL_INTERRUPT()				SREG |= (1<<7)
+#define DISABLE_GLOBAL_INTERRUPT()				SREG &= ~(1<<7)
+#define DISABLE_PULL_UP_ALL_PORTS
+
+
+
+#endif /* INC_ATMEGA32_H_ */

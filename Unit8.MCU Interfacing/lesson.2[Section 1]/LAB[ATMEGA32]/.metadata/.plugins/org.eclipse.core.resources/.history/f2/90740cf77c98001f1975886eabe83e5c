@@ -1,0 +1,117 @@
+/*
+ * atmega32_exti_driver.h
+ *
+ *  Created on: Nov 1, 2024
+ *      Author: Mohamed Abd El Hakeem El Said Ali
+ */
+
+#ifndef INC_ATMEGA32_EXTI_DRIVER_H_
+#define INC_ATMEGA32_EXTI_DRIVER_H_
+
+
+
+
+//-----------------------------
+//Includes
+#include <ATMEGA32.h>
+#include <atmega32_gpio_driver.h>
+//-----------------------------
+
+
+
+
+
+//-----------------------------
+//User type definitions (structures)
+//-----------------------------
+
+typedef struct
+{
+
+	uint16_t EXTI_Line_Number ;     	//Specifies the EXTI_Line_Number
+										//This Parameter can be a value of @ref EXTI_Line_Define
+
+
+	GPIO_TypedDef* GPIOX;   			//Specifies the Port of the required pin
+										//This Parameter can be a value of @ref //Peripheral Instants
+										//in STM32F103X6.h
+
+	uint16_t EXTI_Pin_Number;           //Specifies the EXTI_Pin_Number that receives external interrupt
+										//This Parameter can be a value of @ref GPIO_PINS_Define ,In GPIO Driver
+
+
+	uint8_t IVT_EXTI_IRQn;              //Specifies the IRQ Number of the EXTI according IVT[Interrupt Vector Table]
+										//This Parameter can be a value of @ref EXTI-------IVT In ATMEGA32.h
+
+}EXTI_AFIO_MAPPING_t;
+
+
+
+typedef struct
+{
+
+	EXTI_AFIO_MAPPING_t EXTI_Map_Pin;	//@EXTI_ALTERNATIVE_PIN , For Example :
+										//EXTI_Map_Pin = EXTI0PA0;
+
+	uint8_t EXTI_Trigger_State;         //Specifies the State of Triggering  that receives of External Interrupt
+										//This Parameter can be selected by a value that is in @EXTI_Trigger_Defin
+
+
+	uint8_t   IRQ_EN;                   //This Parameter enable or disable the EXTI_IRQ,
+										// EXTI_MASK in EXTI Peripheral and Also on the  NVIC Controller
+										// you can set this Parameter by @ref EXTI_IRQ_Define
+
+
+	void (* PF_IRQ_CALLBACK)(void);   	//This Pointer allows you that calls IRQ_Handler of the required EXTIx
+										// by only  giving this pointer address of your function.
+
+}EXTI_PINCONFIG_t;
+
+
+//@ref EXTI_Line_Define
+#define EXTI0            0
+#define EXTI1            2
+#define EXTI2            6
+
+
+
+
+//@EXTI_ALTERNATIVE_PIN
+#define EXTI0PD2  (EXTI_AFIO_MAPPING_t){EXTI0, GPIOD, GPIO_PIN_2, INT0_ISR}
+#define EXTI1PD3  (EXTI_AFIO_MAPPING_t){EXTI1, GPIOD, GPIO_PIN_3, INT1_ISR}
+#define EXTI2PB2  (EXTI_AFIO_MAPPING_t){EXTI2, GPIOB, GPIO_PIN_2, INT2_ISR}
+
+
+
+//@EXTI_Trigger_Define.............. OPTION EXTI_LOW_LEVEL  & EXTI_Rising_Falling_Trigger Not available in INT2
+#define EXTI_LOW_LEVEL                    0b00
+#define EXTI_Rising_Falling_Trigger       0b01
+#define EXTI_Falling_Trigger              0b10
+#define EXTI_Rising_Trigger       		  0b11
+
+
+//@ref EXTI_IRQ_Define
+#define EXTI_IRQ_ENABLE                   1
+#define EXTI_IRQ_DISABLE                  0
+
+
+
+
+/*
+ * ===============================================
+ * APIs Supported by "MCAL EXTI DRIVER"
+ * ===============================================
+ */
+
+void MCAL_EXTI_DEInit(void);
+void MCAL_EXTI_Init(EXTI_PINCONFIG_t* EXTI_Config);
+
+
+
+
+
+
+
+
+
+#endif /* INC_ATMEGA32_EXTI_DRIVER_H_ */

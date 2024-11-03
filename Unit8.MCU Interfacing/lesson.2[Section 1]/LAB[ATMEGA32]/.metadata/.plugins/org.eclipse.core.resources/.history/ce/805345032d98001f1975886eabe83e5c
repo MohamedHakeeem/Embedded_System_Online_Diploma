@@ -1,0 +1,13 @@
+/*
+ * atmega32_gpio_driver.c
+ *
+ *  Created on: Nov 1, 2024
+ *      Author: PC-SHOP
+ */
+
+#ifndef INC_ATMEGA32_GPIO_DRIVER_C_
+#define INC_ATMEGA32_GPIO_DRIVER_C_
+
+
+
+#endif /* INC_ATMEGA32_GPIO_DRIVER_C_ */

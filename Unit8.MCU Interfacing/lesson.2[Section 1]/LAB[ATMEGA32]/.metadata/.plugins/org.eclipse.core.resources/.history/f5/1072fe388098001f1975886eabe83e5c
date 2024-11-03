@@ -1,0 +1,131 @@
+/*
+ * atmega32_exti_driver.c
+ *
+ *  Created on: Nov 1, 2024
+ *      Author: Mohamed Abd El Hakeem El Said Ali
+ */
+
+
+/*
+ * stm32f103x6_exti_driver.c
+ *
+ *  Created on: Oct 19, 2024
+ *      Author: Mohamed Hakeem
+ */
+
+
+#include <atmega32_exti_driver.h>
+
+void (* GP_FuncCallBack[3] ) (void);
+
+
+
+
+
+
+/*
+ * ===============================================
+ * APIs Supported by "MCAL EXTI DRIVER"
+ * ===============================================
+ **/
+
+
+
+
+
+/**================================================================
+ * @Fn-MCAL_EXTI_DEInit
+ * @brief -This Func is responsible for reseting the EXTI Peripheral [Registers] & GIC Controller
+ * @param [in] - 	none
+ * @retval -none
+ * Note-.....
+ */
+void MCAL_EXTI_DEInit(void)
+{
+	//Reset INT_Registers
+	MCUCR &= ~(0b1111 << 0);
+	MCUCSR &= ~(1 << 6);
+
+
+	//Reset GIC Controller
+	GICR &= ~( (1 << INT0_ISR) | (1 << INT1_ISR) | (1 << INT2_ISR));
+	GIFR |=  ( (1 << INT0_ISR) | (1 << INT1_ISR) | (1 << INT2_ISR));
+
+	DISABLE_GLOBAL_INTERRUPT();
+}
+
+
+
+/**================================================================
+ * @Fn-MCAL_EXTI_Init
+ * @brief -This Func is responsible for reseting the EXTI Peripheral [Registers] & NVIC Controller
+ * @param [in] - EXTI_PINCONFIG_t* EXTI_Config
+ * @retval -none
+ * Note-.....
+ */
+void MCAL_EXTI_Init(EXTI_PINCONFIG_t* EXTI_Config)
+{
+
+	// Configure GPIO PIN As FLOATING Input PIN
+	GPIO_PinConfig_t GPIO_EXTI_Config;
+	GPIO_EXTI_Config.GPIO_PinNumber=EXTI_Config->EXTI_Map_Pin.EXTI_Pin_Number;
+	GPIO_EXTI_Config.GPIO_Mode=GPIO_Mode_Inp_Floating;
+	MCAL_GPIO_Init(EXTI_Config->EXTI_Map_Pin.GPIOX,&GPIO_EXTI_Config);
+
+
+
+	//Configuration of EXTI
+	MCUCR &= ~(0xF << 0);
+	MCUCSR &= ~(1 << 6);
+
+	if(EXTI_Config->EXTI_Map_Pin.EXTI_Line_Number == EXTI0 || EXTI_Config->EXTI_Map_Pin.EXTI_Line_Number == EXTI1 )
+	{
+
+		MCUCR |= ((EXTI_Config->EXTI_Trigger_State) << ((EXTI_Config->EXTI_Map_Pin.EXTI_Line_Number) * 2) );
+	}
+	else
+	{
+
+		MCUCSR |= (( (EXTI_Config->EXTI_Trigger_State) / 3) << ((EXTI_Config->EXTI_Map_Pin.EXTI_Line_Number) *3) );
+	}
+
+
+	//CallBack Function.
+	GP_FuncCallBack[EXTI_Config->EXTI_Map_Pin.EXTI_Line_Number]= EXTI_Config->PF_IRQ_CALLBACK;
+
+
+	//Enable OR Disable EXTIx & GIC
+	if(EXTI_Config->IRQ_EN == EXTI_IRQ_ENABLE)
+	{
+		GICR |= ( (1 << EXTI_Config->EXTI_Map_Pin.IVT_EXTI_IRQn));
+	}
+	else if(EXTI_Config->IRQ_EN == EXTI_IRQ_DISABLE)
+	{
+		GICR &= ~( (1 << EXTI_Config->EXTI_Map_Pin.IVT_EXTI_IRQn));
+	}
+
+	//Enable Global Interrupt
+	 ENABLE_GLOBAL_INTERRUPT();
+
+}
+
+
+void EXTI0_IRQHandler(void)
+{
+	GP_FuncCallBack[0]();
+	GIFR |=  (1 << INT0_ISR);
+}
+
+void EXTI1_IRQHandler(void)
+{
+	GP_FuncCallBack[1]();
+	GIFR |=  (1 << INT1_ISR);
+}
+
+void EXTI2_IRQHandler(void)
+{
+	GP_FuncCallBack[2]();
+	GIFR |=  (1 << INT2_ISR);
+
+
+}

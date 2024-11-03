@@ -1,0 +1,106 @@
+/*
+ * atmega32_gpio_driver.h
+ *
+ *  Created on: Nov 1, 2024
+ *      Author: Mohamed Abd El Hakeem El Said Ali
+ */
+
+#ifndef INC_ATMEGA32_GPIO_DRIVER_H_
+#define INC_ATMEGA32_GPIO_DRIVER_H_
+
+
+
+
+//-----------------------------
+//Includes
+#include <ATMEGA32.h>
+//-----------------------------
+
+
+
+//GPIO  PIN States
+#define GPIO_PIN_SET        1
+#define GPIO_PIN_RESET      0
+
+
+
+
+//-----------------------------
+//User type definitions (structures)
+typedef struct
+{
+
+	uint8_t GPIO_PinNumber ;     //Specifies the GPIO Pin_Number
+							     //This Parameter can be a value of @ref GPIO_PINS_Define
+
+	uint8_t GPIO_Mode;           //Specifies the operating mode for the selected pin
+							     //This Parameter can be a value of @ref GPIO_Mode_Define
+
+}GPIO_PinConfig_t;
+//-----------------------------
+
+
+
+//-----------------------------
+//Macros Configuration References
+
+/* @ref GPIO_PINS_Define */
+#define  GPIO_PIN_0       ((uint8_t) 0x01)
+#define  GPIO_PIN_1       ((uint8_t) 0x02)
+#define  GPIO_PIN_2       ((uint8_t) 0x04)
+#define  GPIO_PIN_3       ((uint8_t) 0x08)
+#define  GPIO_PIN_4       ((uint8_t) 0x10)
+#define  GPIO_PIN_5       ((uint8_t) 0x20)
+#define  GPIO_PIN_6       ((uint8_t) 0x40)
+#define  GPIO_PIN_7       ((uint8_t) 0x80)
+#define  GPIO_PIN_ALL     ((uint8_t) 0xFF)
+
+//-----------------------------
+
+
+
+/*@ref GPIO_Mode_Define*/
+
+
+#define GPIO_Mode_Inp_Floating             1
+#define GPIO_Mode_Inp_pull_up              2
+
+#define GPIO_Mode_Out_push_pull            3
+
+
+
+
+
+
+/*
+ * ===============================================
+ * APIs Supported by "MCAL GPIO DRIVER"
+ * ===============================================
+ */
+
+
+void MCAL_GPIO_Init(GPIO_TypedDef* GPIOx, GPIO_PinConfig_t* PinConfig );
+void MCAL_GPIO_DInit(GPIO_TypedDef* GPIOx);
+
+uint8_t  MCAL_GPIO_ReadPin(GPIO_TypedDef* GPIOx,uint8_t PinNumber );
+uint16_t MCAL_GPIO_ReadPort(GPIO_TypedDef* GPIOx);
+
+
+void MCAL_GPIO_WritePin(GPIO_TypedDef* GPIOx,uint8_t PinNumber , uint8_t Value);
+void MCAL_GPIO_WritePort(GPIO_TypedDef* GPIOx, uint8_t Value);
+
+
+void MCAL_GPIO_TogglePin(GPIO_TypedDef* GPIOx,uint8_t PinNumber);
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_ATMEGA32_GPIO_DRIVER_H_ */
