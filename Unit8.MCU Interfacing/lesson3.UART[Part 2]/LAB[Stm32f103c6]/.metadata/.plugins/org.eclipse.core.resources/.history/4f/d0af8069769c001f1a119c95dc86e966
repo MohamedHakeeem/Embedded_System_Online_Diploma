@@ -1,0 +1,31 @@
+/*
+ * stm32f103x6_usart_driver.h
+ *
+ *  Created on: Nov 6, 2024
+ *      Author: Mohamed Abd El Hakeem El Said Ali
+ */
+
+#ifndef INC_STM32F103X6_USART_DRIVER_H_
+#define INC_STM32F103X6_USART_DRIVER_H_
+
+
+//includes
+#include "STM32F103X6.h"
+#include "stm32f103x8_gpio_driver.h"
+#include "stm32f103x8_RCC_driver.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_STM32F103X6_USART_DRIVER_H_ */
