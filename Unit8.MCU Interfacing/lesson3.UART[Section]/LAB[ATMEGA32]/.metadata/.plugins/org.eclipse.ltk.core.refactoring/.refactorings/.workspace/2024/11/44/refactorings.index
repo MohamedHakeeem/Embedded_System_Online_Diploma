@@ -1,0 +1,6 @@
+1730449817929	Rename resource 'AMIT_KIT_Programming'
+1730449899668	Delete resource 'UART_PROTOCOL/LCD_Driver'
+1730450002915	Delete resource 'UART_PROTOCOL/HAL/lcd.c'
+1730450456765	Delete resource 'UART_PROTOCOL/MCAL/Inc/atmega32_gpio_driver.c'
+1730472808763	Delete resource 'UART_PROTOCOL/HAL/LCD_DRIVER/lcd.c'
+1730472813079	Delete resource 'UART_PROTOCOL/HAL/Inc/lcd.h'

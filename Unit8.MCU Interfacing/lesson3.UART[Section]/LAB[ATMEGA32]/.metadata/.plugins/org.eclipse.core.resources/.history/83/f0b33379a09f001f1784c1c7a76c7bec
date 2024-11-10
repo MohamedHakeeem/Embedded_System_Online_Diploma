@@ -1,0 +1,276 @@
+/*
+ * main.c
+ *
+ *  Created on: Nov 1, 2024
+ *      Author: Mohamed Abd El Hakeem EL Said Ali.
+ *
+ *
+ */
+
+
+
+#include  <util/delay.h>
+#include "ATMEGA32.h"
+#include "atmega32_gpio_driver.h"
+#include "atmega32_exti_driver.h"
+#include "lcd.h"
+#include "atmega32_usart_driver.h"
+
+/*
+extern USART_Config_t *GL_USART_Config ;
+
+#define F_CPU 8000000UL
+
+
+static uint8_t flag_send=1;
+static uint8_t* Tx_Str;
+*/
+
+/*
+void MCAL_USART_SendStr_Aysnch(uint8_t* str)
+{
+	if(flag_send == 1)
+	{
+
+		USART->UCSRB &= ~(1<<7);
+		USART->UCSRB |= (1<<6);
+		ENABLE_GLOBAL_INTERRUPT();
+		MCAL_USART_SEND(str[0] ,Polling_ENABLED,  Blocking);
+		Tx_Str=str;
+		flag_send=0;
+	}
+
+
+}*/
+
+/*
+void MCAL_USART_SStr_ISR(void)
+{
+	static uint8_t c=1;
+	if(Tx_Str[c] != 0)
+	{
+		MCAL_USART_SEND(Tx_Str[c] ,Polling_ENABLED, Blocking);
+		c++;
+
+	}
+	else
+	{
+		flag_send=1;
+		c=1;
+	}
+}
+*/
+
+/*
+ISR(USART_TXC_vect)
+{
+
+	GL_USART_Config->Ptr_IRQ_CallBack();
+
+	USART->UCSRB &= ~(1<<7);
+	USART->UCSRB |= (1<<6);
+}
+*/
+
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+void USART_Init(unsigned int baud)
+{
+    // Set baud rate
+    unsigned int ubrr = F_CPU/16/baud-1;
+    UBRRH = (unsigned char)(ubrr>>8);
+    UBRRL = (unsigned char)ubrr;
+
+    // Enable transmitter and receiver
+    UCSRB = (1<<RXEN) | (1<<TXEN);
+
+    // Enable USART Transmit Complete interrupt
+    UCSRB |= (1<<TXCIE);
+
+    // Set frame format: 8 data bits, 1 stop bit
+    UCSRC = (1<<URSEL) | (1<<UCSZ1) | (1<<UCSZ0);
+}
+
+void USART_Transmit(unsigned char data)
+{
+    // Wait for empty transmit buffer
+    while (!( UCSRA & (1<<UDRE)));
+
+    // Put data into buffer, sends the data
+    UDR = data;
+}
+
+ISR(UART_TXC_vect)
+{
+
+	LCD_WRITE_CHAR('e');
+	// Code to execute when the transmit complete interrupt occurs
+}
+
+int main(void)
+{
+    // Initialize USART with baud rate 9600
+    USART_Init(115200);
+    LCD_INIT();
+
+    // Enable global interrupts
+    sei();
+
+    // Transmit a character
+    USART_Transmit('A');
+
+    while (1)
+    {
+        // Main loop
+    }
+}
+
+
+
+
+//int main()
+//{
+/*
+	uint8_t ptrreceive_string[32];
+	uint8_t *ptrsend_string= "Aohamed";
+	uint8_t no_block=0;
+	uint8_t Count=0;
+*/
+	//LCD_INIT();
+	//LCD_clear_screen();
+/*
+
+	USART_Config_t USART_CONFIG_LCD;
+	USART_CONFIG_LCD.USART_MODE=USART_MODE_Asynchronous;
+	USART_CONFIG_LCD.BaudRate=USART_BaudRate_9600;
+	USART_CONFIG_LCD.Data_Length=USART_DATA_LEGNTH_8BIT;
+	USART_CONFIG_LCD.Parity=USART_PARITY_NONE;
+	USART_CONFIG_LCD.Stop_Bits=USART_StopBits_1;
+	//USART_CONFIG_LCD.IRQ_Enable=USART_IRQ_DISABLED;
+	//USART_CONFIG_LCD.Ptr_IRQ_CallBack=NULL;
+
+	USART_CONFIG_LCD.Ptr_IRQ_CallBack=MCAL_USART_SStr_ISR;
+	USART_CONFIG_LCD.IRQ_Enable=USART_IRQ_EN_TXCIE;
+
+
+	MCAL_USART_Init(&USART_CONFIG_LCD);
+*/
+
+	//***************Task1:Send & Receiving By Polling********************//
+	//********************************************************************//
+	/*LCD_WRITE_STRING("UART_STRING^___^");
+	MCAL_USART_SendString(ptrsend_string);
+
+	uint8_t i=0;
+
+	while(1)
+	{
+
+		MCAL_USART_ReceiveString(ptrreceive_string);
+
+		LCD_GOTO_XY(2,0);
+		LCD_WRITE_STRING(ptrreceive_string);
+
+		LCD_GOTO_XY(1,0);
+		LCD_WRITE_Number(Count);
+		Count++;
+		if(Count == 10)
+		{
+			Count=0;
+		}
+
+
+		_delay_ms(100000);
+
+
+	}*/
+
+	//********************************************************************//
+	//********************************************************************//
+
+
+
+
+
+	//***********Task2:Send & Receiving By No Blocking********************//
+	//********************************************************************//
+	/*
+	LCD_WRITE_STRING("UART_STRING^___^");
+	MCAL_USART_SEND('M',Polling_DISABLED,No_Blocking);
+	uint8_t i=0;
+
+	while(1)
+	{
+
+		if(MCAL_USART_RECEIVE(&no_block,Polling_DISABLED,No_Blocking))
+		{
+			LCD_GOTO_XY(2,0);
+			LCD_WRITE_CHAR(no_block);
+		}
+
+
+		LCD_GOTO_XY(1,0);
+		LCD_WRITE_Number(Count);
+		Count++;
+		if(Count == 10)
+		{
+			Count=0;
+		}
+
+
+		_delay_ms(1000);
+
+
+	}*/
+
+
+	//********************************************************************//
+	//********************************************************************//
+
+
+
+
+
+
+	//***********Task2:Send & Receiving By Interrupt********************//
+	//********************************************************************//
+
+	//MCAL_USART_SendStr_Aysnch("A");
+	//MCAL_USART_SEND('S' ,Polling_DISABLED,  No_Blocking);
+	//MCAL_USART_SendStr_Aysnch(ptrsend_string);
+
+
+	//while(1)
+	//{
+
+		/*LCD_GOTO_XY(1,0);
+		LCD_WRITE_Number(Count);
+		Count++;
+		if(Count == 10)
+		{
+			Count=0;
+		}
+
+
+		_delay_ms(1000);*/
+
+
+	//}
+
+
+	//********************************************************************//
+	//********************************************************************//
+
+
+
+
+
+
+
+	//return 0 ;
+
+//}
+
+

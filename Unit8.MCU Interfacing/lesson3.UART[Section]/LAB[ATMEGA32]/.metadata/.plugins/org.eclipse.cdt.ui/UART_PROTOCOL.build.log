@@ -1,0 +1,20 @@
+22:35:43 **** Incremental Build of configuration Debug for project UART_PROTOCOL ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 UART_PROTOCOL.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5716 bytes (34.9% Full)
+(.text + .data + .bootloader)
+
+Data:         56 bytes (5.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:35:43 Build Finished. 0 errors, 0 warnings. (took 313ms)
+

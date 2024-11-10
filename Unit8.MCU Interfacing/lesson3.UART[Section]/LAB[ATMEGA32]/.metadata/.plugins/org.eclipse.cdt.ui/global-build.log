@@ -1,0 +1,45 @@
+23:05:45 **** Incremental Build of configuration Debug for project UART_Three_Tricks ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson3.UART[Section]\LAB[ATMEGA32]\UART_Three_Tricks\HAL\Inc" -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson3.UART[Section]\LAB[ATMEGA32]\UART_Three_Tricks\MCAL\Inc" -Wall -g2 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:20:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../main.c: In function 'main':
+../main.c:28: warning: pointer targets in initialization differ in signedness
+../main.c:30: warning: unused variable 'Count'
+../main.c:29: warning: unused variable 'no_block'
+../main.c:28: warning: unused variable 'ptrsend_string'
+../main.c:27: warning: unused variable 'ptrreceive_string'
+Finished building: ../main.c
+ 
+Building target: UART_Three_Tricks.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,UART_Three_Tricks.map -mmcu=atmega16 -o "UART_Three_Tricks.elf"  ./MCAL/USART_DRIVER/atmega32_usart_driver.o  ./MCAL/GPIO_DRIVER/atmega32_gpio_driver.o  ./MCAL/EXTI_DRIVER/atmega32_exti_driver.o  ./HAL/LCD_DRIVER/lcd.o  ./HAL/KEYPAD_DRIVER/Keypad.o  ./main.o   
+Finished building target: UART_Three_Tricks.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S UART_Three_Tricks.elf  >"UART_Three_Tricks.lss"
+Finished building: UART_Three_Tricks.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex UART_Three_Tricks.elf  "UART_Three_Tricks.hex"
+Finished building: UART_Three_Tricks.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 UART_Three_Tricks.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5896 bytes (36.0% Full)
+(.text + .data + .bootloader)
+
+Data:         40 bytes (3.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
