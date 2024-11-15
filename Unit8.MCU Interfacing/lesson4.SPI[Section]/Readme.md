@@ -7,4 +7,4 @@
 
 #SPI_MASTER_SLAVE
 
-![Uploading SPI_MASTER_SLAVE-ezgif.com-video-to-gif-converter.gif…]()
+![SPI_MASTER_SLAVE-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/35a02e0e-3809-43a2-8940-5735e7784831)
