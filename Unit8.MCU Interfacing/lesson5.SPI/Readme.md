@@ -1,0 +1,23 @@
+#Keil_U_Vision [Debugging]:
+
+![SPI_UART_PROTOCOLLAB1-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/fcd542a6-fa57-474a-924d-d13d7aab920e)
+![SPI_UART_PROTOCOLLAB1-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9ba4dabb-d127-4655-ba28-df2389cbfe0f)
+
+
+
+
+
+
+#Proteus_Simulation [Lab1]:
+
+
+
+
+
+
+
+
+#Proteus_Simulation [Lab2]:
+
+![Uploading SPI_UART_TX_RXLAB2-ezgif.com-video-to-gif-converter.gif…]()
+
