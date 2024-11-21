@@ -10,6 +10,7 @@
 
 #Proteus_Simulation [Lab1]:
 
+![SPI_UART_ProteusLAB1-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/1d0d6b44-a5eb-4f72-a957-bd3b3acc446a)
 
 
 
