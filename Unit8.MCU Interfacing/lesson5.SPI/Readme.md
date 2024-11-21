@@ -19,5 +19,5 @@
 
 #Proteus_Simulation [Lab2]:
 
-![Uploading SPI_UART_TX_RXLAB2-ezgif.com-video-to-gif-converter.gif…]()
+![SPI_UART_TX_RXLAB2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9c954ba5-6c24-436d-bb57-5957461bc970)
 
