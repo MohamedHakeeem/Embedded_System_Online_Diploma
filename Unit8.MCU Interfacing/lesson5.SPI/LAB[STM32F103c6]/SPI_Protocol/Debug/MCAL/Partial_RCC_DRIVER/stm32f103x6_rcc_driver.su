@@ -1,0 +1,4 @@
+../MCAL/Partial_RCC_DRIVER/stm32f103x6_rcc_driver.c:55:10:MCAL_RCC_GetSYS_CLCKFreq	4	static
+../MCAL/Partial_RCC_DRIVER/stm32f103x6_rcc_driver.c:88:10:MCAL_RCC_GetHCLKFreq	8	static
+../MCAL/Partial_RCC_DRIVER/stm32f103x6_rcc_driver.c:96:10:MCAL_RCC_GetPCLK1Freq	8	static
+../MCAL/Partial_RCC_DRIVER/stm32f103x6_rcc_driver.c:102:10:MCAL_RCC_GetPCLK2Freq	8	static

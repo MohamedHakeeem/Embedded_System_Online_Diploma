@@ -1,0 +1,10 @@
+../HAL/LCD_DRIVER/lcd.c:12:6:_delay_ms	24	static
+../HAL/LCD_DRIVER/lcd.c:22:6:LCD_INIT	8	static
+../HAL/LCD_DRIVER/lcd.c:104:6:LCD_clear_screen	8	static
+../HAL/LCD_DRIVER/lcd.c:120:6:LCD_check_lcd_isbusy	8	static
+../HAL/LCD_DRIVER/lcd.c:216:6:LCD_lcd_kick	8	static
+../HAL/LCD_DRIVER/lcd.c:227:6:LCD_GOTO_XY	16	static
+../HAL/LCD_DRIVER/lcd.c:248:6:LCD_WRITE_COMMAND	16	static
+../HAL/LCD_DRIVER/lcd.c:272:6:LCD_WRITE_CHAR	16	static
+../HAL/LCD_DRIVER/lcd.c:297:6:LCD_WRITE_STRING	24	static
+../HAL/LCD_DRIVER/lcd.c:317:6:LCD_Generate_Ch	8	static

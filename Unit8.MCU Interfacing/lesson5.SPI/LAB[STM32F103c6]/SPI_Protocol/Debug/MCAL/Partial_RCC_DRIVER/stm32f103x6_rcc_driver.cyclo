@@ -1,0 +1,4 @@
+stm32f103x6_rcc_driver.c:55:10:MCAL_RCC_GetSYS_CLCKFreq	5
+stm32f103x6_rcc_driver.c:88:10:MCAL_RCC_GetHCLKFreq	1
+stm32f103x6_rcc_driver.c:96:10:MCAL_RCC_GetPCLK1Freq	1
+stm32f103x6_rcc_driver.c:102:10:MCAL_RCC_GetPCLK2Freq	1
