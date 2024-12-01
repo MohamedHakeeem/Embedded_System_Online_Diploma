@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SPI_PROTOCOL/MCAL/Includes&apos; to &apos;Include&apos;" description="Rename resource &apos;Includes&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MCAL/Includes" name="Include" stamp="1731526586212" updateReferences="true"/>
+</session>

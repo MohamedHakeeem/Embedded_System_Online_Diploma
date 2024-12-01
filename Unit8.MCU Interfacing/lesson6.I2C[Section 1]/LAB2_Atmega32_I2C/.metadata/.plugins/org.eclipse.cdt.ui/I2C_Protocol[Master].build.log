@@ -1,0 +1,20 @@
+15:34:48 **** Incremental Build of configuration Debug for project I2C_Protocol[Master] ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 I2C_Protocol[Master].elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   10750 bytes (65.6% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:34:49 Build Finished. 0 errors, 0 warnings. (took 471ms)
+

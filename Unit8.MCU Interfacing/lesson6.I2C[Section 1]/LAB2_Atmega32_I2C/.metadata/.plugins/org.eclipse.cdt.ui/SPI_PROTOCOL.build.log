@@ -1,0 +1,73 @@
+23:49:12 **** Incremental Build of configuration Debug for project SPI_PROTOCOL ****
+make all 
+Building file: ../MCAL/USART_DRIVER/atmega32_usart_driver.c
+Invoking: AVR Compiler
+avr-gcc -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\HAL\Inc" -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\MCAL\Include" -Wall -g2 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/USART_DRIVER/atmega32_usart_driver.d" -MT"MCAL/USART_DRIVER/atmega32_usart_driver.o" -c -o "MCAL/USART_DRIVER/atmega32_usart_driver.o" "../MCAL/USART_DRIVER/atmega32_usart_driver.c"
+../MCAL/USART_DRIVER/atmega32_usart_driver.c: In function 'MCAL_USART_RECEIVE':
+../MCAL/USART_DRIVER/atmega32_usart_driver.c:255: warning: control reaches end of non-void function
+../MCAL/USART_DRIVER/atmega32_usart_driver.c: At top level:
+../MCAL/USART_DRIVER/atmega32_usart_driver.c:342: warning: return type defaults to 'int'
+../MCAL/USART_DRIVER/atmega32_usart_driver.c: In function 'ISR':
+../MCAL/USART_DRIVER/atmega32_usart_driver.c:342: warning: type of 'USART_TXC_vect' defaults to 'int'
+../MCAL/USART_DRIVER/atmega32_usart_driver.c:346: warning: control reaches end of non-void function
+Finished building: ../MCAL/USART_DRIVER/atmega32_usart_driver.c
+ 
+Building file: ../MCAL/SPI_DRIVER/atmega32_spi_driver.c
+Invoking: AVR Compiler
+avr-gcc -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\HAL\Inc" -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\MCAL\Include" -Wall -g2 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/SPI_DRIVER/atmega32_spi_driver.d" -MT"MCAL/SPI_DRIVER/atmega32_spi_driver.o" -c -o "MCAL/SPI_DRIVER/atmega32_spi_driver.o" "../MCAL/SPI_DRIVER/atmega32_spi_driver.c"
+Finished building: ../MCAL/SPI_DRIVER/atmega32_spi_driver.c
+ 
+Building file: ../MCAL/GPIO_DRIVER/atmega32_gpio_driver.c
+Invoking: AVR Compiler
+avr-gcc -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\HAL\Inc" -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\MCAL\Include" -Wall -g2 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/GPIO_DRIVER/atmega32_gpio_driver.d" -MT"MCAL/GPIO_DRIVER/atmega32_gpio_driver.o" -c -o "MCAL/GPIO_DRIVER/atmega32_gpio_driver.o" "../MCAL/GPIO_DRIVER/atmega32_gpio_driver.c"
+Finished building: ../MCAL/GPIO_DRIVER/atmega32_gpio_driver.c
+ 
+Building file: ../MCAL/EXTI_DRIVER/atmega32_exti_driver.c
+Invoking: AVR Compiler
+avr-gcc -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\HAL\Inc" -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\MCAL\Include" -Wall -g2 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/EXTI_DRIVER/atmega32_exti_driver.d" -MT"MCAL/EXTI_DRIVER/atmega32_exti_driver.o" -c -o "MCAL/EXTI_DRIVER/atmega32_exti_driver.o" "../MCAL/EXTI_DRIVER/atmega32_exti_driver.c"
+Finished building: ../MCAL/EXTI_DRIVER/atmega32_exti_driver.c
+ 
+Building file: ../HAL/LCD_DRIVER/lcd.c
+Invoking: AVR Compiler
+avr-gcc -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\HAL\Inc" -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\MCAL\Include" -Wall -g2 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"HAL/LCD_DRIVER/lcd.d" -MT"HAL/LCD_DRIVER/lcd.o" -c -o "HAL/LCD_DRIVER/lcd.o" "../HAL/LCD_DRIVER/lcd.c"
+Finished building: ../HAL/LCD_DRIVER/lcd.c
+ 
+Building file: ../HAL/KEYPAD_DRIVER/Keypad.c
+Invoking: AVR Compiler
+avr-gcc -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\HAL\Inc" -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\MCAL\Include" -Wall -g2 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"HAL/KEYPAD_DRIVER/Keypad.d" -MT"HAL/KEYPAD_DRIVER/Keypad.o" -c -o "HAL/KEYPAD_DRIVER/Keypad.o" "../HAL/KEYPAD_DRIVER/Keypad.c"
+Finished building: ../HAL/KEYPAD_DRIVER/Keypad.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\HAL\Inc" -I"F:\Embedded Systems New\Diploma\Unit8.MCU Interfacing\lesson4.SPI[Section]\LAB1[7_SegmentDisplay]_Atmega32_SPI\SPI_PROTOCOL\MCAL\Include" -Wall -g2 -gdwarf-2 -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: SPI_PROTOCOL.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,SPI_PROTOCOL.map -mmcu=atmega16 -o "SPI_PROTOCOL.elf"  ./MCAL/USART_DRIVER/atmega32_usart_driver.o  ./MCAL/SPI_DRIVER/atmega32_spi_driver.o  ./MCAL/GPIO_DRIVER/atmega32_gpio_driver.o  ./MCAL/EXTI_DRIVER/atmega32_exti_driver.o  ./HAL/LCD_DRIVER/lcd.o  ./HAL/KEYPAD_DRIVER/Keypad.o  ./main.o   
+Finished building target: SPI_PROTOCOL.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S SPI_PROTOCOL.elf  >"SPI_PROTOCOL.lss"
+Finished building: SPI_PROTOCOL.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 SPI_PROTOCOL.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   10342 bytes (63.1% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+23:49:15 Build Finished. 0 errors, 5 warnings. (took 2s.495ms)
+

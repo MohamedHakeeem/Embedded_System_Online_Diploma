@@ -1,0 +1,38 @@
+/*
+ * atmega32_i2c_driver.c
+ *
+ *  Created on: Nov 27, 2024
+ *      Author: Mohamed Abd El Hakeem EL Said Ali.
+ */
+
+
+
+#include "atmega32_i2c_driver.h"
+
+
+void MCAL_I2C_Set_Address(unsigned char address)
+{
+	I2C->TWAR = address;
+}
+
+
+unsigned char MCAL_I2C_Read(unsigned char ack)
+{
+	unsigned char x=0;
+	I2C_TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWEA);
+	while ((I2C_TWCR & 1<<TWINT) == 0);
+	while ((I2C->TWSR) != 0x60) x = I2C->TWSR;             // own SLA+W(0) has been transmitted and ACK has been returned
+	I2C_TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWEA);
+	while ((I2C_TWCR & 1<<TWINT) == 0);
+	while ((I2C->TWSR) != 0x80) x = I2C->TWSR;          // Data has been transmitted and ACK has been returned
+	return I2C->TWDR;
+}
+
+
+
+void MCAL_I2C_Write(unsigned char cByte)
+{
+	I2C->TWDR = cByte;
+	I2C_TWCR = (1<<TWINT)|(1<<TWEN);
+	while ((I2C_TWCR & 0x80)==0);
+}
