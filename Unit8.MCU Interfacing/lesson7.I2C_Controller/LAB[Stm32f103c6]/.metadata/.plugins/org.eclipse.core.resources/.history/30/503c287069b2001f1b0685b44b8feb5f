@@ -1,0 +1,13 @@
+/*
+ * stm32f103x8_i2c_driver.h
+ *
+ *  Created on: Dec 4, 2024
+ * Mohamed Abd El Hakeem El Said Ali
+ */
+
+#ifndef INC_STM32F103X8_I2C_DRIVER_H_
+#define INC_STM32F103X8_I2C_DRIVER_H_
+
+
+
+#endif /* INC_STM32F103X8_I2C_DRIVER_H_ */
