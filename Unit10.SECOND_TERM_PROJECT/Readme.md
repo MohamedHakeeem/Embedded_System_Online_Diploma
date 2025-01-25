@@ -36,3 +36,23 @@ PARKING EXIT - SECURITY HANDLING (ALRAM) - ADMIN ACCESS - VERIFICATINO & VALIDAT
 
 ### My Summery:
 ![Summery_JIRA](https://github.com/user-attachments/assets/59586821-7524-4dbf-863a-59f3c2cff3db)
+
+## My Simulation Is done Via  Proteus:
+### ADMIN CONTROL: 
+![Admin_Control1-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/1ed7b667-daa2-466a-befc-9da417258d98)
+![Admin_Control2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/3c0b3340-062c-4b83-b885-5d92e94d4cb3)
+
+### Vehicle Parking Authorized:
+![Vehicle_Parking_Authorized-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/0c27f6a5-b584-40b0-93b8-69d8059b19b4)
+
+
+### Vehicle Parking Not Available Slots:
+![Vehicle_Parking_Not_Available_Slots-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9b267114-3843-4599-9c0e-7c1fe09497f5)
+
+
+###  Vehicle Parking Un Authorized:
+![Vehicle_Parking_UnAuthorized-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f684674d-5385-486e-ba01-3bdb23e751dd)
+![Vehicle_Parking_UnAuthorized2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/6a7c08ce-e482-4a78-a01f-629a93bdf71c)
+
+
+
