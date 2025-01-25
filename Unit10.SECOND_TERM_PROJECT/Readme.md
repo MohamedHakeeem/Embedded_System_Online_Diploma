@@ -22,5 +22,17 @@ PARKING EXIT - SECURITY HANDLING (ALRAM) - ADMIN ACCESS - VERIFICATINO & VALIDAT
 ![Timeline2](https://github.com/user-attachments/assets/2b4d1d0f-abfe-4370-9b12-c85a8bd15b72)
 
 
-### MY Velocity Report:
+### My Velocity Report:
 ![Verlocity_speed](https://github.com/user-attachments/assets/53a5216a-e507-4e09-a8bf-b59b28d2d5a7)
+
+### My Burnup Report:
+![Burnup_report1](https://github.com/user-attachments/assets/ceb8c572-d20c-4dbf-a185-60a8aae58e7c)
+![Burnup_report2](https://github.com/user-attachments/assets/6b8e42f4-ab9f-48df-a400-9d536f0a9a49)
+![Burnup_report3](https://github.com/user-attachments/assets/d5a26953-9eab-40fe-8abf-56f1312913ef)
+![Burnup_report4](https://github.com/user-attachments/assets/f07d85e7-ab7d-4c45-b52b-0762c5a138ae)
+
+### My Cumlative Flow:
+![Cumlative_Flow](https://github.com/user-attachments/assets/0f7f2ff0-3723-4667-b856-cc854b67a20d)
+
+### My Summery:
+![Summery_JIRA](https://github.com/user-attachments/assets/59586821-7524-4dbf-863a-59f3c2cff3db)
