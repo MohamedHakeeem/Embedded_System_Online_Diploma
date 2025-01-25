@@ -1,6 +1,6 @@
 # SMART VEHICLE PARKING Project:
-
-![SVP](https://github.com/user-attachments/assets/33d02801-b1d5-4aa4-8dc0-88cab9db91ff) ![Smart Vehcile Parking](https://github.com/user-attachments/assets/d38ae4b4-8915-4e0e-ad74-0d42f40f859f)
+![Smart Vehcile Parking](https://github.com/user-attachments/assets/d38ae4b4-8915-4e0e-ad74-0d42f40f859f)
+![SVP](https://github.com/user-attachments/assets/33d02801-b1d5-4aa4-8dc0-88cab9db91ff)
 
 ## THIS PRROJEC IS DONE BY AGILE SCRUM ON JIRA ..........
 ### My Project consists of EPICS & USER STORYs & TASKS & Child Tasks, My Epics are  [PARKING ENTRY - SLOTS AVAILABLE - 
