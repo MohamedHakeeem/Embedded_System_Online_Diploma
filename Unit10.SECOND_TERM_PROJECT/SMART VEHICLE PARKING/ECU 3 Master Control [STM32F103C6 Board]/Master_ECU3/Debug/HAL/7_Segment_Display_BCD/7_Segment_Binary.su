@@ -1,0 +1,2 @@
+../HAL/7_Segment_Display_BCD/7_Segment_Binary.c:13:6:Seven_SegmentBCD_Init	16	static
+../HAL/7_Segment_Display_BCD/7_Segment_Binary.c:40:6:Seven_SegmentBCD_Display	16	static

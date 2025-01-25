@@ -1,0 +1,10 @@
+lcd.c:12:6:_delay_ms	3
+lcd.c:22:6:LCD_INIT	1
+lcd.c:107:6:LCD_clear_screen	1
+lcd.c:123:6:LCD_check_lcd_isbusy	1
+lcd.c:219:6:LCD_lcd_kick	1
+lcd.c:230:6:LCD_GOTO_XY	5
+lcd.c:251:6:LCD_WRITE_COMMAND	1
+lcd.c:290:6:LCD_WRITE_CHAR	1
+lcd.c:329:6:LCD_WRITE_STRING	4
+lcd.c:349:6:LCD_Generate_Ch	1

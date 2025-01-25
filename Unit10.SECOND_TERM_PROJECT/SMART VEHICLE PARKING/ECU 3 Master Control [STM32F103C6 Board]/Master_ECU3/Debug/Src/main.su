@@ -1,0 +1,15 @@
+../Src/main.c:120:6:EXTI15_CALLBACK	8	static
+../Src/main.c:128:5:main	56	static
+../Src/main.c:214:6:RFID_ENTRY	16	static
+../Src/main.c:306:6:RFID_EXIT	16	static
+../Src/main.c:371:6:Gate_Entry_Init	24	static
+../Src/main.c:385:6:GATE_ENTRY_COMMAND	16	static
+../Src/main.c:393:6:Gate_EXIT_Init	24	static
+../Src/main.c:407:6:GATE_EXIT_COMMAND	16	static
+../Src/main.c:415:6:BUZZER_INIT	32	static
+../Src/main.c:427:6:BUZZER_Turn	16	static
+../Src/main.c:448:6:LED_INIT	32	static
+../Src/main.c:461:6:LED_Turn	16	static
+../Src/main.c:484:17:Password_Check	32	static
+../Src/main.c:501:6:Admin_Control	24	static
+../Src/main.c:653:6:Delay_ms	24	static,ignoring_inline_asm

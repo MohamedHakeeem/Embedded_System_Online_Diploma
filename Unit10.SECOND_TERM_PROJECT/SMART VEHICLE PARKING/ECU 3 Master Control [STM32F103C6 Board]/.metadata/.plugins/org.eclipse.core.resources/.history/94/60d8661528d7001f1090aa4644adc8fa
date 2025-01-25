@@ -1,0 +1,201 @@
+/*
+ * RFID_CARD.c
+ *
+ *  Created on: Jan 8, 2025
+ *      Author: PC-SHOP
+ */
+
+
+#include "RFID_CARD.h"
+
+
+
+
+char  RFID_ID_ENTRY_Buffer[8];
+char  RFID_ID_EXIT_Buffer[8];
+uint16_t RFID_ID_Address=0x0010;
+
+uint8_t GB_S_ENTRY_READRFID;
+uint8_t GB_S_EXIT_READRFID;
+
+UART_Config GBuart_ENTRY_cnfg;
+UART_Config GBuart_EXIT_cnfg;
+
+
+
+
+void RFID_CARD_ENTRY_INIT(USART_TypeDef *USARTx)
+{
+	GBuart_ENTRY_cnfg.BaudRate=UART_BaudRate_9600;
+	GBuart_ENTRY_cnfg.HwFlowCtl=UART_HwFlowCtl_NONE;
+	GBuart_ENTRY_cnfg.IRQ_Enable=UART_IRQ_Enable_RXNEIE;
+	GBuart_ENTRY_cnfg.P_IRQ_CallBack=UartRXNEI_ENTRY_CALLBACK;
+	GBuart_ENTRY_cnfg.Parity=UART_Parity__NONE;
+	GBuart_ENTRY_cnfg.Payload_Length=UART_Payload_Length_8B;
+	GBuart_ENTRY_cnfg.StopBits=UART_StopBits__1;
+	GBuart_ENTRY_cnfg.USART_Mode=UART_MODE_RX;
+	MCAL_UART_GPIO_Set_Pins(USARTx);
+	MCAL_UART_Init(USARTx, &GBuart_ENTRY_cnfg);
+
+
+}
+
+
+
+void RFID_CARD_EXIT_INIT(USART_TypeDef *USARTx)
+{
+	GBuart_EXIT_cnfg.BaudRate=UART_BaudRate_9600;
+	GBuart_EXIT_cnfg.HwFlowCtl=UART_HwFlowCtl_NONE;
+	GBuart_EXIT_cnfg.IRQ_Enable=UART_IRQ_Enable_RXNEIE;
+	GBuart_EXIT_cnfg.P_IRQ_CallBack=UartRXNEI_EXIT_CALLBACK;
+	GBuart_EXIT_cnfg.Parity=UART_Parity__NONE;
+	GBuart_EXIT_cnfg.Payload_Length=UART_Payload_Length_8B;
+	GBuart_EXIT_cnfg.StopBits=UART_StopBits__1;
+	GBuart_EXIT_cnfg.USART_Mode=UART_MODE_RX;
+	MCAL_UART_GPIO_Set_Pins(USARTx);
+	MCAL_UART_Init(USARTx, &GBuart_EXIT_cnfg);
+
+}
+
+
+
+void RFID_CARD_ENTRY_READ(char* ID_Buffer,uint8_t Length)
+{
+	uint8_t i=0;
+	for(i=0;i<Length;i++)
+	{
+		ID_Buffer[i]=RFID_ID_ENTRY_Buffer[i];
+
+	}
+
+}
+
+
+void RFID_CARD_EXIT_READ(char* ID_Buffer,uint8_t Length)
+{
+	uint8_t i=0;
+	for(i=0;i<Length;i++)
+	{
+		ID_Buffer[i]=RFID_ID_EXIT_Buffer[i];
+
+	}
+
+}
+
+
+
+DRIVER_ID_STATUS RFID_CARD_ID_ENTRY_CHECK(char* RFID_ID_Entry_Buffer,uint8_t ID_Length,uint8_t ID_Num)
+{
+	uint8_t i,j;
+	uint8_t L_Stop=0;
+	DRIVER_ID_STATUS ID_State;
+	char  Driver_ID_EEPROM[8];
+
+
+	for(j=0,RFID_ID_Address=16;j<ID_Num;j++)
+	{
+		EEPROM_READSEQUENCE(SPI1,GPIOA,GPIO_PIN_4, Driver_ID_EEPROM,RFID_ID_Address,8);
+		for(i=0;i<ID_Length;i++)
+		{
+			if(*(RFID_ID_Entry_Buffer + i) != Driver_ID_EEPROM[i])
+			{
+				ID_State=Unauthorized;
+				break;
+			}
+			ID_State=Authorized;
+
+		}
+
+		if(ID_State==Authorized) break;
+		RFID_ID_Address+=16;
+	}
+
+
+	return ID_State;
+
+}
+
+
+
+
+DRIVER_ID_STATUS RFID_CARD_ID_EXIT_CHECK(char* RFID_ID_EXIT_Buffer,uint8_t ID_Length,uint8_t ID_Num)
+{
+	uint8_t i,j;
+	uint8_t L_Stop=0;
+	DRIVER_ID_STATUS ID_State;
+	char  Driver_ID_EEPROM[8];
+
+
+	for(j=0,RFID_ID_Address=16;j<ID_Num;j++)
+	{
+		EEPROM_READSEQUENCE(SPI1,GPIOA,GPIO_PIN_4, Driver_ID_EEPROM,RFID_ID_Address,8);
+		for(i=0;i<ID_Length;i++)
+		{
+			if(*(RFID_ID_EXIT_Buffer + i) != Driver_ID_EEPROM[i])
+			{
+				ID_State=Unauthorized;
+				break;
+			}
+			ID_State=Authorized;
+
+		}
+
+		if(ID_State==Authorized) break;
+		RFID_ID_Address+=16;
+	}
+
+
+	return ID_State;
+
+}
+
+
+
+
+void UartRXNEI_ENTRY_CALLBACK(void)
+{
+	static uint8_t Index=0;
+	uint16_t RXNE_ENTRY_Buffer;
+
+	MCAL_UART_ReceiveData(USART1,&RXNE_ENTRY_Buffer, disable);
+	RFID_ID_ENTRY_Buffer[Index]=(char)RXNE_ENTRY_Buffer;
+
+	GB_S_ENTRY_READRFID=Stop_ReadRFID_ENTRY;
+
+
+	if(Index == 7)
+	{
+		GB_S_ENTRY_READRFID=Start_ReadRFID_ENTRY;
+		Index=0;
+		return ;
+	}
+
+	Index++;
+
+
+}
+
+
+void UartRXNEI_EXIT_CALLBACK(void)
+{
+	static uint8_t Index=0;
+	uint16_t RXNE_EXIT_Buffer;
+
+	MCAL_UART_ReceiveData(USART2,&RXNE_EXIT_Buffer, disable);
+	RFID_ID_EXIT_Buffer[Index]=(char)RXNE_EXIT_Buffer;
+
+	GB_S_EXIT_READRFID=Stop_ReadRFID_EXIT;
+
+
+
+	if(Index == 7)
+	{
+		GB_S_EXIT_READRFID=Start_ReadRFID_EXIT;
+		Index=0;
+		return ;
+	}
+
+	Index++;
+
+
+}

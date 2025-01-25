@@ -1,0 +1,50 @@
+/*
+ * RFID_CARD.h
+ *
+ *  Created on: Jan 8, 2025
+ *      Author: Mohamed Abd El Hakeem El Said Ali
+ */
+
+#ifndef INCLUDE_RFID_CARD_H_
+#define INCLUDE_RFID_CARD_H_
+
+#include "stm32f103x6_usart_driver.h"
+#include "EEPROM.h"
+
+
+
+#define DriverID_Length          		4
+#define Start_ReadRFID_ENTRY            1
+#define Stop_ReadRFID_ENTRY             0
+#define Start_ReadRFID_EXIT            1
+#define Stop_ReadRFID_EXIT             0
+
+
+typedef enum
+{
+	Authorized,
+	Unauthorized
+
+}DRIVER_ID_STATUS;
+
+
+
+void RFID_CARD_ENTRY_INIT(USART_TypeDef *USARTx);
+void RFID_CARD_EXIT_INIT(USART_TypeDef *USARTx);
+
+
+void RFID_CARD_ENTRY_READ(char* ID_Buffer,uint8_t Length);
+void RFID_CARD_EXIT_READ(char* ID_Buffer,uint8_t Length);
+
+
+DRIVER_ID_STATUS RFID_CARD_ID_ENTRY_CHECK(char* RFID_IDBuffer,uint8_t ID_Length,uint8_t ID_Num);
+DRIVER_ID_STATUS RFID_CARD_ID_EXIT_CHECK(char* RFID_ID_EXIT_Buffer,uint8_t ID_Length,uint8_t ID_Num);
+
+void UartRXNEI_ENTRY_CALLBACK(void);
+void UartRXNEI_EXIT_CALLBACK(void);
+
+
+
+
+
+#endif /* INCLUDE_RFID_CARD_H_ */

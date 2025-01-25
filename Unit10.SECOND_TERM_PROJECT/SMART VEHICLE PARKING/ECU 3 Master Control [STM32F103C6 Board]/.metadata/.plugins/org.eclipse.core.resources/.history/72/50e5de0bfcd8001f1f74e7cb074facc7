@@ -1,0 +1,206 @@
+/*
+ * EEPROM.c
+ *
+ *  Created on: Jan 13, 2025
+ *      Author: Mohamed Abd El Hakeem El Said Ali
+ */
+
+
+#include "EEPROM.h"
+
+uint8_t Instruction_Set[6]={Read_EEPROM,Write_EEPROM,WRDI_Disable_EEPROM,WREN_Enable_EEPROM,RDSR_Status_EEPROM,WRSR_Status_EEPROM};
+
+SPI_Config_t SPI_cnfg;
+GPIO_PinConfig_t EEPROM_iocnfg;
+
+uint8_t E4RBuffer = 0;
+
+
+void SPI_Delay_ms(uint32_t time_ms) {
+	volatile uint32_t i;
+	for(int i =0 ;i<time_ms;i++)
+	{
+		__asm__("nop");
+
+	}
+
+}
+
+
+
+
+void EEPROM_SPI_INTT(SPI_TypeDef* SPIx)
+{
+	SPI_cnfg.BaudRate_Prescaler=SPI_BAUDRATEPRESCALER_2;
+	SPI_cnfg.CLKPhase=SPI_CLKPHASE_FIRSTEDGE;
+	SPI_cnfg.CLKPolarity=SPI_CLKPOLARITY_LOW_IDLE;
+	SPI_cnfg.Communication_Mode=SPI_DIRECTION_2LINES;
+	SPI_cnfg.Data_Order=SPI_MSB_TRANSMITTED_FIRST;
+	SPI_cnfg.Data_Size=SPI_8BIT_DATASIZE;
+
+	SPI_cnfg.IRQ_CallBack=NULL;
+	SPI_cnfg.IRQ_Enable=SPI_IRQ_Disable;
+	SPI_cnfg.SPI_Mode=SPI_MASTER_MODE;
+	SPI_cnfg.NSS=SPI_NSS_Soft_NSSInternalSoft_Set;
+
+	MCAL_SPI_Init(SPIx, &SPI_cnfg);
+	MCAL_SPI_GPIO_Set_Pins(SPIx);
+
+}
+
+
+
+void EEPROM_NSS_INIT(GPIO_TypedDef*GPIOx,uint16_t PinNumber)
+{
+	MCAL_GPIO_Enable_ClocK(GPIOx);
+
+	EEPROM_iocnfg.GPIO_Mode=GPIO_Mode_Out_push_pull;
+	EEPROM_iocnfg.GPIO_PinNumber=PinNumber;
+	EEPROM_iocnfg.GPIO_Speed=GPIO_Speed_2MHz;
+
+	MCAL_GPIO_Init(GPIOx, &EEPROM_iocnfg);
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_SET); //High Idle......
+
+
+
+}
+
+void EEPROM_READ(SPI_TypeDef* SPIx,GPIO_TypedDef*GPIOx,uint16_t PinNumber,uint8_t* E2RBuffer,uint16_t Address)
+{
+	//Read_Instruction
+	uint8_t Address_High=(Address >> 8) & 0xFF;
+	uint8_t Address_Low=(Address & 0xFF);
+
+	uint8_t RxBuffer_Backup = 0;
+	uint8_t TxBuffer_Backup = 0;
+	uint8_t i=0;
+
+
+	MCAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+	MCAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
+	MCAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+	MCAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_RESET); //To Listen......
+	MCAL_SPI_SendData(SPIx, (Instruction_Set + 2) , SPIenable);
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_SET); //Return to  Idle......
+
+
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_RESET); //To Listen......
+
+	MCAL_SPI_SendData(SPIx, (Instruction_Set) , SPIenable);
+	MCAL_SPI_SendData(SPIx, &Address_High , SPIenable);
+	MCAL_SPI_SendData(SPIx, &Address_Low , SPIenable);
+
+	/*
+	for(i=0;i<2;i++)
+	{
+		MCAL_SPI_ReceiveData(SPIx, RxBuffer_Backup, SPIenable);
+	}*/
+
+	MCAL_SPI_ReceiveData(SPIx, E2RBuffer, SPIenable);
+
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_SET); //Return to  Idle......
+
+}
+
+
+
+void EEPROM_READSEQUENCE(SPI_TypeDef* SPIx,GPIO_TypedDef*GPIOx,uint16_t PinNumber,uint8_t* E2RBuffer,uint16_t Address,uint8_t Data_Length)
+{
+	uint8_t i;
+	for(i=0; i < Data_Length ;i++)
+	{
+		EEPROM_READ(SPIx,GPIOx,PinNumber,E2RBuffer + i, Address + i);
+
+	}
+
+	SPI_Delay_ms(8000);
+
+}
+
+void EEPROM_WRITE(SPI_TypeDef* SPIx,GPIO_TypedDef*GPIOx,uint16_t PinNumber,uint8_t* E2TBuffer,uint16_t Address)
+{
+	//Write_Operation_Instruction
+	uint8_t Address_High=(Address  >> 8) & 0xFF;
+	uint8_t Address_Low=(Address & 0xFF);
+
+
+	//WREN_Instruction
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_RESET);
+	MCAL_SPI_SendData(SPIx, (Instruction_Set + 3) , SPIenable);
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_SET);
+
+
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_RESET);
+	MCAL_SPI_SendData(SPIx, (Instruction_Set + 1) , SPIenable);
+	MCAL_SPI_SendData(SPIx, &Address_High , SPIenable);
+	MCAL_SPI_SendData(SPIx, &Address_Low , SPIenable);
+
+	MCAL_SPI_SendData(SPIx, E2TBuffer  , SPIenable);
+
+
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_SET);
+	SPI_Delay_ms(8000);
+
+
+}
+
+
+void EEPROM_WRITESEQUENCE(SPI_TypeDef* SPIx,GPIO_TypedDef*GPIOx,uint16_t PinNumber,uint8_t* E2TBuffer,uint16_t Address,uint8_t Data_Length)
+{
+
+
+	//Write_Operation_Instruction
+	uint8_t Address_High=(Address  >> 8) & 0xFF;
+	uint8_t Address_Low=(Address & 0xFF);
+
+	uint8_t i;
+
+
+
+	//WREN_Instruction
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_RESET);
+	MCAL_SPI_SendData(SPIx, (Instruction_Set + 3) , SPIenable);
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_SET);
+
+
+
+
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_RESET);
+	MCAL_SPI_SendData(SPIx, (Instruction_Set + 1) , SPIenable);
+	MCAL_SPI_SendData(SPIx, &Address_High , SPIenable);
+	MCAL_SPI_SendData(SPIx, &Address_Low , SPIenable);
+
+
+	for(i=0; i < Data_Length+1 ;i++)
+	{
+		MCAL_SPI_SendData(SPIx, E2TBuffer + i , SPIenable);
+
+	}
+
+
+
+	MCAL_GPIO_WritePin(GPIOx, PinNumber, GPIO_PIN_SET);
+	SPI_Delay_ms(8000);
+
+
+}
+
+
+void EEPROM_Erase(SPI_TypeDef* SPIx, GPIO_TypedDef* GPIOx, uint16_t PinNumber)
+{
+	uint8_t eraseData = 0xFF; // Value to write (erased state)
+	uint16_t address;
+
+	// Iterate through all memory addresses
+	for (address = Address_begin; address <= Address_end; address++)
+	{
+		EEPROM_WRITESEQUENCE(SPIx, GPIOx, PinNumber, &eraseData, address,1);
+
+	}
+
+	SPI_Delay_ms(8000);
+
+}
+

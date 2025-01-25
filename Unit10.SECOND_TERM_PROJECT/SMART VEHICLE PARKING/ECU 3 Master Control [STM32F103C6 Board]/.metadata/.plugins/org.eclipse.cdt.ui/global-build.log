@@ -1,0 +1,35 @@
+13:43:47 **** Incremental Build of configuration Debug for project Master_ECU3 ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"F:/Embedded Systems New/Diploma/Unit10. SECOND_TERM_PROJECT [ With AGILE SCRUM METHOD BY JIRA TOOL]/SMART VEHICLE PARKING/ECU 3 Master Control [STM32F103C6 Board]/Master_ECU3/HAL/Include" -I"F:/Embedded Systems New/Diploma/Unit10. SECOND_TERM_PROJECT [ With AGILE SCRUM METHOD BY JIRA TOOL]/SMART VEHICLE PARKING/ECU 3 Master Control [STM32F103C6 Board]/Master_ECU3/MCAL/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'Admin_Control':
+../Src/main.c:528:27: warning: pointer targets in passing argument 1 of 'Password_Check' differ in signedness [-Wpointer-sign]
+  528 |     Pass_s=Password_Check(Keypad_Pass, 4 ,PasswordRx_Buff);
+      |                           ^~~~~~~~~~~
+      |                           |
+      |                           uint8_t * {aka unsigned char *}
+../Src/main.c:484:38: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  484 | Password_Status Password_Check(char* Password_KEYPAD,uint8_t Pass_Length,char* Password_EEPROM)
+      |                                ~~~~~~^~~~~~~~~~~~~~~
+../Src/main.c:528:43: warning: pointer targets in passing argument 3 of 'Password_Check' differ in signedness [-Wpointer-sign]
+  528 |     Pass_s=Password_Check(Keypad_Pass, 4 ,PasswordRx_Buff);
+      |                                           ^~~~~~~~~~~~~~~
+      |                                           |
+      |                                           uint8_t * {aka unsigned char *}
+../Src/main.c:484:80: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  484 | Password_Status Password_Check(char* Password_KEYPAD,uint8_t Pass_Length,char* Password_EEPROM)
+      |                                                                          ~~~~~~^~~~~~~~~~~~~~~
+../Src/main.c: In function 'Delay_ms':
+../Src/main.c:655:20: warning: unused variable 'i' [-Wunused-variable]
+  655 |  volatile uint32_t i;
+      |                    ^
+arm-none-eabi-gcc  -gdwarf-2 -o "Master_ECU3.elf" @"objects.list"   -mcpu=cortex-m3 -T"F:\Embedded Systems New\Diploma\Unit10. SECOND_TERM_PROJECT [ With AGILE SCRUM METHOD BY JIRA TOOL]\SMART VEHICLE PARKING\ECU 3 Master Control [STM32F103C6 Board]\Master_ECU3\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Master_ECU3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Master_ECU3.elf
+ 
+arm-none-eabi-size   Master_ECU3.elf 
+arm-none-eabi-objdump -h -S  Master_ECU3.elf  > "Master_ECU3.list"
+   text	   data	    bss	    dec	    hex	filename
+  10944	     52	   1804	  12800	   3200	Master_ECU3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Master_ECU3.list
+ 
