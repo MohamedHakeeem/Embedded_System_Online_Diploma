@@ -3,8 +3,8 @@
 ![SVP](https://github.com/user-attachments/assets/33d02801-b1d5-4aa4-8dc0-88cab9db91ff)
 
 ## THIS PRROJEC IS DONE BY AGILE SCRUM ON JIRA ..........
-### My Project consists of EPICS & USER STORYs & TASKS & Child Tasks, My Epics are  [PARKING ENTRY - SLOTS AVAILABLE - 
-PARKING EXIT - SECURITY HANDLING (ALRAM) - ADMIN ACCESS - VERIFICATINO & VALIDATION], My USER STORYS:
+### My Project consists of EPICS & USER STORYs & TASKS & Child Tasks:
+My Epics are  [PARKING ENTRY - SLOTS AVAILABLE - PARKING EXIT - SECURITY HANDLING (ALRAM) - ADMIN ACCESS - VERIFICATINO & VALIDATION], My USER STORYS:
 [SVP-8](https://egypt1cairo.atlassian.net/browse/SVP-8) AS A Driver, I want to use "RFID CARD", so that I can enter the Parking
 [SVP-9](https://egypt1cairo.atlassian.net/browse/SVP-9) AS A Driver, I want to see the message on "LCD", so that I can check my ability to enter or not based on my Driver ID
 [SVP-16](https://egypt1cairo.atlassian.net/browse/SVP-16) AS A DRIVER, I want to see the available slots on 7\_Segment Display, so that I can decide to enter parking or not
