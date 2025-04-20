@@ -18,7 +18,7 @@
 ![Static Badge](https://img.shields.io/badge/Unit8%3A%20-%20MCU_Interfacing%20%20%20-%20green?style=plastic)
 ![Static Badge](https://img.shields.io/badge/Unit9%3A%20-%20MCU_Timers/ADC%20%20%20-%20green?style=plastic)
 ![Static Badge](https://img.shields.io/badge/Unit10%3A%20-%20SW_Engineering_(Testing_&_Validation)%20%20%20-%20green?style=plastic)
-![Static Badge](https://img.shields.io/badge/Unit11%3A%20-%20Second_Term_Exam_Project%20%20%20-%20green?style=plastic)
+![Static Badge](https://img.shields.io/badge/Unit11%3A%20-%20Second_Term_Exam_&_Project%20%20%20-%20green?style=plastic)
 <img src="https://github.com/user-attachments/assets/660df31e-efda-40f4-abe8-d31c87f6ea8d" width="1000">
 
 ## 🛠️Certificate of Mastering of embedded system  ✅✅✅✅✅ 
