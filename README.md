@@ -4,7 +4,7 @@
 ![Static Badge](https://img.shields.io/badge/Unit1%3A%20-%20Intro%20%20%20-%20green?style=plastic)
 ![Static Badge](https://img.shields.io/badge/Unit2%3A%20-%20C_programming%20%20-%20green?style=plastic)
 
-<img src="https://github.com/user-attachments/assets/5125cf9c-c95e-4c4e-b804-a064e9bacc07" width="500">
+<img src="https://github.com/user-attachments/assets/492cf411-1434-4448-890f-8af96424540a" width="600">
 
 ## The Second Star⭐⭐
 ![Static Badge](https://img.shields.io/badge/Unit3%3A%20-%20Embedded_C%20%20%20-%20green?style=plastic)
