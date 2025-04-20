@@ -23,8 +23,8 @@
 
 ## 🛠️Certificate of Mastering of embedded system  ✅✅✅✅✅ 
 <div>
-<img src="https://github.com/user-attachments/assets/412e81d4-1170-4357-98f3-024d4222315c" width="600">
-<img src="https://github.com/user-attachments/assets/beb4a945-f03d-457c-91e7-ea0dab4da122" width="600">
+<img src="https://github.com/user-attachments/assets/beb4a945-f03d-457c-91e7-ea0dab4da122" width="800">
+<img src="https://github.com/user-attachments/assets/412e81d4-1170-4357-98f3-024d4222315c" width="800">
 </div>
 
 
