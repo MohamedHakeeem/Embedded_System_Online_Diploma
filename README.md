@@ -1,4 +1,4 @@
 # Embedded_System_Online_Diploma:
 
 
-<img src="![1](https://github.com/user-attachments/assets/130d296f-e96c-4d4a-b733-5f77440e0c95)" width="600">
+<img src="https://github.com/user-attachments/assets/5125cf9c-c95e-4c4e-b804-a064e9bacc07" width="600">
