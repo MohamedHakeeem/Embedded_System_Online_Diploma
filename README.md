@@ -22,5 +22,11 @@
 <img src="https://github.com/user-attachments/assets/660df31e-efda-40f4-abe8-d31c87f6ea8d" width="1000">
 
 ## 🛠️Certificate of Mastering of embedded system  ✅✅✅✅✅ 
-<img src="https://github.com/user-attachments/assets/beb4a945-f03d-457c-91e7-ea0dab4da122" width="900">
+<div>
+<img src="https://github.com/user-attachments/assets/412e81d4-1170-4357-98f3-024d4222315c" width="600">
+<img src="https://github.com/user-attachments/assets/beb4a945-f03d-457c-91e7-ea0dab4da122" width="600">
+</div>
+
+
+
 
