@@ -1,7 +1,11 @@
 # Embedded_System_Online_Diploma:
 
+![Static Badge](https://img.shields.io/badge/Unit1%3A%20-%20Intro%20%20%20-%20green?style=plastic)
+![Static Badge](https://img.shields.io/badge/Unit2%3A%20-%20C_programming%20%20-%20green?style=plastic)
 <img src="https://github.com/user-attachments/assets/5125cf9c-c95e-4c4e-b804-a064e9bacc07" width="1000">
 
+##Unit3:Embedded C
+#Unit4:System Architect
 <img src="https://github.com/user-attachments/assets/aec4a73c-be94-4e36-9a4b-9ccd4c4ce940" width="1000">
 
 <img src="https://github.com/user-attachments/assets/660df31e-efda-40f4-abe8-d31c87f6ea8d" width="1000">
