@@ -2,7 +2,7 @@
 ![Smart Vehcile Parking](https://github.com/user-attachments/assets/d38ae4b4-8915-4e0e-ad74-0d42f40f859f)
 ![SVP](https://github.com/user-attachments/assets/33d02801-b1d5-4aa4-8dc0-88cab9db91ff)
 
-## THIS PRROJEC IS DONE BY AGILE SCRUM ON JIRA ..........
+## THIS PRROJECT IS DONE BY AGILE SCRUM ON JIRA ..........
 ### My Project consists of EPICS & USER STORYs & TASKS & Child Tasks:
 My Epics are  [PARKING ENTRY - SLOTS AVAILABLE - PARKING EXIT - SECURITY HANDLING (ALRAM) - ADMIN ACCESS - VERIFICATINO & VALIDATION], My USER STORYS:
 [SVP-8](https://egypt1cairo.atlassian.net/browse/SVP-8) AS A Driver, I want to use "RFID CARD", so that I can enter the Parking
